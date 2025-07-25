@@ -56,7 +56,11 @@ def run():
     for pos in portfolio:
         ticker = pos["ticker"]
         df = load_signals(ticker)
-        trades, final_value = simulate_trades(df, pos.get("strategy", {}))
+        strategy = {
+            "rsi_buy": 30,
+            "rsi_sell": 60
+        }
+        trades, final_value = simulate_trades(df, strategy)
 
         console.print(f"\n[bold cyan]Backtest Results for {ticker}[/bold cyan]")
 
