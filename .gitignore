@@ -1,0 +1,16 @@
+
+# Ignore Python cache and logs
+__pycache__/
+*.log
+
+# Ignore environment and secrets
+.env
+*.env
+*.key
+*.pem
+
+# Ignore evaluation data
+data/evaluations/*.json
+
+# Ignore virtual environments
+venv/

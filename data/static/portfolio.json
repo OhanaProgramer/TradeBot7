@@ -1,0 +1,32 @@
+{
+  "position_list": [
+    {
+      "ticker": "AAPL",
+      "qty": 17.0575,
+      "cost_basis": 2710.85,
+      "sector": "Info Tech",
+      "strategy": {
+        "trailing_stop_pct": 17,
+        "min_hold_days": 30,
+        "override_sell": true,
+        "signals": {
+          "use_rsi": true,
+          "rsi_buy": 30,
+          "rsi_sell": 70,
+          "use_macd": true,
+          "macd_cross_buy": true,
+          "macd_cross_sell": true,
+          "use_sma": true,
+          "sma_crossover_buy": true,
+          "sma_crossover_sell": true
+        },
+        "risk": {
+          "max_drawdown_pct": 25,
+          "stop_loss_pct": 15,
+          "take_profit_pct": 50
+        },
+        "notes": "Long-term core; evaluate RSI and SMA/MACD crossovers only as confirmation."
+      }
+    }
+  ]
+}
