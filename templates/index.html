@@ -12,6 +12,12 @@
   .near-support { background-color: #fff3cd !important; }   /* yellow for near support */
   .near-stop { background-color: #f8d7da !important; }      /* red for near stop */
   .near-breakout { background-color: #d4edda !important; }  /* green for breakout */
+  .support-alert {
+    background-color: #f8d7da !important;   /* light red for support being tested */
+  }
+  .resistance-alert {
+    background-color: #d4edda !important;   /* light green for resistance being tested */
+  }
   td.wrap-action {
     white-space: normal !important;
     word-break: break-word;
@@ -25,11 +31,18 @@
     padding: 5px 8px;
   }
 
+  td.trend-cell {
+    max-width: 120px;       /* limit column width */
+    white-space: normal;    /* allow wrapping */
+    word-wrap: break-word;  /* wrap long words */
+  }
+
   td.trend-cell .badge {
     display: block;
     white-space: normal;
     text-align: center;
     padding: 5px 8px;
+    line-height: 1.2;       /* tighter line spacing */
   }
 
   thead th {
@@ -130,10 +143,27 @@
     const isNearBreakout = resistanceLevels.some(r => Math.abs(price - r) / r < 0.02);
     const isNearStop = !isNaN(stop) && Math.abs(price - stop) / stop < 0.01;
 
+    // Clear previous highlights
     row.classList.remove('near-stop','near-support','near-breakout');
+    row.children[2].classList.remove('support-alert');
+    row.children[3].classList.remove('support-alert');
+    row.children[5].classList.remove('resistance-alert');
+    row.children[6].classList.remove('resistance-alert');
+
+    // Row-level highlights
     if (isNearStop) row.classList.add('near-stop');
     else if (isNearSupport) row.classList.add('near-support');
     else if (isNearBreakout) row.classList.add('near-breakout');
+
+    // Cell-level highlights
+    if (isNearSupport) {
+      row.children[2].classList.add('support-alert');
+      row.children[3].classList.add('support-alert');
+    }
+    if (isNearBreakout) {
+      row.children[5].classList.add('resistance-alert');
+      row.children[6].classList.add('resistance-alert');
+    }
   }
 
   // ✅ Initial highlight based on static Price
