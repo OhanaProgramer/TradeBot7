@@ -25,6 +25,13 @@
     padding: 5px 8px;
   }
 
+  td.trend-cell .badge {
+    display: block;
+    white-space: normal;
+    text-align: center;
+    padding: 5px 8px;
+  }
+
   thead th {
     position: sticky;
     top: 0;
@@ -50,12 +57,14 @@
       <thead class="table-dark">
         <tr>
           <th scope="col">Ticker</th>
-          <th scope="col">Price</th>
+          <th scope="col" data-bs-toggle="tooltip" title="Trend direction">Trend</th>
+          <th scope="col">Major S.</th>
+          <th scope="col">Minor S.</th>
           <th scope="col">Live Price</th>
-          <th scope="col">Trend</th>
-          <th scope="col">Support</th>
-          <th scope="col">Resistance</th>
-          <th scope="col">Stop</th>
+          <th scope="col">R1</th>
+          <th scope="col">R2</th>
+          <th scope="col" data-bs-toggle="tooltip" title="Current stop-loss level to limit downside risk.">Stop</th>
+          <th scope="col">Performance</th>
           <th scope="col">Action Needed</th>
         </tr>
       </thead>
@@ -63,18 +72,22 @@
         {% for item in data %}
         <tr>
           <td><strong>{{ item.ticker }}</strong></td>
-          <td>{{ item.price }}</td>
-          <td><span class="text-muted">--</span></td>
-          <td>
+          <td class="trend-cell">
             <span class="badge {% if item.trend == 'Bullish' %}bg-success{% elif item.trend == 'Bearish' %}bg-danger{% else %}bg-secondary{% endif %}">
               {{ item.trend }}
             </span>
           </td>
-          <td>{{ item.support_levels|join(', ') }}</td>
-          <td>{{ item.resistance_levels|join(', ') }}</td>
+          <td>{{ item.support_levels[-1] }}</td>
+          <td>{{ item.support_levels[0] }}</td>
+          <td><span class="text-muted">--</span></td>
+          <td>{{ item.resistance_levels[0] }}</td>
+          <td>{{ item.resistance_levels[1] }}</td>
           <td>{{ item.stop_loss }}</td>
+          <td class="performance-cell" data-cost="{{ item.cost_basis }}" data-price="{{ item.price }}" data-qty="{{ item.position_qty }}"></td>
           <td class="wrap-action">
-            <span class="badge bg-info text-dark">{{ item.action_needed }}</span>
+            <span class="badge action-badge" data-bs-toggle="tooltip" title="{{ item.action_needed }}">
+              {{ item.action_needed }}
+            </span>
           </td>
         </tr>
         {% endfor %}
@@ -101,11 +114,17 @@
     });
   });
 
-  // ✅ Function to apply row highlighting based on a given price
+  // ✅ Function to apply row highlighting based on new column layout
   function highlightRow(row, price) {
-    const supportLevels = row.children[4].innerText.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
-    const resistanceLevels = row.children[5].innerText.split(',').map(r => parseFloat(r.trim())).filter(n => !isNaN(n));
-    const stop = parseFloat(row.children[6].innerText);
+    const majorSupport = parseFloat(row.children[2].innerText);
+    const minorSupport = parseFloat(row.children[3].innerText);
+    const supportLevels = [majorSupport, minorSupport].filter(n => !isNaN(n));
+
+    const resistance1 = parseFloat(row.children[5].innerText);
+    const resistance2 = parseFloat(row.children[6].innerText);
+    const resistanceLevels = [resistance1, resistance2].filter(n => !isNaN(n));
+
+    const stop = parseFloat(row.children[7].innerText);
 
     const isNearSupport = supportLevels.some(s => Math.abs(price - s) / s < 0.02);
     const isNearBreakout = resistanceLevels.some(r => Math.abs(price - r) / r < 0.02);
@@ -119,7 +138,7 @@
 
   // ✅ Initial highlight based on static Price
   document.querySelectorAll('#strategyTable tbody tr').forEach(row => {
-    const staticPrice = parseFloat(row.children[1].innerText);
+    const staticPrice = parseFloat(row.children[4].innerText) || 0;
     highlightRow(row, staticPrice);
   });
 
@@ -129,7 +148,7 @@
     fetch(`/api/live/${ticker}`)
       .then(res => res.json())
       .then(data => {
-        const cell = row.children[2];
+        const cell = row.children[4];
         if (data.live_price) {
           cell.innerHTML = `<strong>${data.live_price}</strong>`;
           highlightRow(row, parseFloat(data.live_price));
@@ -138,13 +157,59 @@
         }
       })
       .catch(() => {
-        row.children[2].innerHTML = `<span class="text-muted">N/A</span>`;
+        row.children[4].innerHTML = `<span class="text-muted">N/A</span>`;
       });
   });
 
   // ✅ Optional: Auto-refresh the page every 5 minutes
   setInterval(() => { location.reload(); }, 300000);
 
+  // ✅ Improved logical color-coding for Action Needed badges
+  document.querySelectorAll('.action-badge').forEach(badge => {
+    const text = badge.textContent.toLowerCase();
+
+    // Default gray for monitoring/hold states
+    badge.classList.add('bg-secondary','text-light');
+
+    // Green: bullish or sell targets hit (positive actions)
+    if (text.includes('sell') || text.includes('take profit') || text.includes('target hit')) {
+      badge.classList.remove('bg-secondary');
+      badge.classList.add('bg-success','text-light');
+    }
+    // Red: bearish alerts, stop-loss triggers, high-risk actions
+    else if (text.includes('stop') || text.includes('exit') || text.includes('cut')) {
+      badge.classList.remove('bg-secondary');
+      badge.classList.add('bg-danger','text-light');
+    }
+    // Yellow: watch or cautionary actions
+    else if (text.includes('watch') || text.includes('alert')) {
+      badge.classList.remove('bg-secondary');
+      badge.classList.add('bg-warning','text-dark');
+    }
+    // Blue: default info actions (neutral)
+    else if (text.includes('info') || text.includes('pending')) {
+      badge.classList.remove('bg-secondary');
+      badge.classList.add('bg-info','text-dark');
+    }
+  });
+
+  // ✅ Calculate and color-code performance (using total cost basis)
+  document.querySelectorAll('.performance-cell').forEach(cell => {
+    const price = parseFloat(cell.getAttribute('data-price'));   // per-share price
+    const cost = parseFloat(cell.getAttribute('data-cost'));     // total cost
+    const qty = parseFloat(cell.getAttribute('data-qty')) || 1;  // quantity (fallback 1)
+
+    const marketValue = price * qty;
+
+    if (!isNaN(marketValue) && !isNaN(cost) && cost > 0) {
+      const perf = ((marketValue - cost) / cost * 100).toFixed(2);
+      cell.textContent = perf + '%';
+      cell.style.color = perf > 0 ? 'green' : (perf < 0 ? 'red' : 'gray');
+    } else {
+      cell.textContent = '--';
+      cell.style.color = 'gray';
+    }
+  });
 </script>
 <script>
   // ✅ Display last updated date/time
@@ -162,5 +227,14 @@
 </script>
 </script>
 
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // ✅ Enable Bootstrap tooltips globally
+  document.addEventListener('DOMContentLoaded', () => {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
+  });
+</script>
 </body>
 </html>
