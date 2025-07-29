@@ -93,8 +93,8 @@
       "SMA_200": 11.40
     },
     "today_signal": "F bouncing from support. Hold; add on dips near $12.",
-    "position_qty": 53,
-    "cost_basis": 667.25,
+    "position_qty": 55,
+    "cost_basis": 661.14,
     "holding_status": "Held",
     "stop_loss": 11.90,
     "stop_type": "trailing"
@@ -113,8 +113,8 @@
       "SMA_200": 39.80
     },
     "today_signal": "VZ is rangebound. Hold for yield; add only above $42.",
-    "position_qty": 18,
-    "cost_basis": 726.88,
+    "position_qty": 29.6971,
+    "cost_basis": 1320.20,
     "holding_status": "Held",
     "stop_loss": 38.80,
     "stop_type": "trailing"
@@ -133,8 +133,8 @@
       "SMA_200": 21.60
     },
     "today_signal": "OLP uptrend continues. Hold; add on break above $24.",
-    "position_qty": 12,
-    "cost_basis": 289.32,
+    "position_qty": 13.56,
+    "cost_basis": 300.54,
     "holding_status": "Held",
     "stop_loss": 21.80,
     "stop_type": "trailing"
@@ -153,8 +153,8 @@
       "SMA_200": 154.50
     },
     "today_signal": "JNJ below SMAs. Hold for dividend; monitor $145 support.",
-    "position_qty": 5,
-    "cost_basis": 744.10,
+    "position_qty": 3,
+    "cost_basis": 465.75,
     "holding_status": "Held",
     "stop_loss": 143.90,
     "stop_type": "trailing"
@@ -173,8 +173,8 @@
       "SMA_200": 95.00
     },
     "today_signal": "SBUX broke down; hold and consider adding if reversal above $84.",
-    "position_qty": 8,
-    "cost_basis": 675.28,
+    "position_qty": 9.9188,
+    "cost_basis": 925.72,
     "holding_status": "Held",
     "stop_loss": 77.50,
     "stop_type": "trailing"
@@ -193,8 +193,8 @@
       "SMA_200": 380.00
     },
     "today_signal": "ISRG uptrend strong. Hold; consider partial profit at $430.",
-    "position_qty": 1,
-    "cost_basis": 390.00,
+    "position_qty": 0.0463,
+    "cost_basis": 14.22,
     "holding_status": "Held",
     "stop_loss": 405.00,
     "stop_type": "trailing"
@@ -213,8 +213,8 @@
       "SMA_200": 70.00
     },
     "today_signal": "NEE consolidating. Hold; add above $74 breakout.",
-    "position_qty": 8,
-    "cost_basis": 578.56,
+    "position_qty": 3,
+    "cost_basis": 211.10,
     "holding_status": "Held",
     "stop_loss": 68.90,
     "stop_type": "trailing"
@@ -233,8 +233,8 @@
       "SMA_200": 160.00
     },
     "today_signal": "GOOG above SMAs. Hold; add on dips to $175.",
-    "position_qty": 4,
-    "cost_basis": 665.88,
+    "position_qty": 1.931,
+    "cost_basis": 216.77,
     "holding_status": "Held",
     "stop_loss": 169.00,
     "stop_type": "trailing"
@@ -253,8 +253,8 @@
       "SMA_200": 35.80
     },
     "today_signal": "BAC recent breakout. Hold; add on dips to $38.50.",
-    "position_qty": 15,
-    "cost_basis": 598.65,
+    "position_qty": 29.2748,
+    "cost_basis": 1127.19,
     "holding_status": "Held",
     "stop_loss": 37.90,
     "stop_type": "trailing"
@@ -273,8 +273,8 @@
       "SMA_200": 17.20
     },
     "today_signal": "PRDO uptrend continues. Hold; take partial profits near $21.",
-    "position_qty": 18,
-    "cost_basis": 349.20,
+    "position_qty": 8,
+    "cost_basis": 170.20,
     "holding_status": "Held",
     "stop_loss": 18.80,
     "stop_type": "trailing"
@@ -293,8 +293,8 @@
       "SMA_200": 35.60
     },
     "today_signal": "INTC underperforming. Hold; watch for reversal above $32.",
-    "position_qty": 18,
-    "cost_basis": 546.30,
+    "position_qty": 5,
+    "cost_basis": 102.52,
     "holding_status": "Held",
     "stop_loss": 28.80,
     "stop_type": "trailing"
@@ -313,8 +313,8 @@
       "SMA_200": 160.00
     },
     "today_signal": "GOOGL strong momentum. Hold; add on dips near $173.",
-    "position_qty": 3,
-    "cost_basis": 505.20,
+    "position_qty": 10.7361,
+    "cost_basis": 1327.86,
     "holding_status": "Held",
     "stop_loss": 169.00,
     "stop_type": "trailing"
@@ -333,8 +333,8 @@
       "SMA_200": 41.00
     },
     "today_signal": "GM recent breakout. Hold; consider profit at $50.",
-    "position_qty": 12,
-    "cost_basis": 541.80,
+    "position_qty": 1,
+    "cost_basis": 55.74,
     "holding_status": "Held",
     "stop_loss": 44.90,
     "stop_type": "trailing"
@@ -353,8 +353,8 @@
       "SMA_200": 330.00
     },
     "today_signal": "HD rangebound. Hold; add above $350 breakout.",
-    "position_qty": 2,
-    "cost_basis": 668.82,
+    "position_qty": 4.1487,
+    "cost_basis": 1431.19,
     "holding_status": "Held",
     "stop_loss": 319.00,
     "stop_type": "trailing"
@@ -373,8 +373,8 @@
       "SMA_200": 162.00
     },
     "today_signal": "AMZN strong uptrend. Hold; add on dips near $182.",
-    "position_qty": 3,
-    "cost_basis": 528.63,
+    "position_qty": 8,
+    "cost_basis": 1677.77,
     "holding_status": "Held",
     "stop_loss": 174.00,
     "stop_type": "trailing"
@@ -394,7 +394,7 @@
     },
     "today_signal": "META strong uptrend. Hold; consider profit-taking near $520.",
     "position_qty": 1,
-    "cost_basis": 480.00,
+    "cost_basis": 719.41,
     "holding_status": "Held",
     "stop_loss": 489.00,
     "stop_type": "trailing"
@@ -413,8 +413,8 @@
       "SMA_200": 35.00
     },
     "today_signal": "BP consolidating. Hold for yield; add above $37.",
-    "position_qty": 16,
-    "cost_basis": 572.00,
+    "position_qty": 22,
+    "cost_basis": 645.78,
     "holding_status": "Held",
     "stop_loss": 33.90,
     "stop_type": "trailing"
@@ -433,8 +433,8 @@
       "SMA_200": 58.00
     },
     "today_signal": "OXY recent bounce. Hold; add on dips to $60.",
-    "position_qty": 8,
-    "cost_basis": 489.12,
+    "position_qty": 1,
+    "cost_basis": 43.73,
     "holding_status": "Held",
     "stop_loss": 56.80,
     "stop_type": "trailing"
@@ -453,8 +453,8 @@
       "SMA_200": 200.00
     },
     "today_signal": "BA under pressure. Hold; reduce if $172 fails.",
-    "position_qty": 3,
-    "cost_basis": 537.00,
+    "position_qty": 1,
+    "cost_basis": 204.84,
     "holding_status": "Held",
     "stop_loss": 164.00,
     "stop_type": "trailing"
@@ -473,8 +473,8 @@
       "SMA_200": 1400.00
     },
     "today_signal": "AVGO strong uptrend. Hold; consider profit-taking above $1750.",
-    "position_qty": 0.5,
-    "cost_basis": 819.50,
+    "position_qty": 4.4808,
+    "cost_basis": 435.61,
     "holding_status": "Held",
     "stop_loss": 1599.00,
     "stop_type": "trailing"
@@ -493,8 +493,8 @@
       "SMA_200": 80.00
     },
     "today_signal": "BABA under pressure. Hold; cut if $72 fails.",
-    "position_qty": 8,
-    "cost_basis": 594.56,
+    "position_qty": 4,
+    "cost_basis": 550.45,
     "holding_status": "Held",
     "stop_loss": 67.80,
     "stop_type": "trailing"
@@ -513,8 +513,8 @@
       "SMA_200": 950.00
     },
     "today_signal": "NVDA AI momentum. Hold; consider profit-taking above $1300.",
-    "position_qty": 1,
-    "cost_basis": 1124.00,
+    "position_qty": 9.0078,
+    "cost_basis": 153.65,
     "holding_status": "Held",
     "stop_loss": 1149.00,
     "stop_type": "trailing"
@@ -534,7 +534,7 @@
     },
     "today_signal": "VHT sector rotation. Hold; add above $268.",
     "position_qty": 2,
-    "cost_basis": 510.00,
+    "cost_basis": 489.76,
     "holding_status": "Held",
     "stop_loss": 254.00,
     "stop_type": "trailing"
@@ -553,8 +553,8 @@
       "SMA_200": 76.00
     },
     "today_signal": "SCHD dividend ETF. Hold for yield; add above $81.",
-    "position_qty": 3,
-    "cost_basis": 238.47,
+    "position_qty": 18,
+    "cost_basis": 475.66,
     "holding_status": "Held",
     "stop_loss": 74.00,
     "stop_type": "trailing"
@@ -574,7 +574,7 @@
     },
     "today_signal": "VTI broad market strength. Hold; add on dips near $258.",
     "position_qty": 2,
-    "cost_basis": 522.94,
+    "cost_basis": 579.65,
     "holding_status": "Held",
     "stop_loss": 249.00,
     "stop_type": "trailing"
@@ -594,7 +594,7 @@
     },
     "today_signal": "QQQ tech sector strength. Hold; add on dips near $455.",
     "position_qty": 1,
-    "cost_basis": 441.00,
+    "cost_basis": 559.69,
     "holding_status": "Held",
     "stop_loss": 439.00,
     "stop_type": "trailing"
@@ -613,8 +613,8 @@
       "SMA_200": 87.00
     },
     "today_signal": "XLE consolidating. Hold for yield; add above $92.",
-    "position_qty": 2,
-    "cost_basis": 181.00,
+    "position_qty": 5,
+    "cost_basis": 426.28,
     "holding_status": "Held",
     "stop_loss": 84.00,
     "stop_type": "trailing"
@@ -634,7 +634,7 @@
     },
     "today_signal": "BROS is testing SMA200 at $56. A bounce here could trigger a reversal; failure opens downside to $50.",
     "position_qty": 7,
-    "cost_basis": 218.98,
+    "cost_basis": 218.96,
     "holding_status": "Held",
     "stop_loss": 56.00,
     "stop_type": "trailing"

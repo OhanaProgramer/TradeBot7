@@ -21,7 +21,7 @@
   td.wrap-action {
     white-space: normal !important;
     word-break: break-word;
-    max-width: 200px;
+    max-width: 300px;
   }
 
   td.wrap-action .badge {
@@ -71,6 +71,8 @@
         <tr>
           <th scope="col">Ticker</th>
           <th scope="col" data-bs-toggle="tooltip" title="Trend direction">Trend</th>
+          <th scope="col">Qty</th>
+          <th scope="col">Cost Basis</th>
           <th scope="col">Major S.</th>
           <th scope="col">Minor S.</th>
           <th scope="col">Live Price</th>
@@ -90,6 +92,8 @@
               {{ item.trend }}
             </span>
           </td>
+          <td>{{ item.position_qty }}</td>
+          <td>{{ item.cost_basis }}</td>
           <td>{{ item.support_levels[-1] }}</td>
           <td>{{ item.support_levels[0] }}</td>
           <td><span class="text-muted">--</span></td>
@@ -129,15 +133,15 @@
 
   // ✅ Function to apply row highlighting based on new column layout
   function highlightRow(row, price) {
-    const majorSupport = parseFloat(row.children[2].innerText);
-    const minorSupport = parseFloat(row.children[3].innerText);
+    const majorSupport = parseFloat(row.children[4].innerText);
+    const minorSupport = parseFloat(row.children[5].innerText);
     const supportLevels = [majorSupport, minorSupport].filter(n => !isNaN(n));
 
-    const resistance1 = parseFloat(row.children[5].innerText);
-    const resistance2 = parseFloat(row.children[6].innerText);
+    const resistance1 = parseFloat(row.children[7].innerText);
+    const resistance2 = parseFloat(row.children[8].innerText);
     const resistanceLevels = [resistance1, resistance2].filter(n => !isNaN(n));
 
-    const stop = parseFloat(row.children[7].innerText);
+    const stop = parseFloat(row.children[9].innerText);
 
     const isNearSupport = supportLevels.some(s => Math.abs(price - s) / s < 0.02);
     const isNearBreakout = resistanceLevels.some(r => Math.abs(price - r) / r < 0.02);
@@ -145,10 +149,10 @@
 
     // Clear previous highlights
     row.classList.remove('near-stop','near-support','near-breakout');
-    row.children[2].classList.remove('support-alert');
-    row.children[3].classList.remove('support-alert');
-    row.children[5].classList.remove('resistance-alert');
-    row.children[6].classList.remove('resistance-alert');
+    row.children[4].classList.remove('support-alert');
+    row.children[5].classList.remove('support-alert');
+    row.children[7].classList.remove('resistance-alert');
+    row.children[8].classList.remove('resistance-alert');
 
     // Row-level highlights
     if (isNearStop) row.classList.add('near-stop');
@@ -157,37 +161,54 @@
 
     // Cell-level highlights
     if (isNearSupport) {
-      row.children[2].classList.add('support-alert');
-      row.children[3].classList.add('support-alert');
+      row.children[4].classList.add('support-alert');
+      row.children[5].classList.add('support-alert');
     }
     if (isNearBreakout) {
-      row.children[5].classList.add('resistance-alert');
-      row.children[6].classList.add('resistance-alert');
+      row.children[7].classList.add('resistance-alert');
+      row.children[8].classList.add('resistance-alert');
     }
   }
 
   // ✅ Initial highlight based on static Price
   document.querySelectorAll('#strategyTable tbody tr').forEach(row => {
-    const staticPrice = parseFloat(row.children[4].innerText) || 0;
+    const staticPrice = parseFloat(row.children[6].innerText) || 0;
     highlightRow(row, staticPrice);
   });
 
-  // ✅ Fetch live prices, update column, and re-highlight with Live Price
+  // ✅ Fetch live prices, update column, update data-price, recalc performance, and re-highlight with Live Price
   document.querySelectorAll('#strategyTable tbody tr').forEach(row => {
     const ticker = row.children[0].innerText;
     fetch(`/api/live/${ticker}`)
       .then(res => res.json())
       .then(data => {
-        const cell = row.children[4];
+        const cell = row.children[6];
         if (data.live_price) {
-          cell.innerHTML = `<strong>${data.live_price}</strong>`;
-          highlightRow(row, parseFloat(data.live_price));
+          const livePrice = parseFloat(data.live_price);
+          cell.innerHTML = `<strong>${livePrice}</strong>`;
+          
+          // Update data-price attribute to use live price
+          const perfCell = row.querySelector('.performance-cell');
+          if (perfCell) perfCell.setAttribute('data-price', livePrice);
+
+          // Recalculate performance dynamically
+          const cost = parseFloat(perfCell.getAttribute('data-cost'));
+          const qty = parseFloat(perfCell.getAttribute('data-qty')) || 1;
+          const marketValue = livePrice * qty;
+          if (!isNaN(marketValue) && !isNaN(cost) && cost > 0) {
+            const perf = ((marketValue - cost) / cost * 100).toFixed(2);
+            perfCell.textContent = perf + '%';
+            perfCell.style.color = perf > 0 ? 'green' : (perf < 0 ? 'red' : 'gray');
+          }
+
+          // Reapply highlights with the updated price
+          highlightRow(row, livePrice);
         } else {
           cell.innerHTML = `<span class="text-muted">N/A</span>`;
         }
       })
       .catch(() => {
-        row.children[4].innerHTML = `<span class="text-muted">N/A</span>`;
+        row.children[6].innerHTML = `<span class="text-muted">N/A</span>`;
       });
   });
 
