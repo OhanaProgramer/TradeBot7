@@ -1,10 +1,10 @@
 [
   {
     "ticker": "NIO",
-    "price": 4.84,
-    "support_levels": ["4.50", "4.20"],
+    "price": 4.72,
+    "support_levels": ["4.20", "4.00"],
     "resistance_levels": ["5.00", "5.50"],
-    "trend": "Neutral → Potential Bullish Reversal",
+    "trend": "Neutral → Attempting Bullish Reversal",
     "indicators": {
       "RSI": 43.5,
       "MACD": "-0.1 (near crossover)",
@@ -12,12 +12,12 @@
       "SMA_50": 5.45,
       "SMA_200": 5.00
     },
-    "today_signal": "Price is testing the $5.00 resistance and SMA200. Watch for breakout confirmation with MACD crossover; otherwise, risk of rejection remains high.",
+    "today_signal": "NIO closed slightly below the $5.00 resistance but above support at $4.20. Price action shows stabilization with potential upside if volume increases. MACD near crossover suggests a possible bullish move, but risk remains if $4.20 fails.",
     "position_qty": 86,
     "cost_basis": 466.22,
     "holding_status": "Held",
-    "stop_loss": 4.40,
-    "stop_type": "trailing",
+    "stop_loss": 4.20,
+    "stop_type": "hard",
     "trailing_stop_pct": null
   },
   {
@@ -43,7 +43,7 @@
   },
   {
     "ticker": "UPS",
-    "price": 101.49,
+    "price": 92.14,
     "support_levels": ["99.00", "90.00"],
     "resistance_levels": ["105.00", "113.00"],
     "trend": "Bearish",
@@ -54,12 +54,12 @@
       "SMA_50": 113.6,
       "SMA_200": 134.1
     },
-    "today_signal": "UPS is trading below all major SMAs with bearish MACD. Unless price reclaims $105 with volume, trend remains weak; watch $99 support closely.",
+    "today_signal": "UPS has broken below the $99 minor support and is now testing major support at $90. Momentum remains bearish with no sign of reversal. Hold cautiously while $90 is being tested. If $90 fails, consider reducing or exiting the position. No adding until price reclaims $99 with strong volume.",
     "position_qty": 7,
     "cost_basis": 774.39,
     "holding_status": "Held",
     "stop_loss": null,
-    "stop_type": "trailing",
+    "stop_type": "none",
     "trailing_stop_pct": null
   },
   {
@@ -484,9 +484,9 @@
   },
   {
     "ticker": "AVGO",
-    "price": 1678.99,
-    "support_levels": ["1650.00", "1600.00"],
-    "resistance_levels": ["1750.00", "1800.00"],
+    "price": 298.14,
+    "support_levels": ["290.00", "280.00"],
+    "resistance_levels": ["310.00", "320.00"],
     "trend": "Bullish",
     "indicators": {
       "RSI": 73.0,
@@ -499,7 +499,7 @@
     "position_qty": 4.4808,
     "cost_basis": 435.61,
     "holding_status": "Held",
-    "stop_loss": 1599.00,
+    "stop_loss": 271.00,
     "stop_type": "trailing",
     "trailing_stop_pct": 10.0
   },
@@ -526,9 +526,9 @@
   },
   {
     "ticker": "NVDA",
-    "price": 1224.40,
-    "support_levels": ["1200.00", "1150.00"],
-    "resistance_levels": ["1300.00", "1400.00"],
+    "price": 175.84,
+    "support_levels": ["172.00", "165.00"],
+    "resistance_levels": ["180.00", "190.00"],
     "trend": "Bullish",
     "indicators": {
       "RSI": 75.0,
@@ -541,7 +541,7 @@
     "position_qty": 9.0078,
     "cost_basis": 153.65,
     "holding_status": "Held",
-    "stop_loss": 1149.00,
+    "stop_loss": 160.00,
     "stop_type": "trailing",
     "trailing_stop_pct": 15.0
   },

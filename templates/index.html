@@ -85,7 +85,7 @@
       </thead>
       <tbody>
         {% for item in data %}
-        <tr>
+        <tr data-original-price="{{ item.price }}">
           <td><strong>{{ item.ticker }}</strong></td>
           <td class="trend-cell">
             <span class="badge {% if item.trend == 'Bullish' %}bg-success{% elif item.trend == 'Bearish' %}bg-danger{% else %}bg-secondary{% endif %}">
@@ -143,14 +143,35 @@
 
     const stop = parseFloat(row.children[9].innerText);
 
-    const isNearSupport = supportLevels.some(s => Math.abs(price - s) / s < 0.02);
+    // ✅ Determine if support is breached or being approached
+    const breachedSupport = supportLevels.some(s => price < s);
+    const isNearSupport = supportLevels.some(s => Math.abs(price - s) / s < 0.02 && price >= s);
+
+    // ✅ Apply support cell highlights
+    row.children[4].classList.remove('support-alert');
+    row.children[5].classList.remove('support-alert');
+    row.children[4].style.backgroundColor = '';
+    row.children[5].style.backgroundColor = '';
+
+    if (breachedSupport) {
+      // Light red for breached support
+      row.children[4].classList.add('support-alert');
+      row.children[5].classList.add('support-alert');
+      row.children[4].style.backgroundColor = '#f8d7da';
+      row.children[5].style.backgroundColor = '#f8d7da';
+    } else if (isNearSupport) {
+      // Light orange for approaching support
+      row.children[4].classList.add('support-alert');
+      row.children[5].classList.add('support-alert');
+      row.children[4].style.backgroundColor = '#ffe5b4';
+      row.children[5].style.backgroundColor = '#ffe5b4';
+    }
+
     const isNearBreakout = resistanceLevels.some(r => Math.abs(price - r) / r < 0.02);
     const isNearStop = !isNaN(stop) && Math.abs(price - stop) / stop < 0.01;
 
     // Clear previous highlights
     row.classList.remove('near-stop','near-support','near-breakout');
-    row.children[4].classList.remove('support-alert');
-    row.children[5].classList.remove('support-alert');
     row.children[7].classList.remove('resistance-alert');
     row.children[8].classList.remove('resistance-alert');
 
@@ -160,10 +181,6 @@
     else if (isNearBreakout) row.classList.add('near-breakout');
 
     // Cell-level highlights
-    if (isNearSupport) {
-      row.children[4].classList.add('support-alert');
-      row.children[5].classList.add('support-alert');
-    }
     if (isNearBreakout) {
       row.children[7].classList.add('resistance-alert');
       row.children[8].classList.add('resistance-alert');
@@ -187,6 +204,14 @@
           const livePrice = parseFloat(data.live_price);
           cell.innerHTML = `<strong>${livePrice}</strong>`;
           
+          // Add movement arrow based on original price
+          const originalPrice = parseFloat(row.getAttribute('data-original-price'));
+          if (!isNaN(originalPrice)) {
+            const arrow = livePrice > originalPrice ? '▲' : (livePrice < originalPrice ? '▼' : '↔');
+            const color = livePrice > originalPrice ? 'green' : (livePrice < originalPrice ? 'red' : 'gray');
+            cell.innerHTML += ` <span style="color:${color}">${arrow}</span>`;
+          }
+
           // Update data-price attribute to use live price
           const perfCell = row.querySelector('.performance-cell');
           if (perfCell) perfCell.setAttribute('data-price', livePrice);

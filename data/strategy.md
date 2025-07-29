@@ -35,8 +35,9 @@ Human - 28 Jul 25 (1930 CST)
 - **Resistance:** $105.00, $113.00  
 
 #### ✅ Action Plan
-- Maintain stop near $98.50; consider reducing exposure if $99 fails.  
-- Wait for reclaim of $105 with volume before adding.  
+- Major support at $90 is currently being tested after the break below $99.
+- Hold only if $90 holds; if it fails, prepare to reduce or exit position.
+- No adding until price reclaims $99 with strong volume.
 
 ---
 

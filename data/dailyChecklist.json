@@ -46,11 +46,11 @@
   {
     "ticker": "NVDA",
     "watch_for": [
-      "profit_take_1300",
-      "support_1200"
+      "support_172_test",
+      "profit_take_180_190"
     ],
-    "stop_active": "1149.00 (trailing 15%)",
-    "action_needed": "Consider profit-taking above $1300; trailing stop at $1149."
+    "stop_active": "160.00 (trailing 15%)",
+    "action_needed": "NVDA is trading at $175.84, holding above major support at $172. Momentum remains bullish. Hold; consider profit-taking near $180 and $190 resistance levels. Trailing stop at $160 to lock gains if momentum fails."
   },
   {
     "ticker": "BTC",
@@ -64,11 +64,11 @@
   {
     "ticker": "UPS",
     "watch_for": [
-      "support_99",
-      "breakout_105"
+      "support_90_test",
+      "breakout_99"
     ],
     "stop_active": "None",
-    "action_needed": "Monitor $99 support; consider placing a stop near $98.50. Add only above $105 breakout with volume."
+    "action_needed": "UPS has broken below minor support ($99) and is threatening the $90 major support. Hold only if $90 holds. If $90 breaks, reduce or exit. Do not add until price reclaims $99 with strong volume."
   },
   {
     "ticker": "SONY",
