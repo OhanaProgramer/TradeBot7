@@ -11,7 +11,7 @@ PORTFOLIO_PATH = os.path.join(BASE_DIR, "data", "static", "portfolio.json")
 with open(PORTFOLIO_PATH, "r") as f:
     portfolio_data = json.load(f)
 
-TICKERS = [pos["name"] for pos in portfolio_data.get("position_list", [])]
+TICKERS = [pos["ticker"] for pos in portfolio_data.get("position_list", [])]
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 end = datetime.today()

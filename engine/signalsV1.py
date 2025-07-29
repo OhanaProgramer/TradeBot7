@@ -21,6 +21,25 @@ def calculate_signals(df):
     df["MACD"] = ema_12 - ema_26
     df["MACD_Signal"] = df["MACD"].ewm(span=9, adjust=False).mean()
 
+    # --- Professional indicators (optional columns) ---
+    # Calculate Bollinger Bands (20 period, 2 std)
+    sma_20 = df["Adj Close"].rolling(window=20).mean()
+    std_20 = df["Adj Close"].rolling(window=20).std()
+    df["BB_Upper"] = sma_20 + (2 * std_20)
+    df["BB_Mid"] = sma_20
+    df["BB_Lower"] = sma_20 - (2 * std_20)
+
+    # Calculate EMA 9 and EMA 21
+    df["EMA_9"] = df["Adj Close"].ewm(span=9, adjust=False).mean()
+    df["EMA_21"] = df["Adj Close"].ewm(span=21, adjust=False).mean()
+
+    # Calculate ATR (Average True Range, 14 period)
+    high_low = df["High"] - df["Low"]
+    high_close = (df["High"] - df["Adj Close"].shift()).abs()
+    low_close = (df["Low"] - df["Adj Close"].shift()).abs()
+    tr = high_low.to_frame(name="HL").join(high_close.rename("HC")).join(low_close.rename("LC")).max(axis=1)
+    df["ATR_14"] = tr.rolling(window=14).mean()
+
     return df
 
 def run():

@@ -30,6 +30,11 @@ console = Console()
 RSI_BUY_RANGE = range(20, 36, 2)
 RSI_SELL_RANGE = range(60, 81, 2)
 
+# Additional indicator toggles for grid search
+USE_MACD = [False, True]
+USE_BB = [False, True]
+USE_ATR = [False, True]
+
 def load_portfolio():
     with open(PORTFOLIO_PATH, "r") as f:
         return json.load(f)["position_list"]
@@ -191,42 +196,48 @@ def run_optimization(target_return=None):
         results = []
 
         # === Progress Bar Setup ===
-        total_iters = len(RSI_BUY_RANGE) * len(RSI_SELL_RANGE)
+        total_iters = len(USE_MACD) * len(USE_BB) * len(USE_ATR) * len(RSI_BUY_RANGE) * len(RSI_SELL_RANGE)
         current_iter = 0
         start_time = time.time()
         progress = Progress()
         task = progress.add_task(f"[cyan]Optimizing {ticker}...", total=total_iters)
 
         with progress:
-            for rsi_buy in RSI_BUY_RANGE:
-                for rsi_sell in RSI_SELL_RANGE:
-                    current_iter += 1
-                    elapsed = time.time() - start_time
-                    progress.update(
-                        task,
-                        advance=1,
-                        description=f"[green]{ticker} {current_iter}/{total_iters} | {elapsed:.1f}s elapsed[/green]"
-                    )
+            for use_macd in USE_MACD:
+                for use_bb in USE_BB:
+                    for use_atr in USE_ATR:
+                        for rsi_buy in RSI_BUY_RANGE:
+                            for rsi_sell in RSI_SELL_RANGE:
+                                current_iter += 1
+                                elapsed = time.time() - start_time
+                                progress.update(
+                                    task,
+                                    advance=1,
+                                    description=f"[green]{ticker} {current_iter}/{total_iters} | {elapsed:.1f}s elapsed[/green]"
+                                )
 
-                    strategy = {
-                        "rsi_buy": rsi_buy,
-                        "rsi_sell": rsi_sell
-                    }
-                    try:
-                        trades, final_value, sharpe_ratio = simulate_trades(df, strategy)
-                        pct_return = (final_value - 10000) / 10000 * 100
-                        delta = abs(pct_return - df_return)
-                        alpha = pct_return - df_return
-                        results.append({
-                            "rsi_buy": rsi_buy,
-                            "rsi_sell": rsi_sell,
-                            "pct_return": pct_return,
-                            "delta": delta,
-                            "sharpe": sharpe_ratio,
-                            "alpha": alpha
-                        })
-                    except Exception as e:
-                        console.print(f"[red]Error with strategy {strategy}: {e}[/red]")
+                                strategy = {
+                                    "rsi_buy": rsi_buy,
+                                    "rsi_sell": rsi_sell,
+                                    "use_macd": use_macd,
+                                    "use_bb": use_bb,
+                                    "use_atr": use_atr
+                                }
+                                try:
+                                    trades, final_value, sharpe_ratio = simulate_trades(df, strategy)
+                                    pct_return = (final_value - 10000) / 10000 * 100
+                                    delta = abs(pct_return - df_return)
+                                    alpha = pct_return - df_return
+                                    results.append({
+                                        "rsi_buy": rsi_buy,
+                                        "rsi_sell": rsi_sell,
+                                        "pct_return": pct_return,
+                                        "delta": delta,
+                                        "sharpe": sharpe_ratio,
+                                        "alpha": alpha
+                                    })
+                                except Exception as e:
+                                    console.print(f"[red]Error with strategy {strategy}: {e}[/red]")
 
         # Sort results by Sharpe Ratio descending
         results.sort(key=lambda x: x["sharpe"], reverse=True)

@@ -1,0 +1,64 @@
+
+
+[
+  {
+    "ticker": "AAPL",
+    "watch_for": [
+      "dip_210",
+      "breakout_220"
+    ],
+    "stop_active": "208 (trailing)",
+    "action_needed": "Watch for dip to $210 to add; monitor breakout above $220; trailing stop in place."
+  },
+  {
+    "ticker": "BAC",
+    "watch_for": [
+      "dip_38.5"
+    ],
+    "stop_active": "37.90 (trailing 5%)",
+    "action_needed": "Monitor for dip to $38.50 to add; trailing stop active."
+  },
+  {
+    "ticker": "BROS",
+    "watch_for": [
+      "support_56"
+    ],
+    "stop_active": "56.00 (trailing 5%)",
+    "action_needed": "Watch $56 support for reversal; trailing stop at $56."
+  },
+  {
+    "ticker": "AMZN",
+    "watch_for": [
+      "dip_182"
+    ],
+    "stop_active": "174.00 (trailing 5%)",
+    "action_needed": "Monitor for dip to $182 to add; trailing stop at $174."
+  },
+  {
+    "ticker": "NVDA",
+    "watch_for": [
+      "profit_take_1300",
+      "support_1200"
+    ],
+    "stop_active": "1149.00 (trailing 15%)",
+    "action_needed": "Consider profit-taking above $1300; trailing stop at $1149."
+  },
+  {
+    "ticker": "BTC",
+    "watch_for": [
+      "support_66000",
+      "breakout_70000"
+    ],
+    "stop_active": "65500",
+    "action_needed": "Watch $66,000 support; reduce if it fails. Avoid adding unless $70,000 reclaims."
+  },
+  {
+    "ticker": "UPS",
+    "watch_for": [
+      "support_99",
+      "breakout_105"
+    ],
+    "stop_active": "None",
+    "action_needed": "Monitor $99 support; consider placing a stop near $98.50. Add only above $105 breakout with volume."
+  }
+]
