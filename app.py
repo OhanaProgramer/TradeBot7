@@ -11,6 +11,21 @@ def index():
     with open('data/dailyChecklist.json') as f:
         checklist = json.load(f)
 
+    # Calculate dynamic trailing stops before rendering table
+    for s in strategy:
+        if (
+            s.get('stop_type') == 'trailing'
+            and s.get('stop_loss') is not None
+            and s.get('price') is not None
+        ):
+            try:
+                existing_stop = float(s['stop_loss'])
+                price = float(s['price'])
+                new_stop = max(existing_stop, price * (1 - 0.05))
+                s['stop_loss'] = round(new_stop, 2)
+            except Exception:
+                pass
+
     # Create a mapping from ticker → action_needed
     actions = {item['ticker']: item['action_needed'] for item in checklist}
 

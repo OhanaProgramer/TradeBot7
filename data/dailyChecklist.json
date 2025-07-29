@@ -2,6 +2,15 @@
 
 [
   {
+    "ticker": "NIO",
+    "watch_for": [
+      "support_4.20",
+      "breakout_5.00"
+    ],
+    "stop_active": "4.20 (hard stop)",
+    "action_needed": "Hold unless $4.20 support fails; consider adding only on breakout above $5.00 with strong volume."
+  },
+  {
     "ticker": "AAPL",
     "watch_for": [
       "dip_210",
@@ -60,5 +69,14 @@
     ],
     "stop_active": "None",
     "action_needed": "Monitor $99 support; consider placing a stop near $98.50. Add only above $105 breakout with volume."
+  },
+  {
+    "ticker": "SONY",
+    "watch_for": [
+      "support_24",
+      "breakout_26"
+    ],
+    "stop_active": "23.20 (trailing)",
+    "action_needed": "Hold unless $24 support fails; consider adding only on breakout above $26 with volume. Trailing stop at $23.20."
   }
 ]

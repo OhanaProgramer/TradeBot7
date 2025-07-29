@@ -17,7 +17,8 @@
     "cost_basis": 466.22,
     "holding_status": "Held",
     "stop_loss": 4.40,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "PLNT",
@@ -37,7 +38,8 @@
     "cost_basis": 0,
     "holding_status": "Watch",
     "stop_loss": null,
-    "stop_type": "watch"
+    "stop_type": "watch",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "UPS",
@@ -56,8 +58,9 @@
     "position_qty": 7,
     "cost_basis": 774.39,
     "holding_status": "Held",
-    "stop_loss": 98.50,
-    "stop_type": "trailing"
+    "stop_loss": null,
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "SONY",
@@ -77,7 +80,8 @@
     "cost_basis": 1832.13,
     "holding_status": "Held",
     "stop_loss": 23.20,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": 5.0
   },
   {
     "ticker": "F",
@@ -97,7 +101,8 @@
     "cost_basis": 661.14,
     "holding_status": "Held",
     "stop_loss": 11.90,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "VZ",
@@ -117,7 +122,8 @@
     "cost_basis": 1320.20,
     "holding_status": "Held",
     "stop_loss": 38.80,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "OLP",
@@ -137,7 +143,8 @@
     "cost_basis": 300.54,
     "holding_status": "Held",
     "stop_loss": 21.80,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "JNJ",
@@ -157,7 +164,8 @@
     "cost_basis": 465.75,
     "holding_status": "Held",
     "stop_loss": 143.90,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "SBUX",
@@ -177,7 +185,8 @@
     "cost_basis": 925.72,
     "holding_status": "Held",
     "stop_loss": 77.50,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "ISRG",
@@ -197,7 +206,8 @@
     "cost_basis": 14.22,
     "holding_status": "Held",
     "stop_loss": 405.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "NEE",
@@ -217,7 +227,8 @@
     "cost_basis": 211.10,
     "holding_status": "Held",
     "stop_loss": 68.90,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "GOOG",
@@ -237,7 +248,8 @@
     "cost_basis": 216.77,
     "holding_status": "Held",
     "stop_loss": 169.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "BAC",
@@ -257,7 +269,8 @@
     "cost_basis": 1127.19,
     "holding_status": "Held",
     "stop_loss": 37.90,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": 5.0
   },
   {
     "ticker": "PRDO",
@@ -277,7 +290,8 @@
     "cost_basis": 170.20,
     "holding_status": "Held",
     "stop_loss": 18.80,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "INTC",
@@ -297,7 +311,8 @@
     "cost_basis": 102.52,
     "holding_status": "Held",
     "stop_loss": 28.80,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "GOOGL",
@@ -317,7 +332,8 @@
     "cost_basis": 1327.86,
     "holding_status": "Held",
     "stop_loss": 169.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "GM",
@@ -337,7 +353,8 @@
     "cost_basis": 55.74,
     "holding_status": "Held",
     "stop_loss": 44.90,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "HD",
@@ -357,7 +374,8 @@
     "cost_basis": 1431.19,
     "holding_status": "Held",
     "stop_loss": 319.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "AMZN",
@@ -377,7 +395,8 @@
     "cost_basis": 1677.77,
     "holding_status": "Held",
     "stop_loss": 174.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": 10.0
   },
   {
     "ticker": "META",
@@ -397,7 +416,8 @@
     "cost_basis": 719.41,
     "holding_status": "Held",
     "stop_loss": 489.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "BP",
@@ -417,7 +437,8 @@
     "cost_basis": 645.78,
     "holding_status": "Held",
     "stop_loss": 33.90,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "OXY",
@@ -437,7 +458,8 @@
     "cost_basis": 43.73,
     "holding_status": "Held",
     "stop_loss": 56.80,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "BA",
@@ -457,7 +479,8 @@
     "cost_basis": 204.84,
     "holding_status": "Held",
     "stop_loss": 164.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "AVGO",
@@ -477,7 +500,8 @@
     "cost_basis": 435.61,
     "holding_status": "Held",
     "stop_loss": 1599.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": 10.0
   },
   {
     "ticker": "BABA",
@@ -497,7 +521,8 @@
     "cost_basis": 550.45,
     "holding_status": "Held",
     "stop_loss": 67.80,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "NVDA",
@@ -517,7 +542,8 @@
     "cost_basis": 153.65,
     "holding_status": "Held",
     "stop_loss": 1149.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": 15.0
   },
   {
     "ticker": "VHT",
@@ -537,7 +563,8 @@
     "cost_basis": 489.76,
     "holding_status": "Held",
     "stop_loss": 254.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "SCHD",
@@ -557,7 +584,8 @@
     "cost_basis": 475.66,
     "holding_status": "Held",
     "stop_loss": 74.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "VTI",
@@ -577,7 +605,8 @@
     "cost_basis": 579.65,
     "holding_status": "Held",
     "stop_loss": 249.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "QQQ",
@@ -597,7 +626,8 @@
     "cost_basis": 559.69,
     "holding_status": "Held",
     "stop_loss": 439.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": null
   },
   {
     "ticker": "XLE",
@@ -617,7 +647,8 @@
     "cost_basis": 426.28,
     "holding_status": "Held",
     "stop_loss": 84.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": 5.0
   },
   {
     "ticker": "BROS",
@@ -637,7 +668,8 @@
     "cost_basis": 218.96,
     "holding_status": "Held",
     "stop_loss": 56.00,
-    "stop_type": "trailing"
+    "stop_type": "trailing",
+    "trailing_stop_pct": 5.0
   },
   {
   "ticker": "AAPL",
@@ -657,7 +689,8 @@
   "cost_basis": 2710.85,
   "holding_status": "Held",
   "stop_loss": 208.00,
-  "stop_type": "trailing"
+  "stop_type": "trailing",
+  "trailing_stop_pct": 17.0
 },
 {
     "ticker": "BTC",
