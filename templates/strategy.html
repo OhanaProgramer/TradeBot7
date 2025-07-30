@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>TB7 – Strategy Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
-</head>
-<body>
-  <nav class="navbar navbar-dark bg-dark mb-4">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">📊 TB7 – Portfolio Dashboard</span>
-      <span class="text-light ms-auto">Last Updated: {{ last_updated }}</span>
-    </div>
-  </nav>
+{% extends "base.html" %}
 
+{% block content %}
   <div class="container">
     <div class="mb-3">
       <input type="text" id="searchBox" class="form-control" placeholder="🔍 Search ticker or action...">
@@ -38,7 +24,7 @@
       </thead>
       <tbody>
         {% for item in strategy %}
-        <tr data-original-price="{{ item.price }}">
+        <tr id="{{ item.ticker }}" data-original-price="{{ item.price }}">
           <td><strong>{{ item.ticker }}</strong></td>
           <td class="trend-cell">
             <span class="badge {% if item.trend == 'Bullish' %}bg-success{% elif item.trend == 'Bearish' %}bg-danger{% else %}bg-secondary{% endif %}">
@@ -64,12 +50,42 @@
       </tbody>
     </table>
   </div>
+{% endblock %}
 
-</script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
 <script>
   // Auto-refresh the page every 5 minutes
   setInterval(() => { location.reload(); }, 300000);
+
+  // Filter rows by ticker if URL fragment is present
+  document.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1).toUpperCase();
+    if (hash) {
+      const rows = document.querySelectorAll('#strategyTable tbody tr');
+      let found = false;
+      rows.forEach(row => {
+        if (row.id.toUpperCase() === hash) {
+          row.style.display = '';
+          found = true;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+      if (found) {
+        const container = document.querySelector('.container');
+        const btn = document.createElement('button');
+        btn.textContent = 'Show All';
+        btn.className = 'btn btn-secondary mb-3';
+        btn.addEventListener('click', () => {
+          rows.forEach(row => row.style.display = '');
+          btn.remove();
+          history.pushState("", document.title, window.location.pathname + window.location.search);
+        });
+        container.insertBefore(btn, container.firstChild);
+      }
+    }
+  });
 </script>
-</body>
-</html>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

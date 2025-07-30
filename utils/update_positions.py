@@ -56,9 +56,13 @@ for item in positions:
     # Recalculate alerts
     item["alerts"] = calculate_alerts(item)
 
-# Prepare output with last_updated timestamp
+# Prepare output with last_updated timestamp in format 'Wed, Jul 30, 2025 – 13:52'
+def format_last_updated(dt):
+    # Example: Wed, Jul 30, 2025 – 13:52
+    return dt.strftime("%a, %b %d, %Y – %H:%M")
+
 output = {
-    "last_updated": datetime.utcnow().isoformat() + "Z",
+    "last_updated": format_last_updated(datetime.utcnow()),
     "positions": positions
 }
 

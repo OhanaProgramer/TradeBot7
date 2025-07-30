@@ -1,9 +1,9 @@
 {
-  "last_updated": "2025-07-30T16:31:06.181405Z",
+  "last_updated": "Wed, Jul 30, 2025 \u2013 18:58",
   "positions": [
     {
       "ticker": "NIO",
-      "price": 4.59,
+      "price": 4.53,
       "position_qty": 86,
       "cost_basis": 466.22,
       "trend": "Neutral \u2192 Attempting Bullish Reversal",
@@ -36,7 +36,7 @@
     },
     {
       "ticker": "PLNT",
-      "price": 111.66,
+      "price": 110.15,
       "position_qty": 0,
       "cost_basis": 0,
       "trend": "Bullish",
@@ -69,7 +69,7 @@
     },
     {
       "ticker": "UPS",
-      "price": 89.52,
+      "price": 87.78,
       "position_qty": 7,
       "cost_basis": 774.39,
       "trend": "Bearish",
@@ -102,7 +102,7 @@
     },
     {
       "ticker": "SONY",
-      "price": 24.31,
+      "price": 24.18,
       "position_qty": 100,
       "cost_basis": 1832.13,
       "trend": "Sideways",
@@ -135,7 +135,7 @@
     },
     {
       "ticker": "F",
-      "price": 11.01,
+      "price": 10.89,
       "position_qty": 55,
       "cost_basis": 661.14,
       "trend": "Mildly Bullish",
@@ -201,7 +201,7 @@
     },
     {
       "ticker": "OLP",
-      "price": 23.03,
+      "price": 22.75,
       "position_qty": 13.56,
       "cost_basis": 300.54,
       "trend": "Mildly Bullish",
@@ -234,7 +234,7 @@
     },
     {
       "ticker": "JNJ",
-      "price": 168.03,
+      "price": 167.66,
       "position_qty": 3,
       "cost_basis": 465.75,
       "trend": "Bearish",
@@ -267,7 +267,7 @@
     },
     {
       "ticker": "SBUX",
-      "price": 94.0,
+      "price": 92.71,
       "position_qty": 9.9188,
       "cost_basis": 925.72,
       "trend": "Bearish",
@@ -300,7 +300,7 @@
     },
     {
       "ticker": "ISRG",
-      "price": 502.03,
+      "price": 498.88,
       "position_qty": 0.0463,
       "cost_basis": 14.22,
       "trend": "Bullish",
@@ -333,7 +333,7 @@
     },
     {
       "ticker": "NEE",
-      "price": 71.75,
+      "price": 71.61,
       "position_qty": 3,
       "cost_basis": 211.1,
       "trend": "Sideways",
@@ -366,7 +366,7 @@
     },
     {
       "ticker": "GOOG",
-      "price": 198.3,
+      "price": 197.41,
       "position_qty": 1.931,
       "cost_basis": 216.77,
       "trend": "Bullish",
@@ -399,7 +399,7 @@
     },
     {
       "ticker": "BAC",
-      "price": 48.35,
+      "price": 47.91,
       "position_qty": 29.2748,
       "cost_basis": 1127.19,
       "trend": "Bullish",
@@ -432,7 +432,7 @@
     },
     {
       "ticker": "PRDO",
-      "price": 28.86,
+      "price": 28.7,
       "position_qty": 8,
       "cost_basis": 170.2,
       "trend": "Bullish",
@@ -465,7 +465,7 @@
     },
     {
       "ticker": "INTC",
-      "price": 20.3,
+      "price": 20.17,
       "position_qty": 5,
       "cost_basis": 102.52,
       "trend": "Bearish",
@@ -498,7 +498,7 @@
     },
     {
       "ticker": "GOOGL",
-      "price": 197.42,
+      "price": 196.51,
       "position_qty": 10.7361,
       "cost_basis": 1327.86,
       "trend": "Bullish",
@@ -531,7 +531,7 @@
     },
     {
       "ticker": "GM",
-      "price": 52.59,
+      "price": 52.0,
       "position_qty": 1,
       "cost_basis": 55.74,
       "trend": "Bullish",
@@ -564,7 +564,7 @@
     },
     {
       "ticker": "HD",
-      "price": 376.13,
+      "price": 372.7,
       "position_qty": 4.1487,
       "cost_basis": 1431.19,
       "trend": "Sideways",
@@ -597,7 +597,7 @@
     },
     {
       "ticker": "AMZN",
-      "price": 230.5,
+      "price": 229.95,
       "position_qty": 8,
       "cost_basis": 1677.77,
       "trend": "Bullish",
@@ -630,7 +630,7 @@
     },
     {
       "ticker": "META",
-      "price": 700.72,
+      "price": 694.04,
       "position_qty": 1,
       "cost_basis": 719.41,
       "trend": "Bullish",
@@ -663,7 +663,7 @@
     },
     {
       "ticker": "BP",
-      "price": 32.36,
+      "price": 32.18,
       "position_qty": 22,
       "cost_basis": 645.78,
       "trend": "Sideways",
@@ -696,7 +696,7 @@
     },
     {
       "ticker": "OXY",
-      "price": 44.91,
+      "price": 44.46,
       "position_qty": 1,
       "cost_basis": 43.73,
       "trend": "Bullish",
@@ -729,7 +729,7 @@
     },
     {
       "ticker": "BA",
-      "price": 227.9,
+      "price": 224.71,
       "position_qty": 1,
       "cost_basis": 204.84,
       "trend": "Bearish",
@@ -762,7 +762,7 @@
     },
     {
       "ticker": "AVGO",
-      "price": 299.83,
+      "price": 300.99,
       "position_qty": 4.4808,
       "cost_basis": 435.61,
       "trend": "Bullish",
@@ -795,7 +795,7 @@
     },
     {
       "ticker": "BABA",
-      "price": 118.47,
+      "price": 117.21,
       "position_qty": 4,
       "cost_basis": 550.45,
       "trend": "Bearish",
@@ -828,7 +828,7 @@
     },
     {
       "ticker": "NVDA",
-      "price": 178.84,
+      "price": 178.58,
       "position_qty": 9.0078,
       "cost_basis": 153.65,
       "trend": "Bullish",
@@ -861,7 +861,7 @@
     },
     {
       "ticker": "VHT",
-      "price": 248.92,
+      "price": 247.78,
       "position_qty": 2,
       "cost_basis": 489.76,
       "trend": "Sideways",
@@ -894,7 +894,7 @@
     },
     {
       "ticker": "SCHD",
-      "price": 27.08,
+      "price": 26.92,
       "position_qty": 18,
       "cost_basis": 475.66,
       "trend": "Sideways",
@@ -927,7 +927,7 @@
     },
     {
       "ticker": "VTI",
-      "price": 313.43,
+      "price": 311.84,
       "position_qty": 2,
       "cost_basis": 579.65,
       "trend": "Bullish",
@@ -960,7 +960,7 @@
     },
     {
       "ticker": "QQQ",
-      "price": 569.28,
+      "price": 567.11,
       "position_qty": 1,
       "cost_basis": 559.69,
       "trend": "Bullish",
@@ -993,7 +993,7 @@
     },
     {
       "ticker": "XLE",
-      "price": 88.2,
+      "price": 87.68,
       "position_qty": 5,
       "cost_basis": 426.28,
       "trend": "Sideways",
@@ -1026,7 +1026,7 @@
     },
     {
       "ticker": "BROS",
-      "price": 59.36,
+      "price": 59.23,
       "position_qty": 7,
       "cost_basis": 218.96,
       "trend": "Bearish \u2192 Potential Reversal",
@@ -1059,7 +1059,7 @@
     },
     {
       "ticker": "AAPL",
-      "price": 210.0,
+      "price": 208.57,
       "position_qty": 17.06,
       "cost_basis": 2710.85,
       "trend": "Bullish",
@@ -1092,7 +1092,7 @@
     },
     {
       "ticker": "BTC",
-      "price": 52.21,
+      "price": 51.63,
       "position_qty": 0.039,
       "cost_basis": 2820.0,
       "trend": "Neutral-Bearish",
@@ -1122,7 +1122,7 @@
     },
     {
       "ticker": "ETH",
-      "price": 35.79,
+      "price": 35.25,
       "position_qty": 0.33,
       "cost_basis": 1070.0,
       "trend": "Bullish",

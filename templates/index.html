@@ -1,22 +1,39 @@
+{% extends "base.html" %}
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>TB7 – Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-  <nav class="navbar navbar-dark bg-dark mb-3">
-    <div class="container-fluid">
-      <span class="navbar-brand">📈 TB7 – Portfolio Overview</span>
-      <span id="lastUpdated" class="text-light ms-auto"></span>
-    </div>
-  </nav>
-
+{% block content %}
   <div class="container">
+    <h3>Portfolio Snapshot</h3>
+    <div class="row mb-4" id="portfolioSnapshot">
+      <div class="col-md-4">
+        <div class="card text-bg-primary mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Value</h5>
+            <p class="card-text" id="totalValue">--</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-bg-success mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Top 3 Winners</h5>
+            <ul class="list-unstyled mb-0" id="topWinners">
+              <li>--</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-bg-danger mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Top 3 Losers</h5>
+            <ul class="list-unstyled mb-0" id="topLosers">
+              <li>--</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h3>Positions Overview</h3>
     <table id="positionsTable" class="table table-striped table-bordered">
       <thead class="table-dark">
@@ -29,8 +46,13 @@
       </thead>
       <tbody></tbody>
     </table>
+    <div class="mt-2">
+      <a href="/strategy" class="btn btn-link">View full strategy page</a>
+    </div>
   </div>
+{% endblock %}
 
+{% block scripts %}
 <script>
 async function loadPositions() {
   try {
@@ -43,36 +65,94 @@ async function loadPositions() {
     const data = await res.json();
     console.log("Positions data:", data);
 
+    const positions = data.positions || [];
     const tbody = document.querySelector('#positionsTable tbody');
     tbody.innerHTML = '';
 
-    if (!Array.isArray(data) || data.length === 0) {
+    if (!Array.isArray(positions) || positions.length === 0) {
       tbody.innerHTML = '<tr><td colspan="4">No data available</td></tr>';
+      document.getElementById('totalValue').textContent = '--';
+      document.getElementById('topWinners').innerHTML = '<li>--</li>';
+      document.getElementById('topLosers').innerHTML = '<li>--</li>';
       return;
     }
 
-    data.forEach(item => {
-      const alerts = item.alerts || {};
-      const alertBadge = alerts.attention && alerts.attention !== 'none'
-        ? `<span class="badge bg-danger">${alerts.attention}</span>`
-        : `<span class="badge bg-success">OK</span>`;
+    // Calculate total portfolio value and identify top winners/losers
+    // Assume each position has fields: price, quantity, and changePercent (percentage change)
+    let totalValue = 0;
+    let winners = [];
+    let losers = [];
 
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td><strong>${item.ticker || '--'}</strong></td>
-        <td>${item.price ?? '--'}</td>
-        <td>${item.trend ?? '--'}</td>
-        <td>${alertBadge}</td>`;
-      tbody.appendChild(row);
+    positions.forEach(item => {
+      const price = Number(item.price) || 0;
+      const quantity = Number(item.quantity) || 0;
+      const changePercent = Number(item.changePercent) || 0;
+      const value = price * quantity;
+      totalValue += value;
+
+      if (changePercent > 0) {
+        winners.push({ ticker: item.ticker || '--', changePercent });
+      } else if (changePercent < 0) {
+        losers.push({ ticker: item.ticker || '--', changePercent });
+      }
     });
 
-    document.getElementById('lastUpdated').textContent =
-      'Last updated: ' + new Date().toLocaleTimeString();
+    // Sort winners descending by changePercent, losers ascending
+    winners.sort((a, b) => b.changePercent - a.changePercent);
+    losers.sort((a, b) => a.changePercent - b.changePercent);
+
+    // Take top 3 of each
+    const topWinners = winners.slice(0, 3);
+    const topLosers = losers.slice(0, 3);
+
+    // Update portfolio snapshot cards
+    document.getElementById('totalValue').textContent = '$' + totalValue.toFixed(2);
+
+    const winnersList = topWinners.length > 0
+      ? topWinners.map(w => `<li>${w.ticker}: ${w.changePercent.toFixed(2)}%</li>`).join('')
+      : '<li>--</li>';
+    document.getElementById('topWinners').innerHTML = winnersList;
+
+    const losersList = topLosers.length > 0
+      ? topLosers.map(l => `<li>${l.ticker}: ${l.changePercent.toFixed(2)}%</li>`).join('')
+      : '<li>--</li>';
+    document.getElementById('topLosers').innerHTML = losersList;
+
+    // Filter positions to only those with actionable alerts
+    const alertPositions = positions.filter(item => {
+      const alerts = item.alerts || {};
+      return (alerts.attention && alerts.attention !== 'none') || alerts.stop_near === true;
+    });
+
+    if (alertPositions.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="4">No critical alerts</td></tr>';
+    } else {
+      alertPositions.forEach(item => {
+        const alerts = item.alerts || {};
+        const alertBadge = alerts.attention && alerts.attention !== 'none'
+          ? `<span class="badge bg-danger">${alerts.attention}</span>`
+          : alerts.stop_near === true
+            ? `<span class="badge bg-warning">Stop Near</span>`
+            : `<span class="badge bg-success">OK</span>`;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td><a href="/strategy#${item.ticker}" style="text-decoration: underline; color: blue;"><strong>${item.ticker || '--'}</strong></a></td>
+          <td>${item.price ?? '--'}</td>
+          <td>${item.trend ?? '--'}</td>
+          <td>${alertBadge}</td>`;
+        tbody.appendChild(row);
+      });
+    }
+
 
   } catch (err) {
     console.error('Error loading positions:', err);
     const tbody = document.querySelector('#positionsTable tbody');
     tbody.innerHTML = '<tr><td colspan="4">Error loading data</td></tr>';
+    document.getElementById('totalValue').textContent = '--';
+    document.getElementById('topWinners').innerHTML = '<li>--</li>';
+    document.getElementById('topLosers').innerHTML = '<li>--</li>';
   }
 }
 
@@ -80,5 +160,4 @@ loadPositions();
 setInterval(loadPositions, 300000); // refresh every 5 min
 </script>
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-</html>
+{% endblock %}

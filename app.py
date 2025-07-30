@@ -21,7 +21,12 @@ def load_json(file_path):
 @app.route("/")
 def home():
     print(">>> / route hit")
-    return render_template("index.html")
+    try:
+        data = load_json(POSITIONS_FILE)
+        last_updated = data.get("last_updated", "Unknown") if isinstance(data, dict) else "Unknown"
+    except Exception:
+        last_updated = "Unknown"
+    return render_template("index.html", last_updated=last_updated)
 
 @app.route("/test")
 def test():
@@ -63,12 +68,18 @@ def update_positions_api():
         app.logger.error(f"Error updating positions: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
 
-# def auto_update_positions(interval=300):
-#     while True:
-#         subprocess.run(["python", "update_positions.py"])
-#         time.sleep(interval)
-#
-# threading.Thread(target=auto_update_positions, daemon=True).start()
+
+# Enable background thread to periodically update positions
+def auto_update_positions(interval=300):
+    script_path = BASE_PATH / "utils" / "update_positions.py"
+    while True:
+        try:
+            subprocess.run(["python", str(script_path)], check=True)
+        except Exception as e:
+            app.logger.error(f"Auto-update error: {e}")
+        time.sleep(interval)
+
+threading.Thread(target=auto_update_positions, args=(300,), daemon=True).start()
 
 if __name__ == "__main__":
     app.run(debug=True)
