@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TB7 – Strategy Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">📊 TB7 – Portfolio Dashboard</span>
+      <span class="text-light ms-auto">Last Updated: {{ last_updated }}</span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="mb-3">
+      <input type="text" id="searchBox" class="form-control" placeholder="🔍 Search ticker or action...">
+    </div>
+    <table id="strategyTable" class="table table-striped table-hover table-bordered align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Ticker</th>
+          <th scope="col" data-bs-toggle="tooltip" title="Trend direction">Trend</th>
+          <th scope="col">Qty</th>
+          <th scope="col">Cost Basis</th>
+          <th scope="col">Major S.</th>
+          <th scope="col">Minor S.</th>
+          <th scope="col">Live Price</th>
+          <th scope="col">R1</th>
+          <th scope="col">R2</th>
+          <th scope="col" data-bs-toggle="tooltip" title="Current stop-loss level to limit downside risk.">Stop</th>
+          <th scope="col">Performance</th>
+          <th scope="col">Action Needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in strategy %}
+        <tr data-original-price="{{ item.price }}">
+          <td><strong>{{ item.ticker }}</strong></td>
+          <td class="trend-cell">
+            <span class="badge {% if item.trend == 'Bullish' %}bg-success{% elif item.trend == 'Bearish' %}bg-danger{% else %}bg-secondary{% endif %}">
+              {{ item.trend }}
+            </span>
+          </td>
+          <td>{{ item.position_qty }}</td>
+          <td>{{ item.cost_basis }}</td>
+          <td>{{ item.support_levels[-1] }}</td>
+          <td>{{ item.support_levels[0] }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.resistance_levels[0] }}</td>
+          <td>{{ item.resistance_levels[1] }}</td>
+          <td>{{ item.action_plan.stop_loss }}</td>
+          <td class="performance-cell" data-cost="{{ item.cost_basis }}" data-price="{{ item.price }}" data-qty="{{ item.position_qty }}"></td>
+          <td class="wrap-action">
+            <span class="badge action-badge" data-bs-toggle="tooltip" title="{{ item.action_plan.narrative }}">
+              {{ item.action_plan.narrative }}
+            </span>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+  // Auto-refresh the page every 5 minutes
+  setInterval(() => { location.reload(); }, 300000);
+</script>
+</body>
+</html>

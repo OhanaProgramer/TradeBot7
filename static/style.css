@@ -1,0 +1,66 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.badge {
+  font-size: 0.85rem;
+}
+
+th {
+  cursor: pointer;
+}
+
+.near-support {
+  background-color: #fff3cd !important; /* yellow for near support */
+}
+
+.near-stop {
+  background-color: #f8d7da !important; /* red for near stop */
+}
+
+.near-breakout {
+  background-color: #d4edda !important; /* green for breakout */
+}
+
+.support-alert {
+  background-color: #f8d7da !important; /* light red for support being tested */
+}
+
+.resistance-alert {
+  background-color: #d4edda !important; /* light green for resistance being tested */
+}
+
+td.wrap-action {
+  white-space: normal !important;
+  word-break: break-word;
+  max-width: 300px;
+}
+
+td.wrap-action .badge {
+  display: block;
+  white-space: normal;
+  text-align: left;
+  padding: 5px 8px;
+}
+
+td.trend-cell {
+  max-width: 120px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+td.trend-cell .badge {
+  display: block;
+  white-space: normal;
+  text-align: center;
+  padding: 5px 8px;
+  line-height: 1.2;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #212529;
+  color: #fff;
+  z-index: 2;
+}

@@ -1,316 +1,84 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TB7 – Strategy Dashboard</title>
+  <title>TB7 – Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
-<style>
-  body { background-color: #f8f9fa; }
-  .badge { font-size: 0.85rem; }
-  th { cursor: pointer; }
-  .near-support { background-color: #fff3cd !important; }   /* yellow for near support */
-  .near-stop { background-color: #f8d7da !important; }      /* red for near stop */
-  .near-breakout { background-color: #d4edda !important; }  /* green for breakout */
-  .support-alert {
-    background-color: #f8d7da !important;   /* light red for support being tested */
-  }
-  .resistance-alert {
-    background-color: #d4edda !important;   /* light green for resistance being tested */
-  }
-  td.wrap-action {
-    white-space: normal !important;
-    word-break: break-word;
-    max-width: 300px;
-  }
-
-  td.wrap-action .badge {
-    display: block;
-    white-space: normal;
-    text-align: left;
-    padding: 5px 8px;
-  }
-
-  td.trend-cell {
-    max-width: 120px;       /* limit column width */
-    white-space: normal;    /* allow wrapping */
-    word-wrap: break-word;  /* wrap long words */
-  }
-
-  td.trend-cell .badge {
-    display: block;
-    white-space: normal;
-    text-align: center;
-    padding: 5px 8px;
-    line-height: 1.2;       /* tighter line spacing */
-  }
-
-  thead th {
-    position: sticky;
-    top: 0;
-    background-color: #212529;
-    color: #fff;
-    z-index: 2;
-  }
-</style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark mb-4">
+  <nav class="navbar navbar-dark bg-dark mb-3">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">📊 TB7 – Portfolio Dashboard</span>
-      <span class="text-light ms-auto" id="lastUpdated"></span>
+      <span class="navbar-brand">📈 TB7 – Portfolio Overview</span>
+      <span id="lastUpdated" class="text-light ms-auto"></span>
     </div>
   </nav>
 
   <div class="container">
-    <div class="mb-3">
-      <input type="text" id="searchBox" class="form-control" placeholder="🔍 Search ticker or action...">
-    </div>
-    <table id="strategyTable" class="table table-striped table-hover table-bordered align-middle">
+    <h3>Positions Overview</h3>
+    <table id="positionsTable" class="table table-striped table-bordered">
       <thead class="table-dark">
         <tr>
-          <th scope="col">Ticker</th>
-          <th scope="col" data-bs-toggle="tooltip" title="Trend direction">Trend</th>
-          <th scope="col">Qty</th>
-          <th scope="col">Cost Basis</th>
-          <th scope="col">Major S.</th>
-          <th scope="col">Minor S.</th>
-          <th scope="col">Live Price</th>
-          <th scope="col">R1</th>
-          <th scope="col">R2</th>
-          <th scope="col" data-bs-toggle="tooltip" title="Current stop-loss level to limit downside risk.">Stop</th>
-          <th scope="col">Performance</th>
-          <th scope="col">Action Needed</th>
+          <th>Ticker</th>
+          <th>Price</th>
+          <th>Trend</th>
+          <th>Alert</th>
         </tr>
       </thead>
-      <tbody>
-        {% for item in data %}
-        <tr data-original-price="{{ item.price }}">
-          <td><strong>{{ item.ticker }}</strong></td>
-          <td class="trend-cell">
-            <span class="badge {% if item.trend == 'Bullish' %}bg-success{% elif item.trend == 'Bearish' %}bg-danger{% else %}bg-secondary{% endif %}">
-              {{ item.trend }}
-            </span>
-          </td>
-          <td>{{ item.position_qty }}</td>
-          <td>{{ item.cost_basis }}</td>
-          <td>{{ item.support_levels[-1] }}</td>
-          <td>{{ item.support_levels[0] }}</td>
-          <td><span class="text-muted">--</span></td>
-          <td>{{ item.resistance_levels[0] }}</td>
-          <td>{{ item.resistance_levels[1] }}</td>
-          <td>{{ item.stop_loss }}</td>
-          <td class="performance-cell" data-cost="{{ item.cost_basis }}" data-price="{{ item.price }}" data-qty="{{ item.position_qty }}"></td>
-          <td class="wrap-action">
-            <span class="badge action-badge" data-bs-toggle="tooltip" title="{{ item.action_needed }}">
-              {{ item.action_needed }}
-            </span>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
+      <tbody></tbody>
     </table>
   </div>
 
 <script>
-  // Basic table sorting on click
-  document.querySelectorAll('th').forEach((header, index) => {
-    header.addEventListener('click', () => {
-      const table = header.closest('table');
-      const rows = Array.from(table.querySelectorAll('tbody tr'));
-      const asc = !header.classList.contains('asc');
-      rows.sort((a, b) => {
-        const aText = a.children[index].textContent.trim();
-        const bText = b.children[index].textContent.trim();
-        return asc ? aText.localeCompare(bText, undefined, {numeric:true})
-                   : bText.localeCompare(aText, undefined, {numeric:true});
-      });
-      table.querySelectorAll('th').forEach(th => th.classList.remove('asc','desc'));
-      header.classList.add(asc ? 'asc' : 'desc');
-      rows.forEach(row => table.querySelector('tbody').appendChild(row));
+async function loadPositions() {
+  try {
+    console.log("Fetching /api/positions...");
+    const res = await fetch('/api/positions');
+    if (!res.ok) {
+      console.error("Failed to load /api/positions:", res.status);
+      return;
+    }
+    const data = await res.json();
+    console.log("Positions data:", data);
+
+    const tbody = document.querySelector('#positionsTable tbody');
+    tbody.innerHTML = '';
+
+    if (!Array.isArray(data) || data.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="4">No data available</td></tr>';
+      return;
+    }
+
+    data.forEach(item => {
+      const alerts = item.alerts || {};
+      const alertBadge = alerts.attention && alerts.attention !== 'none'
+        ? `<span class="badge bg-danger">${alerts.attention}</span>`
+        : `<span class="badge bg-success">OK</span>`;
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td><strong>${item.ticker || '--'}</strong></td>
+        <td>${item.price ?? '--'}</td>
+        <td>${item.trend ?? '--'}</td>
+        <td>${alertBadge}</td>`;
+      tbody.appendChild(row);
     });
-  });
 
-  // ✅ Function to apply row highlighting based on new column layout
-  function highlightRow(row, price) {
-    const majorSupport = parseFloat(row.children[4].innerText);
-    const minorSupport = parseFloat(row.children[5].innerText);
-    const supportLevels = [majorSupport, minorSupport].filter(n => !isNaN(n));
+    document.getElementById('lastUpdated').textContent =
+      'Last updated: ' + new Date().toLocaleTimeString();
 
-    const resistance1 = parseFloat(row.children[7].innerText);
-    const resistance2 = parseFloat(row.children[8].innerText);
-    const resistanceLevels = [resistance1, resistance2].filter(n => !isNaN(n));
-
-    const stop = parseFloat(row.children[9].innerText);
-
-    // ✅ Determine if support is breached or being approached
-    const breachedSupport = supportLevels.some(s => price < s);
-    const isNearSupport = supportLevels.some(s => Math.abs(price - s) / s < 0.02 && price >= s);
-
-    // ✅ Apply support cell highlights
-    row.children[4].classList.remove('support-alert');
-    row.children[5].classList.remove('support-alert');
-    row.children[4].style.backgroundColor = '';
-    row.children[5].style.backgroundColor = '';
-
-    if (breachedSupport) {
-      // Light red for breached support
-      row.children[4].classList.add('support-alert');
-      row.children[5].classList.add('support-alert');
-      row.children[4].style.backgroundColor = '#f8d7da';
-      row.children[5].style.backgroundColor = '#f8d7da';
-    } else if (isNearSupport) {
-      // Light orange for approaching support
-      row.children[4].classList.add('support-alert');
-      row.children[5].classList.add('support-alert');
-      row.children[4].style.backgroundColor = '#ffe5b4';
-      row.children[5].style.backgroundColor = '#ffe5b4';
-    }
-
-    const isNearBreakout = resistanceLevels.some(r => Math.abs(price - r) / r < 0.02);
-    const isNearStop = !isNaN(stop) && Math.abs(price - stop) / stop < 0.01;
-
-    // Clear previous highlights
-    row.classList.remove('near-stop','near-support','near-breakout');
-    row.children[7].classList.remove('resistance-alert');
-    row.children[8].classList.remove('resistance-alert');
-
-    // Row-level highlights
-    if (isNearStop) row.classList.add('near-stop');
-    else if (isNearSupport) row.classList.add('near-support');
-    else if (isNearBreakout) row.classList.add('near-breakout');
-
-    // Cell-level highlights
-    if (isNearBreakout) {
-      row.children[7].classList.add('resistance-alert');
-      row.children[8].classList.add('resistance-alert');
-    }
+  } catch (err) {
+    console.error('Error loading positions:', err);
+    const tbody = document.querySelector('#positionsTable tbody');
+    tbody.innerHTML = '<tr><td colspan="4">Error loading data</td></tr>';
   }
+}
 
-  // ✅ Initial highlight based on static Price
-  document.querySelectorAll('#strategyTable tbody tr').forEach(row => {
-    const staticPrice = parseFloat(row.children[6].innerText) || 0;
-    highlightRow(row, staticPrice);
-  });
-
-  // ✅ Fetch live prices, update column, update data-price, recalc performance, and re-highlight with Live Price
-  document.querySelectorAll('#strategyTable tbody tr').forEach(row => {
-    const ticker = row.children[0].innerText;
-    fetch(`/api/live/${ticker}`)
-      .then(res => res.json())
-      .then(data => {
-        const cell = row.children[6];
-        if (data.live_price) {
-          const livePrice = parseFloat(data.live_price);
-          cell.innerHTML = `<strong>${livePrice}</strong>`;
-          
-          // Add movement arrow based on original price
-          const originalPrice = parseFloat(row.getAttribute('data-original-price'));
-          if (!isNaN(originalPrice)) {
-            const arrow = livePrice > originalPrice ? '▲' : (livePrice < originalPrice ? '▼' : '↔');
-            const color = livePrice > originalPrice ? 'green' : (livePrice < originalPrice ? 'red' : 'gray');
-            cell.innerHTML += ` <span style="color:${color}">${arrow}</span>`;
-          }
-
-          // Update data-price attribute to use live price
-          const perfCell = row.querySelector('.performance-cell');
-          if (perfCell) perfCell.setAttribute('data-price', livePrice);
-
-          // Recalculate performance dynamically
-          const cost = parseFloat(perfCell.getAttribute('data-cost'));
-          const qty = parseFloat(perfCell.getAttribute('data-qty')) || 1;
-          const marketValue = livePrice * qty;
-          if (!isNaN(marketValue) && !isNaN(cost) && cost > 0) {
-            const perf = ((marketValue - cost) / cost * 100).toFixed(2);
-            perfCell.textContent = perf + '%';
-            perfCell.style.color = perf > 0 ? 'green' : (perf < 0 ? 'red' : 'gray');
-          }
-
-          // Reapply highlights with the updated price
-          highlightRow(row, livePrice);
-        } else {
-          cell.innerHTML = `<span class="text-muted">N/A</span>`;
-        }
-      })
-      .catch(() => {
-        row.children[6].innerHTML = `<span class="text-muted">N/A</span>`;
-      });
-  });
-
-  // ✅ Optional: Auto-refresh the page every 5 minutes
-  setInterval(() => { location.reload(); }, 300000);
-
-  // ✅ Improved logical color-coding for Action Needed badges
-  document.querySelectorAll('.action-badge').forEach(badge => {
-    const text = badge.textContent.toLowerCase();
-
-    // Default gray for monitoring/hold states
-    badge.classList.add('bg-secondary','text-light');
-
-    // Green: bullish or sell targets hit (positive actions)
-    if (text.includes('sell') || text.includes('take profit') || text.includes('target hit')) {
-      badge.classList.remove('bg-secondary');
-      badge.classList.add('bg-success','text-light');
-    }
-    // Red: bearish alerts, stop-loss triggers, high-risk actions
-    else if (text.includes('stop') || text.includes('exit') || text.includes('cut')) {
-      badge.classList.remove('bg-secondary');
-      badge.classList.add('bg-danger','text-light');
-    }
-    // Yellow: watch or cautionary actions
-    else if (text.includes('watch') || text.includes('alert')) {
-      badge.classList.remove('bg-secondary');
-      badge.classList.add('bg-warning','text-dark');
-    }
-    // Blue: default info actions (neutral)
-    else if (text.includes('info') || text.includes('pending')) {
-      badge.classList.remove('bg-secondary');
-      badge.classList.add('bg-info','text-dark');
-    }
-  });
-
-  // ✅ Calculate and color-code performance (using total cost basis)
-  document.querySelectorAll('.performance-cell').forEach(cell => {
-    const price = parseFloat(cell.getAttribute('data-price'));   // per-share price
-    const cost = parseFloat(cell.getAttribute('data-cost'));     // total cost
-    const qty = parseFloat(cell.getAttribute('data-qty')) || 1;  // quantity (fallback 1)
-
-    const marketValue = price * qty;
-
-    if (!isNaN(marketValue) && !isNaN(cost) && cost > 0) {
-      const perf = ((marketValue - cost) / cost * 100).toFixed(2);
-      cell.textContent = perf + '%';
-      cell.style.color = perf > 0 ? 'green' : (perf < 0 ? 'red' : 'gray');
-    } else {
-      cell.textContent = '--';
-      cell.style.color = 'gray';
-    }
-  });
+loadPositions();
+setInterval(loadPositions, 300000); // refresh every 5 min
 </script>
-<script>
-  // ✅ Display last updated date/time
-  document.getElementById('lastUpdated').textContent =
-    'Last Updated: ' + new Date().toLocaleString();
-
-  // ✅ Search & filter rows by any text
-  document.getElementById('searchBox').addEventListener('keyup', function() {
-    const searchValue = this.value.toLowerCase();
-    document.querySelectorAll('#strategyTable tbody tr').forEach(row => {
-      const rowText = row.innerText.toLowerCase();
-      row.style.display = rowText.includes(searchValue) ? '' : 'none';
-    });
-  });
-</script>
-</script>
-
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // ✅ Enable Bootstrap tooltips globally
-  document.addEventListener('DOMContentLoaded', () => {
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
-  });
-</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

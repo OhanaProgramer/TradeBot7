@@ -1,1181 +1,1184 @@
-[
-  {
-    "ticker": "NIO",
-    "price": 4.72,
-    "position_qty": 86,
-    "cost_basis": 466.22,
-    "trend": "Neutral \u2192 Attempting Bullish Reversal",
-    "support_levels": [
-      "4.20",
-      "4.00"
-    ],
-    "resistance_levels": [
-      "5.00",
-      "5.50"
-    ],
-    "indicators": {
-      "RSI": 43.5,
-      "MACD": "-0.1 (near crossover)",
-      "SMA_20": 5.51,
-      "SMA_50": 5.45,
-      "SMA_200": 5.0
+{
+  "last_updated": "2025-07-30T16:31:06.181405Z",
+  "positions": [
+    {
+      "ticker": "NIO",
+      "price": 4.59,
+      "position_qty": 86,
+      "cost_basis": 466.22,
+      "trend": "Neutral \u2192 Attempting Bullish Reversal",
+      "support_levels": [
+        "4.20",
+        "4.00"
+      ],
+      "resistance_levels": [
+        "5.00",
+        "5.50"
+      ],
+      "indicators": {
+        "RSI": 43.5,
+        "MACD": "-0.1 (near crossover)",
+        "SMA_20": 5.51,
+        "SMA_50": 5.45,
+        "SMA_200": 5.0
+      },
+      "action_plan": {
+        "narrative": "NIO closed slightly below the $5.00 resistance but above support at $4.20. Price action shows stabilization with potential upside if volume increases. MACD near crossover suggests a possible bullish move, but risk remains if $4.20 fails.",
+        "stop_loss": null,
+        "stop_type": "none",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
     },
-    "action_plan": {
-      "narrative": "NIO closed slightly below the $5.00 resistance but above support at $4.20. Price action shows stabilization with potential upside if volume increases. MACD near crossover suggests a possible bullish move, but risk remains if $4.20 fails.",
-      "stop_loss": null,
-      "stop_type": "none",
-      "trailing_stop_pct": null
+    {
+      "ticker": "PLNT",
+      "price": 111.66,
+      "position_qty": 0,
+      "cost_basis": 0,
+      "trend": "Bullish",
+      "support_levels": [
+        "108.50",
+        "106.00"
+      ],
+      "resistance_levels": [
+        "114.00",
+        "117.00"
+      ],
+      "indicators": {
+        "RSI": 63.8,
+        "MACD": "-0.0 (momentum slowing)",
+        "SMA_20": 81.32,
+        "SMA_50": 78.29,
+        "SMA_200": 69.66
+      },
+      "action_plan": {
+        "narrative": "Momentum remains bullish with price above all major SMAs. Watch for breakout above $114 resistance; caution as RSI nears overbought.",
+        "stop_loss": null,
+        "stop_type": "watch",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
     },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
+    {
+      "ticker": "UPS",
+      "price": 89.52,
+      "position_qty": 7,
+      "cost_basis": 774.39,
+      "trend": "Bearish",
+      "support_levels": [
+        "99.00",
+        "90.00"
+      ],
+      "resistance_levels": [
+        "105.00",
+        "113.00"
+      ],
+      "indicators": {
+        "RSI": 52.7,
+        "MACD": "-0.2 (bearish momentum)",
+        "SMA_20": 103.8,
+        "SMA_50": 113.6,
+        "SMA_200": 134.1
+      },
+      "action_plan": {
+        "narrative": "UPS has broken below the $99 minor support and is now testing major support at $90. Momentum remains bearish with no sign of reversal. Hold cautiously while $90 is being tested. If $90 fails, consider reducing or exiting the position. No adding until price reclaims $99 with strong volume.",
+        "stop_loss": null,
+        "stop_type": "none",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "SONY",
+      "price": 24.31,
+      "position_qty": 100,
+      "cost_basis": 1832.13,
+      "trend": "Sideways",
+      "support_levels": [
+        "24.00",
+        "22.00"
+      ],
+      "resistance_levels": [
+        "26.00",
+        "28.00"
+      ],
+      "indicators": {
+        "RSI": 48.0,
+        "MACD": "flat",
+        "SMA_20": 24.9,
+        "SMA_50": 24.5,
+        "SMA_200": 23.8
+      },
+      "action_plan": {
+        "narrative": "SONY consolidating near $24. Hold unless support breaks; add only above $26 breakout. Trailing stop at $23.20.",
+        "stop_loss": 23.2,
+        "stop_type": "trailing",
+        "trailing_stop_pct": 5.0
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "F",
+      "price": 11.01,
+      "position_qty": 55,
+      "cost_basis": 661.14,
+      "trend": "Mildly Bullish",
+      "support_levels": [
+        "12.00",
+        "11.20"
+      ],
+      "resistance_levels": [
+        "13.00",
+        "14.00"
+      ],
+      "indicators": {
+        "RSI": 56.0,
+        "MACD": "+0.1 (turning positive)",
+        "SMA_20": 12.08,
+        "SMA_50": 11.8,
+        "SMA_200": 11.4
+      },
+      "action_plan": {
+        "narrative": "F bouncing from support. Hold; add on dips near $12.",
+        "stop_loss": 11.9,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "VZ",
+      "price": 42.81,
+      "position_qty": 29.6971,
+      "cost_basis": 1320.2,
+      "trend": "Sideways",
+      "support_levels": [
+        "39.00",
+        "37.50"
+      ],
+      "resistance_levels": [
+        "41.50",
+        "43.00"
+      ],
+      "indicators": {
+        "RSI": 49.0,
+        "MACD": "-0.05 (slightly negative)",
+        "SMA_20": 40.5,
+        "SMA_50": 41.1,
+        "SMA_200": 39.8
+      },
+      "action_plan": {
+        "narrative": "VZ is rangebound. Hold for yield; add only above $42.",
+        "stop_loss": 38.8,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "OLP",
+      "price": 23.03,
+      "position_qty": 13.56,
+      "cost_basis": 300.54,
+      "trend": "Mildly Bullish",
+      "support_levels": [
+        "22.00",
+        "21.00"
+      ],
+      "resistance_levels": [
+        "24.00",
+        "25.50"
+      ],
+      "indicators": {
+        "RSI": 58.0,
+        "MACD": "+0.08 (positive)",
+        "SMA_20": 21.98,
+        "SMA_50": 22.2,
+        "SMA_200": 21.6
+      },
+      "action_plan": {
+        "narrative": "OLP uptrend continues. Hold; add on break above $24.",
+        "stop_loss": 21.8,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "JNJ",
+      "price": 168.03,
+      "position_qty": 3,
+      "cost_basis": 465.75,
+      "trend": "Bearish",
+      "support_levels": [
+        "145.00",
+        "140.00"
+      ],
+      "resistance_levels": [
+        "150.00",
+        "155.00"
+      ],
+      "indicators": {
+        "RSI": 41.0,
+        "MACD": "-0.15 (negative)",
+        "SMA_20": 147.1,
+        "SMA_50": 149.8,
+        "SMA_200": 154.5
+      },
+      "action_plan": {
+        "narrative": "JNJ below SMAs. Hold for dividend; monitor $145 support.",
+        "stop_loss": 143.9,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "SBUX",
+      "price": 94.0,
+      "position_qty": 9.9188,
+      "cost_basis": 925.72,
+      "trend": "Bearish",
+      "support_levels": [
+        "78.00",
+        "75.00"
+      ],
+      "resistance_levels": [
+        "84.00",
+        "89.00"
+      ],
+      "indicators": {
+        "RSI": 38.0,
+        "MACD": "-0.2 (deeply negative)",
+        "SMA_20": 82.1,
+        "SMA_50": 84.0,
+        "SMA_200": 95.0
+      },
+      "action_plan": {
+        "narrative": "SBUX broke down; hold and consider adding if reversal above $84.",
+        "stop_loss": 77.5,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "ISRG",
+      "price": 502.03,
+      "position_qty": 0.0463,
+      "cost_basis": 14.22,
+      "trend": "Bullish",
+      "support_levels": [
+        "410.00",
+        "390.00"
+      ],
+      "resistance_levels": [
+        "430.00",
+        "450.00"
+      ],
+      "indicators": {
+        "RSI": 66.0,
+        "MACD": "+0.3 (positive and rising)",
+        "SMA_20": 412.0,
+        "SMA_50": 401.5,
+        "SMA_200": 380.0
+      },
+      "action_plan": {
+        "narrative": "ISRG uptrend strong. Hold; consider partial profit at $430.",
+        "stop_loss": 405.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "NEE",
+      "price": 71.75,
+      "position_qty": 3,
+      "cost_basis": 211.1,
+      "trend": "Sideways",
+      "support_levels": [
+        "70.00",
+        "68.00"
+      ],
+      "resistance_levels": [
+        "74.00",
+        "77.00"
+      ],
+      "indicators": {
+        "RSI": 53.0,
+        "MACD": "flat",
+        "SMA_20": 72.0,
+        "SMA_50": 71.0,
+        "SMA_200": 70.0
+      },
+      "action_plan": {
+        "narrative": "NEE consolidating. Hold; add above $74 breakout.",
+        "stop_loss": 68.9,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "GOOG",
+      "price": 198.3,
+      "position_qty": 1.931,
+      "cost_basis": 216.77,
+      "trend": "Bullish",
+      "support_levels": [
+        "175.00",
+        "170.00"
+      ],
+      "resistance_levels": [
+        "185.00",
+        "190.00"
+      ],
+      "indicators": {
+        "RSI": 63.0,
+        "MACD": "+0.2 (positive)",
+        "SMA_20": 176.5,
+        "SMA_50": 172.8,
+        "SMA_200": 160.0
+      },
+      "action_plan": {
+        "narrative": "GOOG above SMAs. Hold; add on dips to $175.",
+        "stop_loss": 169.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "BAC",
+      "price": 48.35,
+      "position_qty": 29.2748,
+      "cost_basis": 1127.19,
+      "trend": "Bullish",
+      "support_levels": [
+        "38.50",
+        "36.00"
+      ],
+      "resistance_levels": [
+        "41.00",
+        "43.00"
+      ],
+      "indicators": {
+        "RSI": 60.0,
+        "MACD": "+0.12 (positive)",
+        "SMA_20": 39.0,
+        "SMA_50": 37.9,
+        "SMA_200": 35.8
+      },
+      "action_plan": {
+        "narrative": "BAC recent breakout. Hold; add on dips to $38.50.",
+        "stop_loss": 37.9,
+        "stop_type": "trailing",
+        "trailing_stop_pct": 5.0
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "PRDO",
+      "price": 28.86,
+      "position_qty": 8,
+      "cost_basis": 170.2,
+      "trend": "Bullish",
+      "support_levels": [
+        "19.00",
+        "18.00"
+      ],
+      "resistance_levels": [
+        "21.00",
+        "23.00"
+      ],
+      "indicators": {
+        "RSI": 62.0,
+        "MACD": "+0.12 (positive)",
+        "SMA_20": 19.4,
+        "SMA_50": 18.8,
+        "SMA_200": 17.2
+      },
+      "action_plan": {
+        "narrative": "PRDO uptrend continues. Hold; take partial profits near $21.",
+        "stop_loss": 18.8,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "INTC",
+      "price": 20.3,
+      "position_qty": 5,
+      "cost_basis": 102.52,
+      "trend": "Bearish",
+      "support_levels": [
+        "29.00",
+        "27.00"
+      ],
+      "resistance_levels": [
+        "32.00",
+        "35.00"
+      ],
+      "indicators": {
+        "RSI": 40.0,
+        "MACD": "-0.18 (negative)",
+        "SMA_20": 30.8,
+        "SMA_50": 32.1,
+        "SMA_200": 35.6
+      },
+      "action_plan": {
+        "narrative": "INTC underperforming. Hold; watch for reversal above $32.",
+        "stop_loss": 28.8,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "price": 197.42,
+      "position_qty": 10.7361,
+      "cost_basis": 1327.86,
+      "trend": "Bullish",
+      "support_levels": [
+        "173.00",
+        "170.00"
+      ],
+      "resistance_levels": [
+        "180.00",
+        "185.00"
+      ],
+      "indicators": {
+        "RSI": 62.0,
+        "MACD": "+0.18 (positive)",
+        "SMA_20": 175.2,
+        "SMA_50": 171.0,
+        "SMA_200": 160.0
+      },
+      "action_plan": {
+        "narrative": "GOOGL strong momentum. Hold; add on dips near $173.",
+        "stop_loss": 169.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "GM",
+      "price": 52.59,
+      "position_qty": 1,
+      "cost_basis": 55.74,
+      "trend": "Bullish",
+      "support_levels": [
+        "46.00",
+        "44.00"
+      ],
+      "resistance_levels": [
+        "50.00",
+        "53.00"
+      ],
+      "indicators": {
+        "RSI": 64.0,
+        "MACD": "+0.19 (positive)",
+        "SMA_20": 46.6,
+        "SMA_50": 45.3,
+        "SMA_200": 41.0
+      },
+      "action_plan": {
+        "narrative": "GM recent breakout. Hold; consider profit at $50.",
+        "stop_loss": 44.9,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "HD",
+      "price": 376.13,
+      "position_qty": 4.1487,
+      "cost_basis": 1431.19,
+      "trend": "Sideways",
+      "support_levels": [
+        "330.00",
+        "320.00"
+      ],
+      "resistance_levels": [
+        "350.00",
+        "360.00"
+      ],
+      "indicators": {
+        "RSI": 53.0,
+        "MACD": "flat",
+        "SMA_20": 337.0,
+        "SMA_50": 335.0,
+        "SMA_200": 330.0
+      },
+      "action_plan": {
+        "narrative": "HD rangebound. Hold; add above $350 breakout.",
+        "stop_loss": 319.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "price": 230.5,
+      "position_qty": 8,
+      "cost_basis": 1677.77,
+      "trend": "Bullish",
+      "support_levels": [
+        "182.00",
+        "175.00"
+      ],
+      "resistance_levels": [
+        "190.00",
+        "200.00"
+      ],
+      "indicators": {
+        "RSI": 65.0,
+        "MACD": "+0.25 (positive)",
+        "SMA_20": 183.8,
+        "SMA_50": 179.2,
+        "SMA_200": 162.0
+      },
+      "action_plan": {
+        "narrative": "AMZN strong uptrend. Hold; add on dips near $182.",
+        "stop_loss": 174.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": 10.0
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "META",
+      "price": 700.72,
+      "position_qty": 1,
+      "cost_basis": 719.41,
+      "trend": "Bullish",
+      "support_levels": [
+        "490.00",
+        "470.00"
+      ],
+      "resistance_levels": [
+        "520.00",
+        "550.00"
+      ],
+      "indicators": {
+        "RSI": 69.0,
+        "MACD": "+0.32 (positive)",
+        "SMA_20": 498.0,
+        "SMA_50": 475.0,
+        "SMA_200": 400.0
+      },
+      "action_plan": {
+        "narrative": "META strong uptrend. Hold; consider profit-taking near $520.",
+        "stop_loss": 489.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "BP",
+      "price": 32.36,
+      "position_qty": 22,
+      "cost_basis": 645.78,
+      "trend": "Sideways",
+      "support_levels": [
+        "35.00",
+        "33.00"
+      ],
+      "resistance_levels": [
+        "37.00",
+        "39.00"
+      ],
+      "indicators": {
+        "RSI": 51.0,
+        "MACD": "flat",
+        "SMA_20": 35.4,
+        "SMA_50": 36.1,
+        "SMA_200": 35.0
+      },
+      "action_plan": {
+        "narrative": "BP consolidating. Hold for yield; add above $37.",
+        "stop_loss": 33.9,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "OXY",
+      "price": 44.91,
+      "position_qty": 1,
+      "cost_basis": 43.73,
+      "trend": "Bullish",
+      "support_levels": [
+        "60.00",
+        "57.00"
+      ],
+      "resistance_levels": [
+        "65.00",
+        "68.00"
+      ],
+      "indicators": {
+        "RSI": 59.0,
+        "MACD": "+0.15 (positive)",
+        "SMA_20": 60.5,
+        "SMA_50": 59.0,
+        "SMA_200": 58.0
+      },
+      "action_plan": {
+        "narrative": "OXY recent bounce. Hold; add on dips to $60.",
+        "stop_loss": 56.8,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "BA",
+      "price": 227.9,
+      "position_qty": 1,
+      "cost_basis": 204.84,
+      "trend": "Bearish",
+      "support_levels": [
+        "172.00",
+        "165.00"
+      ],
+      "resistance_levels": [
+        "185.00",
+        "192.00"
+      ],
+      "indicators": {
+        "RSI": 44.0,
+        "MACD": "-0.10 (negative)",
+        "SMA_20": 179.0,
+        "SMA_50": 184.0,
+        "SMA_200": 200.0
+      },
+      "action_plan": {
+        "narrative": "BA under pressure. Hold; reduce if $172 fails.",
+        "stop_loss": 164.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "AVGO",
+      "price": 299.83,
+      "position_qty": 4.4808,
+      "cost_basis": 435.61,
+      "trend": "Bullish",
+      "support_levels": [
+        "290.00",
+        "280.00"
+      ],
+      "resistance_levels": [
+        "310.00",
+        "320.00"
+      ],
+      "indicators": {
+        "RSI": 73.0,
+        "MACD": "+0.5 (strong positive)",
+        "SMA_20": 1630.0,
+        "SMA_50": 1580.0,
+        "SMA_200": 1400.0
+      },
+      "action_plan": {
+        "narrative": "AVGO remains in strong uptrend. Hold; target profit-taking at $1750\u2013$1800. Stop at $1599.",
+        "stop_loss": 271.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": 10.0
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "high",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "BABA",
+      "price": 118.47,
+      "position_qty": 4,
+      "cost_basis": 550.45,
+      "trend": "Bearish",
+      "support_levels": [
+        "72.00",
+        "68.00"
+      ],
+      "resistance_levels": [
+        "78.00",
+        "82.00"
+      ],
+      "indicators": {
+        "RSI": 39.0,
+        "MACD": "-0.09 (negative)",
+        "SMA_20": 75.1,
+        "SMA_50": 76.8,
+        "SMA_200": 80.0
+      },
+      "action_plan": {
+        "narrative": "BABA under pressure. Hold; cut if $72 fails.",
+        "stop_loss": 67.8,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "price": 178.84,
+      "position_qty": 9.0078,
+      "cost_basis": 153.65,
+      "trend": "Bullish",
+      "support_levels": [
+        "1200.00",
+        "1150.00"
+      ],
+      "resistance_levels": [
+        "1300.00",
+        "1400.00"
+      ],
+      "indicators": {
+        "RSI": 75.0,
+        "MACD": "+1.1 (strong positive)",
+        "SMA_20": 1205.0,
+        "SMA_50": 1175.0,
+        "SMA_200": 950.0
+      },
+      "action_plan": {
+        "narrative": "NVDA continues to ride AI momentum above $1200 support. Hold; consider profit-taking near $1300. Trailing stop at $1149 to protect gains.",
+        "stop_loss": 160.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": 15.0
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "high",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "VHT",
+      "price": 248.92,
+      "position_qty": 2,
+      "cost_basis": 489.76,
+      "trend": "Sideways",
+      "support_levels": [
+        "260.00",
+        "255.00"
+      ],
+      "resistance_levels": [
+        "268.00",
+        "275.00"
+      ],
+      "indicators": {
+        "RSI": 50.0,
+        "MACD": "flat",
+        "SMA_20": 261.0,
+        "SMA_50": 259.0,
+        "SMA_200": 255.0
+      },
+      "action_plan": {
+        "narrative": "VHT sector rotation. Hold; add above $268.",
+        "stop_loss": 254.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": true,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "SCHD",
+      "price": 27.08,
+      "position_qty": 18,
+      "cost_basis": 475.66,
+      "trend": "Sideways",
+      "support_levels": [
+        "78.00",
+        "75.00"
+      ],
+      "resistance_levels": [
+        "81.00",
+        "84.00"
+      ],
+      "indicators": {
+        "RSI": 52.0,
+        "MACD": "flat",
+        "SMA_20": 79.0,
+        "SMA_50": 78.8,
+        "SMA_200": 76.0
+      },
+      "action_plan": {
+        "narrative": "SCHD dividend ETF. Hold for yield; add above $81.",
+        "stop_loss": 74.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "VTI",
+      "price": 313.43,
+      "position_qty": 2,
+      "cost_basis": 579.65,
+      "trend": "Bullish",
+      "support_levels": [
+        "258.00",
+        "250.00"
+      ],
+      "resistance_levels": [
+        "265.00",
+        "270.00"
+      ],
+      "indicators": {
+        "RSI": 61.0,
+        "MACD": "+0.22 (positive)",
+        "SMA_20": 259.8,
+        "SMA_50": 257.0,
+        "SMA_200": 240.0
+      },
+      "action_plan": {
+        "narrative": "VTI broad market strength. Hold; add on dips near $258.",
+        "stop_loss": 249.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "QQQ",
+      "price": 569.28,
+      "position_qty": 1,
+      "cost_basis": 559.69,
+      "trend": "Bullish",
+      "support_levels": [
+        "455.00",
+        "440.00"
+      ],
+      "resistance_levels": [
+        "470.00",
+        "480.00"
+      ],
+      "indicators": {
+        "RSI": 65.0,
+        "MACD": "+0.31 (positive)",
+        "SMA_20": 456.0,
+        "SMA_50": 448.0,
+        "SMA_200": 410.0
+      },
+      "action_plan": {
+        "narrative": "QQQ tech sector strength. Hold; add on dips near $455.",
+        "stop_loss": 439.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "XLE",
+      "price": 88.2,
+      "position_qty": 5,
+      "cost_basis": 426.28,
+      "trend": "Sideways",
+      "support_levels": [
+        "88.00",
+        "85.00"
+      ],
+      "resistance_levels": [
+        "92.00",
+        "95.00"
+      ],
+      "indicators": {
+        "RSI": 50.0,
+        "MACD": "flat",
+        "SMA_20": 89.0,
+        "SMA_50": 90.0,
+        "SMA_200": 87.0
+      },
+      "action_plan": {
+        "narrative": "XLE consolidating. Hold for yield; add above $92.",
+        "stop_loss": 84.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": 5.0
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "BROS",
+      "price": 59.36,
+      "position_qty": 7,
+      "cost_basis": 218.96,
+      "trend": "Bearish \u2192 Potential Reversal",
+      "support_levels": [
+        "56.00",
+        "50.00"
+      ],
+      "resistance_levels": [
+        "65.00",
+        "70.00"
+      ],
+      "indicators": {
+        "RSI": 35.0,
+        "MACD": "-0.3 (bearish momentum)",
+        "SMA_20": 65.0,
+        "SMA_50": 70.0,
+        "SMA_200": 56.0
+      },
+      "action_plan": {
+        "narrative": "BROS is testing SMA200 at $56. A bounce here could trigger a reversal; failure opens downside to $50.",
+        "stop_loss": 56.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": 5.0
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "price": 210.0,
+      "position_qty": 17.06,
+      "cost_basis": 2710.85,
+      "trend": "Bullish",
+      "support_levels": [
+        "210.00",
+        "200.00"
+      ],
+      "resistance_levels": [
+        "220.00",
+        "230.00"
+      ],
+      "indicators": {
+        "RSI": 61.0,
+        "MACD": "+0.2 (bullish momentum)",
+        "SMA_20": 211.5,
+        "SMA_50": 206.3,
+        "SMA_200": 190.4
+      },
+      "action_plan": {
+        "narrative": "AAPL is trading above all major SMAs with positive MACD and RSI trending upward. Trend remains bullish; watch for breakout above $220 for continuation.",
+        "stop_loss": 208.0,
+        "stop_type": "trailing",
+        "trailing_stop_pct": 17.0
+      },
+      "alerts": {
+        "stop_near": true,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "BTC",
+      "price": 52.21,
+      "position_qty": 0.039,
+      "cost_basis": 2820.0,
+      "trend": "Neutral-Bearish",
+      "support_levels": [
+        "66000",
+        "62000"
+      ],
+      "resistance_levels": [
+        "70000",
+        "73000"
+      ],
+      "indicators": {
+        "RSI": 48,
+        "MACD": "Slightly negative, no clear upturn"
+      },
+      "action_plan": {
+        "narrative": "BTC under pressure, momentum weak. Hold while above $66,000; avoid adds unless $70,000 reclaims with strong volume.",
+        "stop_loss": 65500,
+        "stop_type": null,
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "ETH",
+      "price": 35.79,
+      "position_qty": 0.33,
+      "cost_basis": 1070.0,
+      "trend": "Bullish",
+      "support_levels": [
+        "3400",
+        "3200"
+      ],
+      "resistance_levels": [
+        "3700",
+        "4000"
+      ],
+      "indicators": {
+        "RSI": 64,
+        "MACD": "Positive, supporting rally"
+      },
+      "action_plan": {
+        "narrative": "ETH strong upward momentum, outperforming BTC. Hold; add on dips to $3,400. Target $3,700+.",
+        "stop_loss": 3250,
+        "stop_type": null,
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
+    },
+    {
+      "ticker": "SOL",
+      "price": 1.89,
+      "position_qty": 6.5,
+      "cost_basis": 720.0,
+      "trend": "Bullish",
+      "support_levels": [
+        "140",
+        "120"
+      ],
+      "resistance_levels": [
+        "165",
+        "180"
+      ],
+      "indicators": {
+        "RSI": 66,
+        "MACD": "Positive, strong upward move"
+      },
+      "action_plan": {
+        "narrative": "SOL strong bounce, momentum building. Hold; consider profit near $165. Add on dips to $140 if uptrend holds.",
+        "stop_loss": 119,
+        "stop_type": null,
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": false,
+        "volatility": "normal",
+        "attention": "none"
+      }
     }
-  },
-  {
-    "ticker": "PLNT",
-    "price": 111.56,
-    "position_qty": 0,
-    "cost_basis": 0,
-    "trend": "Bullish",
-    "support_levels": [
-      "108.50",
-      "106.00"
-    ],
-    "resistance_levels": [
-      "114.00",
-      "117.00"
-    ],
-    "indicators": {
-      "RSI": 63.8,
-      "MACD": "-0.0 (momentum slowing)",
-      "SMA_20": 81.32,
-      "SMA_50": 78.29,
-      "SMA_200": 69.66
-    },
-    "action_plan": {
-      "narrative": "Momentum remains bullish with price above all major SMAs. Watch for breakout above $114 resistance; caution as RSI nears overbought.",
-      "stop_loss": null,
-      "stop_type": "watch",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "UPS",
-    "price": 92.14,
-    "position_qty": 7,
-    "cost_basis": 774.39,
-    "trend": "Bearish",
-    "support_levels": [
-      "99.00",
-      "90.00"
-    ],
-    "resistance_levels": [
-      "105.00",
-      "113.00"
-    ],
-    "indicators": {
-      "RSI": 52.7,
-      "MACD": "-0.2 (bearish momentum)",
-      "SMA_20": 103.8,
-      "SMA_50": 113.6,
-      "SMA_200": 134.1
-    },
-    "action_plan": {
-      "narrative": "UPS has broken below the $99 minor support and is now testing major support at $90. Momentum remains bearish with no sign of reversal. Hold cautiously while $90 is being tested. If $90 fails, consider reducing or exiting the position. No adding until price reclaims $99 with strong volume.",
-      "stop_loss": null,
-      "stop_type": "none",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "SONY",
-    "price": 24.42,
-    "position_qty": 100,
-    "cost_basis": 1832.13,
-    "trend": "Sideways",
-    "support_levels": [
-      "24.00",
-      "22.00"
-    ],
-    "resistance_levels": [
-      "26.00",
-      "28.00"
-    ],
-    "indicators": {
-      "RSI": 48.0,
-      "MACD": "flat",
-      "SMA_20": 24.9,
-      "SMA_50": 24.5,
-      "SMA_200": 23.8
-    },
-    "action_plan": {
-      "narrative": "SONY consolidating near $24. Hold unless support breaks; add only above $26 breakout. Trailing stop at $23.20.",
-      "stop_loss": 23.2,
-      "stop_type": "trailing",
-      "trailing_stop_pct": 5.0
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "F",
-    "price": 12.25,
-    "position_qty": 55,
-    "cost_basis": 661.14,
-    "trend": "Mildly Bullish",
-    "support_levels": [
-      "12.00",
-      "11.20"
-    ],
-    "resistance_levels": [
-      "13.00",
-      "14.00"
-    ],
-    "indicators": {
-      "RSI": 56.0,
-      "MACD": "+0.1 (turning positive)",
-      "SMA_20": 12.08,
-      "SMA_50": 11.8,
-      "SMA_200": 11.4
-    },
-    "action_plan": {
-      "narrative": "F bouncing from support. Hold; add on dips near $12.",
-      "stop_loss": 11.9,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "VZ",
-    "price": 40.16,
-    "position_qty": 29.6971,
-    "cost_basis": 1320.2,
-    "trend": "Sideways",
-    "support_levels": [
-      "39.00",
-      "37.50"
-    ],
-    "resistance_levels": [
-      "41.50",
-      "43.00"
-    ],
-    "indicators": {
-      "RSI": 49.0,
-      "MACD": "-0.05 (slightly negative)",
-      "SMA_20": 40.5,
-      "SMA_50": 41.1,
-      "SMA_200": 39.8
-    },
-    "action_plan": {
-      "narrative": "VZ is rangebound. Hold for yield; add only above $42.",
-      "stop_loss": 38.8,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "OLP",
-    "price": 22.61,
-    "position_qty": 13.56,
-    "cost_basis": 300.54,
-    "trend": "Mildly Bullish",
-    "support_levels": [
-      "22.00",
-      "21.00"
-    ],
-    "resistance_levels": [
-      "24.00",
-      "25.50"
-    ],
-    "indicators": {
-      "RSI": 58.0,
-      "MACD": "+0.08 (positive)",
-      "SMA_20": 21.98,
-      "SMA_50": 22.2,
-      "SMA_200": 21.6
-    },
-    "action_plan": {
-      "narrative": "OLP uptrend continues. Hold; add on break above $24.",
-      "stop_loss": 21.8,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "JNJ",
-    "price": 146.29,
-    "position_qty": 3,
-    "cost_basis": 465.75,
-    "trend": "Bearish",
-    "support_levels": [
-      "145.00",
-      "140.00"
-    ],
-    "resistance_levels": [
-      "150.00",
-      "155.00"
-    ],
-    "indicators": {
-      "RSI": 41.0,
-      "MACD": "-0.15 (negative)",
-      "SMA_20": 147.1,
-      "SMA_50": 149.8,
-      "SMA_200": 154.5
-    },
-    "action_plan": {
-      "narrative": "JNJ below SMAs. Hold for dividend; monitor $145 support.",
-      "stop_loss": 143.9,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "SBUX",
-    "price": 80.41,
-    "position_qty": 9.9188,
-    "cost_basis": 925.72,
-    "trend": "Bearish",
-    "support_levels": [
-      "78.00",
-      "75.00"
-    ],
-    "resistance_levels": [
-      "84.00",
-      "89.00"
-    ],
-    "indicators": {
-      "RSI": 38.0,
-      "MACD": "-0.2 (deeply negative)",
-      "SMA_20": 82.1,
-      "SMA_50": 84.0,
-      "SMA_200": 95.0
-    },
-    "action_plan": {
-      "narrative": "SBUX broke down; hold and consider adding if reversal above $84.",
-      "stop_loss": 77.5,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "ISRG",
-    "price": 418.95,
-    "position_qty": 0.0463,
-    "cost_basis": 14.22,
-    "trend": "Bullish",
-    "support_levels": [
-      "410.00",
-      "390.00"
-    ],
-    "resistance_levels": [
-      "430.00",
-      "450.00"
-    ],
-    "indicators": {
-      "RSI": 66.0,
-      "MACD": "+0.3 (positive and rising)",
-      "SMA_20": 412.0,
-      "SMA_50": 401.5,
-      "SMA_200": 380.0
-    },
-    "action_plan": {
-      "narrative": "ISRG uptrend strong. Hold; consider partial profit at $430.",
-      "stop_loss": 405.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "NEE",
-    "price": 72.44,
-    "position_qty": 3,
-    "cost_basis": 211.1,
-    "trend": "Sideways",
-    "support_levels": [
-      "70.00",
-      "68.00"
-    ],
-    "resistance_levels": [
-      "74.00",
-      "77.00"
-    ],
-    "indicators": {
-      "RSI": 53.0,
-      "MACD": "flat",
-      "SMA_20": 72.0,
-      "SMA_50": 71.0,
-      "SMA_200": 70.0
-    },
-    "action_plan": {
-      "narrative": "NEE consolidating. Hold; add above $74 breakout.",
-      "stop_loss": 68.9,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "GOOG",
-    "price": 178.34,
-    "position_qty": 1.931,
-    "cost_basis": 216.77,
-    "trend": "Bullish",
-    "support_levels": [
-      "175.00",
-      "170.00"
-    ],
-    "resistance_levels": [
-      "185.00",
-      "190.00"
-    ],
-    "indicators": {
-      "RSI": 63.0,
-      "MACD": "+0.2 (positive)",
-      "SMA_20": 176.5,
-      "SMA_50": 172.8,
-      "SMA_200": 160.0
-    },
-    "action_plan": {
-      "narrative": "GOOG above SMAs. Hold; add on dips to $175.",
-      "stop_loss": 169.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "BAC",
-    "price": 39.45,
-    "position_qty": 29.2748,
-    "cost_basis": 1127.19,
-    "trend": "Bullish",
-    "support_levels": [
-      "38.50",
-      "36.00"
-    ],
-    "resistance_levels": [
-      "41.00",
-      "43.00"
-    ],
-    "indicators": {
-      "RSI": 60.0,
-      "MACD": "+0.12 (positive)",
-      "SMA_20": 39.0,
-      "SMA_50": 37.9,
-      "SMA_200": 35.8
-    },
-    "action_plan": {
-      "narrative": "BAC recent breakout. Hold; add on dips to $38.50.",
-      "stop_loss": 37.9,
-      "stop_type": "trailing",
-      "trailing_stop_pct": 5.0
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "PRDO",
-    "price": 19.85,
-    "position_qty": 8,
-    "cost_basis": 170.2,
-    "trend": "Bullish",
-    "support_levels": [
-      "19.00",
-      "18.00"
-    ],
-    "resistance_levels": [
-      "21.00",
-      "23.00"
-    ],
-    "indicators": {
-      "RSI": 62.0,
-      "MACD": "+0.12 (positive)",
-      "SMA_20": 19.4,
-      "SMA_50": 18.8,
-      "SMA_200": 17.2
-    },
-    "action_plan": {
-      "narrative": "PRDO uptrend continues. Hold; take partial profits near $21.",
-      "stop_loss": 18.8,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "INTC",
-    "price": 30.35,
-    "position_qty": 5,
-    "cost_basis": 102.52,
-    "trend": "Bearish",
-    "support_levels": [
-      "29.00",
-      "27.00"
-    ],
-    "resistance_levels": [
-      "32.00",
-      "35.00"
-    ],
-    "indicators": {
-      "RSI": 40.0,
-      "MACD": "-0.18 (negative)",
-      "SMA_20": 30.8,
-      "SMA_50": 32.1,
-      "SMA_200": 35.6
-    },
-    "action_plan": {
-      "narrative": "INTC underperforming. Hold; watch for reversal above $32.",
-      "stop_loss": 28.8,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "GOOGL",
-    "price": 176.89,
-    "position_qty": 10.7361,
-    "cost_basis": 1327.86,
-    "trend": "Bullish",
-    "support_levels": [
-      "173.00",
-      "170.00"
-    ],
-    "resistance_levels": [
-      "180.00",
-      "185.00"
-    ],
-    "indicators": {
-      "RSI": 62.0,
-      "MACD": "+0.18 (positive)",
-      "SMA_20": 175.2,
-      "SMA_50": 171.0,
-      "SMA_200": 160.0
-    },
-    "action_plan": {
-      "narrative": "GOOGL strong momentum. Hold; add on dips near $173.",
-      "stop_loss": 169.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "GM",
-    "price": 47.42,
-    "position_qty": 1,
-    "cost_basis": 55.74,
-    "trend": "Bullish",
-    "support_levels": [
-      "46.00",
-      "44.00"
-    ],
-    "resistance_levels": [
-      "50.00",
-      "53.00"
-    ],
-    "indicators": {
-      "RSI": 64.0,
-      "MACD": "+0.19 (positive)",
-      "SMA_20": 46.6,
-      "SMA_50": 45.3,
-      "SMA_200": 41.0
-    },
-    "action_plan": {
-      "narrative": "GM recent breakout. Hold; consider profit at $50.",
-      "stop_loss": 44.9,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "HD",
-    "price": 339.41,
-    "position_qty": 4.1487,
-    "cost_basis": 1431.19,
-    "trend": "Sideways",
-    "support_levels": [
-      "330.00",
-      "320.00"
-    ],
-    "resistance_levels": [
-      "350.00",
-      "360.00"
-    ],
-    "indicators": {
-      "RSI": 53.0,
-      "MACD": "flat",
-      "SMA_20": 337.0,
-      "SMA_50": 335.0,
-      "SMA_200": 330.0
-    },
-    "action_plan": {
-      "narrative": "HD rangebound. Hold; add above $350 breakout.",
-      "stop_loss": 319.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "AMZN",
-    "price": 186.21,
-    "position_qty": 8,
-    "cost_basis": 1677.77,
-    "trend": "Bullish",
-    "support_levels": [
-      "182.00",
-      "175.00"
-    ],
-    "resistance_levels": [
-      "190.00",
-      "200.00"
-    ],
-    "indicators": {
-      "RSI": 65.0,
-      "MACD": "+0.25 (positive)",
-      "SMA_20": 183.8,
-      "SMA_50": 179.2,
-      "SMA_200": 162.0
-    },
-    "action_plan": {
-      "narrative": "AMZN strong uptrend. Hold; add on dips near $182.",
-      "stop_loss": 174.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": 10.0
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "META",
-    "price": 504.18,
-    "position_qty": 1,
-    "cost_basis": 719.41,
-    "trend": "Bullish",
-    "support_levels": [
-      "490.00",
-      "470.00"
-    ],
-    "resistance_levels": [
-      "520.00",
-      "550.00"
-    ],
-    "indicators": {
-      "RSI": 69.0,
-      "MACD": "+0.32 (positive)",
-      "SMA_20": 498.0,
-      "SMA_50": 475.0,
-      "SMA_200": 400.0
-    },
-    "action_plan": {
-      "narrative": "META strong uptrend. Hold; consider profit-taking near $520.",
-      "stop_loss": 489.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "BP",
-    "price": 35.75,
-    "position_qty": 22,
-    "cost_basis": 645.78,
-    "trend": "Sideways",
-    "support_levels": [
-      "35.00",
-      "33.00"
-    ],
-    "resistance_levels": [
-      "37.00",
-      "39.00"
-    ],
-    "indicators": {
-      "RSI": 51.0,
-      "MACD": "flat",
-      "SMA_20": 35.4,
-      "SMA_50": 36.1,
-      "SMA_200": 35.0
-    },
-    "action_plan": {
-      "narrative": "BP consolidating. Hold for yield; add above $37.",
-      "stop_loss": 33.9,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "OXY",
-    "price": 61.14,
-    "position_qty": 1,
-    "cost_basis": 43.73,
-    "trend": "Bullish",
-    "support_levels": [
-      "60.00",
-      "57.00"
-    ],
-    "resistance_levels": [
-      "65.00",
-      "68.00"
-    ],
-    "indicators": {
-      "RSI": 59.0,
-      "MACD": "+0.15 (positive)",
-      "SMA_20": 60.5,
-      "SMA_50": 59.0,
-      "SMA_200": 58.0
-    },
-    "action_plan": {
-      "narrative": "OXY recent bounce. Hold; add on dips to $60.",
-      "stop_loss": 56.8,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "BA",
-    "price": 176.15,
-    "position_qty": 1,
-    "cost_basis": 204.84,
-    "trend": "Bearish",
-    "support_levels": [
-      "172.00",
-      "165.00"
-    ],
-    "resistance_levels": [
-      "185.00",
-      "192.00"
-    ],
-    "indicators": {
-      "RSI": 44.0,
-      "MACD": "-0.10 (negative)",
-      "SMA_20": 179.0,
-      "SMA_50": 184.0,
-      "SMA_200": 200.0
-    },
-    "action_plan": {
-      "narrative": "BA under pressure. Hold; reduce if $172 fails.",
-      "stop_loss": 164.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "AVGO",
-    "price": 298.14,
-    "position_qty": 4.4808,
-    "cost_basis": 435.61,
-    "trend": "Bullish",
-    "support_levels": [
-      "290.00",
-      "280.00"
-    ],
-    "resistance_levels": [
-      "310.00",
-      "320.00"
-    ],
-    "indicators": {
-      "RSI": 73.0,
-      "MACD": "+0.5 (strong positive)",
-      "SMA_20": 1630.0,
-      "SMA_50": 1580.0,
-      "SMA_200": 1400.0
-    },
-    "action_plan": {
-      "narrative": "AVGO remains in strong uptrend. Hold; target profit-taking at $1750\u2013$1800. Stop at $1599.",
-      "stop_loss": 271.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": 10.0
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "BABA",
-    "price": 74.22,
-    "position_qty": 4,
-    "cost_basis": 550.45,
-    "trend": "Bearish",
-    "support_levels": [
-      "72.00",
-      "68.00"
-    ],
-    "resistance_levels": [
-      "78.00",
-      "82.00"
-    ],
-    "indicators": {
-      "RSI": 39.0,
-      "MACD": "-0.09 (negative)",
-      "SMA_20": 75.1,
-      "SMA_50": 76.8,
-      "SMA_200": 80.0
-    },
-    "action_plan": {
-      "narrative": "BABA under pressure. Hold; cut if $72 fails.",
-      "stop_loss": 67.8,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "NVDA",
-    "price": 175.84,
-    "position_qty": 9.0078,
-    "cost_basis": 153.65,
-    "trend": "Bullish",
-    "support_levels": [
-      "1200.00",
-      "1150.00"
-    ],
-    "resistance_levels": [
-      "1300.00",
-      "1400.00"
-    ],
-    "indicators": {
-      "RSI": 75.0,
-      "MACD": "+1.1 (strong positive)",
-      "SMA_20": 1205.0,
-      "SMA_50": 1175.0,
-      "SMA_200": 950.0
-    },
-    "action_plan": {
-      "narrative": "NVDA continues to ride AI momentum above $1200 support. Hold; consider profit-taking near $1300. Trailing stop at $1149 to protect gains.",
-      "stop_loss": 160.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": 15.0
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "VHT",
-    "price": 262.18,
-    "position_qty": 2,
-    "cost_basis": 489.76,
-    "trend": "Sideways",
-    "support_levels": [
-      "260.00",
-      "255.00"
-    ],
-    "resistance_levels": [
-      "268.00",
-      "275.00"
-    ],
-    "indicators": {
-      "RSI": 50.0,
-      "MACD": "flat",
-      "SMA_20": 261.0,
-      "SMA_50": 259.0,
-      "SMA_200": 255.0
-    },
-    "action_plan": {
-      "narrative": "VHT sector rotation. Hold; add above $268.",
-      "stop_loss": 254.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "SCHD",
-    "price": 79.49,
-    "position_qty": 18,
-    "cost_basis": 475.66,
-    "trend": "Sideways",
-    "support_levels": [
-      "78.00",
-      "75.00"
-    ],
-    "resistance_levels": [
-      "81.00",
-      "84.00"
-    ],
-    "indicators": {
-      "RSI": 52.0,
-      "MACD": "flat",
-      "SMA_20": 79.0,
-      "SMA_50": 78.8,
-      "SMA_200": 76.0
-    },
-    "action_plan": {
-      "narrative": "SCHD dividend ETF. Hold for yield; add above $81.",
-      "stop_loss": 74.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "VTI",
-    "price": 261.47,
-    "position_qty": 2,
-    "cost_basis": 579.65,
-    "trend": "Bullish",
-    "support_levels": [
-      "258.00",
-      "250.00"
-    ],
-    "resistance_levels": [
-      "265.00",
-      "270.00"
-    ],
-    "indicators": {
-      "RSI": 61.0,
-      "MACD": "+0.22 (positive)",
-      "SMA_20": 259.8,
-      "SMA_50": 257.0,
-      "SMA_200": 240.0
-    },
-    "action_plan": {
-      "narrative": "VTI broad market strength. Hold; add on dips near $258.",
-      "stop_loss": 249.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "QQQ",
-    "price": 460.0,
-    "position_qty": 1,
-    "cost_basis": 559.69,
-    "trend": "Bullish",
-    "support_levels": [
-      "455.00",
-      "440.00"
-    ],
-    "resistance_levels": [
-      "470.00",
-      "480.00"
-    ],
-    "indicators": {
-      "RSI": 65.0,
-      "MACD": "+0.31 (positive)",
-      "SMA_20": 456.0,
-      "SMA_50": 448.0,
-      "SMA_200": 410.0
-    },
-    "action_plan": {
-      "narrative": "QQQ tech sector strength. Hold; add on dips near $455.",
-      "stop_loss": 439.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "XLE",
-    "price": 89.63,
-    "position_qty": 5,
-    "cost_basis": 426.28,
-    "trend": "Sideways",
-    "support_levels": [
-      "88.00",
-      "85.00"
-    ],
-    "resistance_levels": [
-      "92.00",
-      "95.00"
-    ],
-    "indicators": {
-      "RSI": 50.0,
-      "MACD": "flat",
-      "SMA_20": 89.0,
-      "SMA_50": 90.0,
-      "SMA_200": 87.0
-    },
-    "action_plan": {
-      "narrative": "XLE consolidating. Hold for yield; add above $92.",
-      "stop_loss": 84.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": 5.0
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "BROS",
-    "price": 58.85,
-    "position_qty": 7,
-    "cost_basis": 218.96,
-    "trend": "Bearish \u2192 Potential Reversal",
-    "support_levels": [
-      "56.00",
-      "50.00"
-    ],
-    "resistance_levels": [
-      "65.00",
-      "70.00"
-    ],
-    "indicators": {
-      "RSI": 35.0,
-      "MACD": "-0.3 (bearish momentum)",
-      "SMA_20": 65.0,
-      "SMA_50": 70.0,
-      "SMA_200": 56.0
-    },
-    "action_plan": {
-      "narrative": "BROS is testing SMA200 at $56. A bounce here could trigger a reversal; failure opens downside to $50.",
-      "stop_loss": 56.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": 5.0
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "AAPL",
-    "price": 214.12,
-    "position_qty": 17.06,
-    "cost_basis": 2710.85,
-    "trend": "Bullish",
-    "support_levels": [
-      "210.00",
-      "200.00"
-    ],
-    "resistance_levels": [
-      "220.00",
-      "230.00"
-    ],
-    "indicators": {
-      "RSI": 61.0,
-      "MACD": "+0.2 (bullish momentum)",
-      "SMA_20": 211.5,
-      "SMA_50": 206.3,
-      "SMA_200": 190.4
-    },
-    "action_plan": {
-      "narrative": "AAPL is trading above all major SMAs with positive MACD and RSI trending upward. Trend remains bullish; watch for breakout above $220 for continuation.",
-      "stop_loss": 208.0,
-      "stop_type": "trailing",
-      "trailing_stop_pct": 17.0
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "BTC",
-    "price": 67948.72,
-    "position_qty": 0.039,
-    "cost_basis": 2820.0,
-    "trend": "Neutral-Bearish",
-    "support_levels": [
-      "66000",
-      "62000"
-    ],
-    "resistance_levels": [
-      "70000",
-      "73000"
-    ],
-    "indicators": {
-      "RSI": 48,
-      "MACD": "Slightly negative, no clear upturn"
-    },
-    "action_plan": {
-      "narrative": "BTC under pressure, momentum weak. Hold while above $66,000; avoid adds unless $70,000 reclaims with strong volume.",
-      "stop_loss": 65500,
-      "stop_type": null,
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "ETH",
-    "price": 3636.36,
-    "position_qty": 0.33,
-    "cost_basis": 1070.0,
-    "trend": "Bullish",
-    "support_levels": [
-      "3400",
-      "3200"
-    ],
-    "resistance_levels": [
-      "3700",
-      "4000"
-    ],
-    "indicators": {
-      "RSI": 64,
-      "MACD": "Positive, supporting rally"
-    },
-    "action_plan": {
-      "narrative": "ETH strong upward momentum, outperforming BTC. Hold; add on dips to $3,400. Target $3,700+.",
-      "stop_loss": 3250,
-      "stop_type": null,
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  },
-  {
-    "ticker": "SOL",
-    "price": 153.85,
-    "position_qty": 6.5,
-    "cost_basis": 720.0,
-    "trend": "Bullish",
-    "support_levels": [
-      "140",
-      "120"
-    ],
-    "resistance_levels": [
-      "165",
-      "180"
-    ],
-    "indicators": {
-      "RSI": 66,
-      "MACD": "Positive, strong upward move"
-    },
-    "action_plan": {
-      "narrative": "SOL strong bounce, momentum building. Hold; consider profit near $165. Add on dips to $140 if uptrend holds.",
-      "stop_loss": 119,
-      "stop_type": null,
-      "trailing_stop_pct": null
-    },
-    "alerts": {
-      "stop_near": false,
-      "volatility": "normal",
-      "attention": "none"
-    }
-  }
-]
+  ]
+}
