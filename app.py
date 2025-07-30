@@ -26,8 +26,8 @@ def index():
             except Exception:
                 pass
 
-    # Create a mapping from ticker → action_needed
-    actions = {item['ticker']: item['action_needed'] for item in checklist}
+    # Create a mapping from ticker → action (new checklist is a dict)
+    actions = {ticker: data['action'] for ticker, data in checklist.items()}
 
     # Merge action_needed into strategy data
     for s in strategy:

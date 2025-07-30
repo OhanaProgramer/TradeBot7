@@ -16,8 +16,8 @@
     "position_qty": 86,
     "cost_basis": 466.22,
     "holding_status": "Held",
-    "stop_loss": 4.20,
-    "stop_type": "hard",
+    "stop_loss": null,
+    "stop_type": "none",
     "trailing_stop_pct": null
   },
   {

@@ -1,82 +1,326 @@
-
-
-[
-  {
-    "ticker": "NIO",
+{
+  "NIO": {
     "watch_for": [
       "support_4.20",
-      "breakout_5.00"
+      "support_4.00",
+      "breakout_5.00",
+      "breakout_5.50"
     ],
-    "stop_active": "4.20 (hard stop)",
-    "action_needed": "Hold unless $4.20 support fails; consider adding only on breakout above $5.00 with strong volume."
+    "action": "NIO closed slightly below the $5.00 resistance but above support at $4.20. Price action shows stabilization with potential upside if volume increases. MACD near crossover suggests a possible bullish move, but risk remains if $4.20 fails."
   },
-  {
-    "ticker": "AAPL",
+  "PLNT": {
     "watch_for": [
-      "dip_210",
-      "breakout_220"
+      "support_108.50",
+      "support_106.00",
+      "breakout_114.00",
+      "breakout_117.00"
     ],
-    "stop_active": "208 (trailing)",
-    "action_needed": "Watch for dip to $210 to add; monitor breakout above $220; trailing stop in place."
+    "action": "Momentum remains bullish with price above all major SMAs. Watch for breakout above $114 resistance; caution as RSI nears overbought."
   },
-  {
-    "ticker": "BAC",
+  "UPS": {
     "watch_for": [
-      "dip_38.5"
+      "support_99.00",
+      "support_90.00",
+      "breakout_105.00",
+      "breakout_113.00"
     ],
-    "stop_active": "37.90 (trailing 5%)",
-    "action_needed": "Monitor for dip to $38.50 to add; trailing stop active."
+    "action": "UPS has broken below the $99 minor support and is now testing major support at $90. Momentum remains bearish with no sign of reversal. Hold cautiously while $90 is being tested. If $90 fails, consider reducing or exiting the position. No adding until price reclaims $99 with strong volume."
   },
-  {
-    "ticker": "BROS",
+  "SONY": {
     "watch_for": [
-      "support_56"
+      "support_24.00",
+      "support_22.00",
+      "breakout_26.00",
+      "breakout_28.00"
     ],
-    "stop_active": "56.00 (trailing 5%)",
-    "action_needed": "Watch $56 support for reversal; trailing stop at $56."
+    "action": "SONY consolidating near $24. Hold unless support breaks; add only above $26 breakout. Trailing stop at $23.20."
   },
-  {
-    "ticker": "AMZN",
+  "F": {
     "watch_for": [
-      "dip_182"
+      "support_12.00",
+      "support_11.20",
+      "breakout_13.00",
+      "breakout_14.00"
     ],
-    "stop_active": "174.00 (trailing 5%)",
-    "action_needed": "Monitor for dip to $182 to add; trailing stop at $174."
+    "action": "F bouncing from support. Hold; add on dips near $12."
   },
-  {
-    "ticker": "NVDA",
+  "VZ": {
     "watch_for": [
-      "support_1200_test",
-      "profit_take_1300_1400"
+      "support_39.00",
+      "support_37.50",
+      "breakout_41.50",
+      "breakout_43.00"
     ],
-    "stop_active": "1149 (trailing 15%)",
-    "action_needed": "Hold with bullish momentum intact; take partial profits above $1300, adjust stops if momentum weakens."
+    "action": "VZ is rangebound. Hold for yield; add only above $42."
   },
-  {
-    "ticker": "BTC",
+  "OLP": {
+    "watch_for": [
+      "support_22.00",
+      "support_21.00",
+      "breakout_24.00",
+      "breakout_25.50"
+    ],
+    "action": "OLP uptrend continues. Hold; add on break above $24."
+  },
+  "JNJ": {
+    "watch_for": [
+      "support_145.00",
+      "support_140.00",
+      "breakout_150.00",
+      "breakout_155.00"
+    ],
+    "action": "JNJ below SMAs. Hold for dividend; monitor $145 support."
+  },
+  "SBUX": {
+    "watch_for": [
+      "support_78.00",
+      "support_75.00",
+      "breakout_84.00",
+      "breakout_89.00"
+    ],
+    "action": "SBUX broke down; hold and consider adding if reversal above $84."
+  },
+  "ISRG": {
+    "watch_for": [
+      "support_410.00",
+      "support_390.00",
+      "breakout_430.00",
+      "breakout_450.00"
+    ],
+    "action": "ISRG uptrend strong. Hold; consider partial profit at $430."
+  },
+  "NEE": {
+    "watch_for": [
+      "support_70.00",
+      "support_68.00",
+      "breakout_74.00",
+      "breakout_77.00"
+    ],
+    "action": "NEE consolidating. Hold; add above $74 breakout."
+  },
+  "GOOG": {
+    "watch_for": [
+      "support_175.00",
+      "support_170.00",
+      "breakout_185.00",
+      "breakout_190.00"
+    ],
+    "action": "GOOG above SMAs. Hold; add on dips to $175."
+  },
+  "BAC": {
+    "watch_for": [
+      "support_38.50",
+      "support_36.00",
+      "breakout_41.00",
+      "breakout_43.00"
+    ],
+    "action": "BAC recent breakout. Hold; add on dips to $38.50."
+  },
+  "PRDO": {
+    "watch_for": [
+      "support_19.00",
+      "support_18.00",
+      "breakout_21.00",
+      "breakout_23.00"
+    ],
+    "action": "PRDO uptrend continues. Hold; take partial profits near $21."
+  },
+  "INTC": {
+    "watch_for": [
+      "support_29.00",
+      "support_27.00",
+      "breakout_32.00",
+      "breakout_35.00"
+    ],
+    "action": "INTC underperforming. Hold; watch for reversal above $32."
+  },
+  "GOOGL": {
+    "watch_for": [
+      "support_173.00",
+      "support_170.00",
+      "breakout_180.00",
+      "breakout_185.00"
+    ],
+    "action": "GOOGL strong momentum. Hold; add on dips near $173."
+  },
+  "GM": {
+    "watch_for": [
+      "support_46.00",
+      "support_44.00",
+      "breakout_50.00",
+      "breakout_53.00"
+    ],
+    "action": "GM recent breakout. Hold; consider profit at $50."
+  },
+  "HD": {
+    "watch_for": [
+      "support_330.00",
+      "support_320.00",
+      "breakout_350.00",
+      "breakout_360.00"
+    ],
+    "action": "HD rangebound. Hold; add above $350 breakout."
+  },
+  "AMZN": {
+    "watch_for": [
+      "support_182.00",
+      "support_175.00",
+      "breakout_190.00",
+      "breakout_200.00"
+    ],
+    "action": "AMZN strong uptrend. Hold; add on dips near $182."
+  },
+  "META": {
+    "watch_for": [
+      "support_490.00",
+      "support_470.00",
+      "breakout_520.00",
+      "breakout_550.00"
+    ],
+    "action": "META strong uptrend. Hold; consider profit-taking near $520."
+  },
+  "BP": {
+    "watch_for": [
+      "support_35.00",
+      "support_33.00",
+      "breakout_37.00",
+      "breakout_39.00"
+    ],
+    "action": "BP consolidating. Hold for yield; add above $37."
+  },
+  "OXY": {
+    "watch_for": [
+      "support_60.00",
+      "support_57.00",
+      "breakout_65.00",
+      "breakout_68.00"
+    ],
+    "action": "OXY recent bounce. Hold; add on dips to $60."
+  },
+  "BA": {
+    "watch_for": [
+      "support_172.00",
+      "support_165.00",
+      "breakout_185.00",
+      "breakout_192.00"
+    ],
+    "action": "BA under pressure. Hold; reduce if $172 fails."
+  },
+  "AVGO": {
+    "watch_for": [
+      "support_290.00",
+      "support_280.00",
+      "breakout_310.00",
+      "breakout_320.00"
+    ],
+    "action": "AVGO remains in strong uptrend. Hold; target profit-taking at $1750\u2013$1800. Stop at $1599."
+  },
+  "BABA": {
+    "watch_for": [
+      "support_72.00",
+      "support_68.00",
+      "breakout_78.00",
+      "breakout_82.00"
+    ],
+    "action": "BABA under pressure. Hold; cut if $72 fails."
+  },
+  "NVDA": {
+    "watch_for": [
+      "support_1200.00",
+      "support_1150.00",
+      "breakout_1300.00",
+      "breakout_1400.00"
+    ],
+    "action": "NVDA continues to ride AI momentum above $1200 support. Hold; consider profit-taking near $1300. Trailing stop at $1149 to protect gains."
+  },
+  "VHT": {
+    "watch_for": [
+      "support_260.00",
+      "support_255.00",
+      "breakout_268.00",
+      "breakout_275.00"
+    ],
+    "action": "VHT sector rotation. Hold; add above $268."
+  },
+  "SCHD": {
+    "watch_for": [
+      "support_78.00",
+      "support_75.00",
+      "breakout_81.00",
+      "breakout_84.00"
+    ],
+    "action": "SCHD dividend ETF. Hold for yield; add above $81."
+  },
+  "VTI": {
+    "watch_for": [
+      "support_258.00",
+      "support_250.00",
+      "breakout_265.00",
+      "breakout_270.00"
+    ],
+    "action": "VTI broad market strength. Hold; add on dips near $258."
+  },
+  "QQQ": {
+    "watch_for": [
+      "support_455.00",
+      "support_440.00",
+      "breakout_470.00",
+      "breakout_480.00"
+    ],
+    "action": "QQQ tech sector strength. Hold; add on dips near $455."
+  },
+  "XLE": {
+    "watch_for": [
+      "support_88.00",
+      "support_85.00",
+      "breakout_92.00",
+      "breakout_95.00"
+    ],
+    "action": "XLE consolidating. Hold for yield; add above $92."
+  },
+  "BROS": {
+    "watch_for": [
+      "support_56.00",
+      "support_50.00",
+      "breakout_65.00",
+      "breakout_70.00"
+    ],
+    "action": "BROS is testing SMA200 at $56. A bounce here could trigger a reversal; failure opens downside to $50."
+  },
+  "AAPL": {
+    "watch_for": [
+      "support_210.00",
+      "support_200.00",
+      "breakout_220.00",
+      "breakout_230.00"
+    ],
+    "action": "AAPL is trading above all major SMAs with positive MACD and RSI trending upward. Trend remains bullish; watch for breakout above $220 for continuation."
+  },
+  "BTC": {
     "watch_for": [
       "support_66000",
-      "breakout_70000"
+      "support_62000",
+      "breakout_70000",
+      "breakout_73000"
     ],
-    "stop_active": "65500",
-    "action_needed": "Maintain position; avoid adding unless $70,000 is reclaimed with strong volume. Watch $66,000 support closely."
+    "action": "BTC under pressure, momentum weak. Hold while above $66,000; avoid adds unless $70,000 reclaims with strong volume."
   },
-  {
-    "ticker": "UPS",
+  "ETH": {
     "watch_for": [
-      "support_90_test",
-      "breakout_99"
+      "support_3400",
+      "support_3200",
+      "breakout_3700",
+      "breakout_4000"
     ],
-    "stop_active": "None",
-    "action_needed": "UPS has broken below minor support ($99) and is threatening the $90 major support. Hold only if $90 holds. If $90 breaks, reduce or exit. Do not add until price reclaims $99 with strong volume."
+    "action": "ETH strong upward momentum, outperforming BTC. Hold; add on dips to $3,400. Target $3,700+."
   },
-  {
-    "ticker": "SONY",
+  "SOL": {
     "watch_for": [
-      "support_24",
-      "breakout_26"
+      "support_140",
+      "support_120",
+      "breakout_165",
+      "breakout_180"
     ],
-    "stop_active": "23.20 (trailing)",
-    "action_needed": "Hold unless $24 support fails; add only on breakout above $26 with volume."
+    "action": "SOL strong bounce, momentum building. Hold; consider profit near $165. Add on dips to $140 if uptrend holds."
   }
-]
+}
