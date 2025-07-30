@@ -46,11 +46,11 @@
   {
     "ticker": "NVDA",
     "watch_for": [
-      "support_172_test",
-      "profit_take_180_190"
+      "support_1200_test",
+      "profit_take_1300_1400"
     ],
-    "stop_active": "160.00 (trailing 15%)",
-    "action_needed": "NVDA is trading at $175.84, holding above major support at $172. Momentum remains bullish. Hold; consider profit-taking near $180 and $190 resistance levels. Trailing stop at $160 to lock gains if momentum fails."
+    "stop_active": "1149 (trailing 15%)",
+    "action_needed": "Hold with bullish momentum intact; take partial profits above $1300, adjust stops if momentum weakens."
   },
   {
     "ticker": "BTC",
@@ -59,7 +59,7 @@
       "breakout_70000"
     ],
     "stop_active": "65500",
-    "action_needed": "Watch $66,000 support; reduce if it fails. Avoid adding unless $70,000 reclaims."
+    "action_needed": "Maintain position; avoid adding unless $70,000 is reclaimed with strong volume. Watch $66,000 support closely."
   },
   {
     "ticker": "UPS",
@@ -77,6 +77,6 @@
       "breakout_26"
     ],
     "stop_active": "23.20 (trailing)",
-    "action_needed": "Hold unless $24 support fails; consider adding only on breakout above $26 with volume. Trailing stop at $23.20."
+    "action_needed": "Hold unless $24 support fails; add only on breakout above $26 with volume."
   }
 ]

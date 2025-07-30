@@ -55,8 +55,9 @@ Human - 28 Jul 25 (1930 CST)
 (25 Jul 25) OPEN - SELL 100 Trailing Stop GTC 5%
 
 #### ✅ Action Plan
-- Hold unless $82 breaks; add above $88 breakout.  
-- Set stop at $81.50.  
+- Hold unless $24 support fails.
+- Add only on breakout above $26 with strong volume.
+- Trailing stop at $23.20.
 
 ---
 
@@ -403,8 +404,8 @@ Human - 28 Jul 25 (1930 CST)
 (25 Jul 25) OPEN - SELL 4 Trailing Stop GTC 10%
 
 #### ✅ Action Plan
-- Hold; consider profit-taking above $1,750.  
-- Stop at $1,599.  
+- Hold; consider profit-taking near $1750–$1800.
+- Trailing stop at $1599 to lock gains.
 
 ---
 
@@ -438,8 +439,9 @@ Human - 28 Jul 25 (1930 CST)
 (25 Jul 25) OPEN - SELL 9 Trailing Stop GTC 15%
 
 #### ✅ Action Plan
-- Hold; consider profit-taking above $1,300.  
-- Stop at $1,149.  
+- Hold with bullish momentum intact.
+- Take partial profits above $1300.
+- Trailing stop set at $1149.
 
 ---
 
@@ -534,9 +536,9 @@ Human - 28 Jul 25 (1930 CST)
 - **Resistance:** $70,000, $73,000  
 
 #### ✅ Action Plan
-- Maintain position; avoid adding unless price reclaims $70,000 with volume.  
-- Watch $66,000 support closely; consider reducing if it fails.  
-- Stop: $65,500.  
+- Maintain position; avoid adding unless price reclaims $70,000 with volume.
+- Watch $66,000 support closely; reduce if it fails.
+- Stop: $65,500.
 
 ---
 

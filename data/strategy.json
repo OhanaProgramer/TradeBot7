@@ -75,7 +75,7 @@
       "SMA_50": 24.5,
       "SMA_200": 23.8
     },
-    "today_signal": "SONY consolidating near support. Hold unless $24 breaks; add above $26 breakout. Trailing stop active at $23.20.",
+    "today_signal": "SONY consolidating near $24. Hold unless support breaks; add only above $26 breakout. Trailing stop at $23.20.",
     "position_qty": 100,
     "cost_basis": 1832.13,
     "holding_status": "Held",
@@ -495,7 +495,7 @@
       "SMA_50": 1580.00,
       "SMA_200": 1400.00
     },
-    "today_signal": "AVGO strong uptrend. Hold; consider profit-taking above $1750.",
+    "today_signal": "AVGO remains in strong uptrend. Hold; target profit-taking at $1750–$1800. Stop at $1599.",
     "position_qty": 4.4808,
     "cost_basis": 435.61,
     "holding_status": "Held",
@@ -527,8 +527,8 @@
   {
     "ticker": "NVDA",
     "price": 175.84,
-    "support_levels": ["172.00", "165.00"],
-    "resistance_levels": ["180.00", "190.00"],
+    "support_levels": ["1200.00", "1150.00"],
+    "resistance_levels": ["1300.00", "1400.00"],
     "trend": "Bullish",
     "indicators": {
       "RSI": 75.0,
@@ -537,7 +537,7 @@
       "SMA_50": 1175.00,
       "SMA_200": 950.00
     },
-    "today_signal": "NVDA AI momentum. Hold; consider profit-taking above $1300.",
+    "today_signal": "NVDA continues to ride AI momentum above $1200 support. Hold; consider profit-taking near $1300. Trailing stop at $1149 to protect gains.",
     "position_qty": 9.0078,
     "cost_basis": 153.65,
     "holding_status": "Held",
@@ -702,7 +702,7 @@
       "RSI": 48,
       "MACD": "Slightly negative, no clear upturn"
     },
-    "today_signal": "BTC is struggling below resistance, momentum waning. Avoid adding unless price reclaims $70,000 with volume. Watch $66,000 support.",
+    "today_signal": "BTC under pressure, momentum weak. Hold while above $66,000; avoid adds unless $70,000 reclaims with strong volume.",
     "position_qty": 0.039,
     "cost_basis": 2820.00,
     "holding_status": "Held",
