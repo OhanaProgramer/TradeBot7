@@ -1,9 +1,78 @@
 {
-  "last_updated": "Wed, Jul 30, 2025 \u2013 19:33",
+  "meta": {
+    "last_updated": "Wed, Jul 30, 2025 \u2013 20:36",
+    "portfolio_summary": {
+      "total_value": 26644.8,
+      "total_invested": 25904.97,
+      "total_pl_percent": 2.86,
+      "top_winners": [
+        {
+          "ticker": "NVDA",
+          "pl_percent": 950.9783963553531,
+          "price": 179.27,
+          "cost_basis": 153.65,
+          "position_qty": 9.0078
+        },
+        {
+          "ticker": "AVGO",
+          "pl_percent": 211.28295860976561,
+          "price": 302.62,
+          "cost_basis": 435.61,
+          "position_qty": 4.4808
+        },
+        {
+          "ticker": "BROS",
+          "pl_percent": 92.03964194373401,
+          "price": 60.07,
+          "cost_basis": 218.96,
+          "position_qty": 7
+        }
+      ],
+      "top_losers": [
+        {
+          "ticker": "BTC",
+          "pl_percent": -99.92840319148935,
+          "price": 51.77,
+          "cost_basis": 2820.0,
+          "position_qty": 0.039
+        },
+        {
+          "ticker": "ETH",
+          "pl_percent": -98.90729906542056,
+          "price": 35.43,
+          "cost_basis": 1070.0,
+          "position_qty": 0.33
+        },
+        {
+          "ticker": "SOL",
+          "pl_percent": -98.30277777777778,
+          "price": 1.88,
+          "cost_basis": 720.0,
+          "position_qty": 6.5
+        }
+      ],
+      "alert_counts": {
+        "critical": 4,
+        "caution": 1,
+        "positive": 19,
+        "info": 11
+      }
+    },
+    "benchmark": {
+      "symbol": "SPY",
+      "current_price": null,
+      "previous_close": null,
+      "daily_change_percent": null,
+      "ytd_change_percent": null
+    }
+  },
   "positions": [
     {
       "ticker": "NIO",
-      "price": 4.53,
+      "price": 4.51,
+      "previous_close": 4.71,
+      "daily_change": -0.2,
+      "daily_change_percent": -4.25,
       "position_qty": 86,
       "cost_basis": 466.22,
       "trend": "Neutral \u2192 Attempting Bullish Reversal",
@@ -31,45 +100,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
-      }
-    },
-    {
-      "ticker": "PLNT",
-      "price": 110.98,
-      "position_qty": 0,
-      "cost_basis": 0,
-      "trend": "Bullish",
-      "support_levels": [
-        "108.50",
-        "106.00"
-      ],
-      "resistance_levels": [
-        "114.00",
-        "117.00"
-      ],
-      "indicators": {
-        "RSI": 63.8,
-        "MACD": "-0.0 (momentum slowing)",
-        "SMA_20": 81.32,
-        "SMA_50": 78.29,
-        "SMA_200": 69.66
-      },
-      "action_plan": {
-        "narrative": "Momentum remains bullish with price above all major SMAs. Watch for breakout above $114 resistance; caution as RSI nears overbought.",
-        "stop_loss": null,
-        "stop_type": "watch",
-        "trailing_stop_pct": null
-      },
-      "alerts": {
-        "stop_near": false,
-        "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "UPS",
-      "price": 87.75,
+      "price": 87.18,
+      "previous_close": 90.84,
+      "daily_change": -3.66,
+      "daily_change_percent": -4.03,
       "position_qty": 7,
       "cost_basis": 774.39,
       "trend": "Bearish",
@@ -97,12 +138,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "SONY",
-      "price": 24.16,
+      "price": 24.2,
+      "previous_close": 24.15,
+      "daily_change": 0.05,
+      "daily_change_percent": 0.21,
       "position_qty": 100,
       "cost_basis": 1832.13,
       "trend": "Sideways",
@@ -130,12 +176,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "F",
-      "price": 10.84,
+      "price": 10.87,
+      "previous_close": 11.08,
+      "daily_change": -0.21,
+      "daily_change_percent": -1.9,
       "position_qty": 55,
       "cost_basis": 661.14,
       "trend": "Mildly Bullish",
@@ -163,12 +214,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "VZ",
-      "price": 42.56,
+      "price": 42.6,
+      "previous_close": 42.71,
+      "daily_change": -0.11,
+      "daily_change_percent": -0.26,
       "position_qty": 29.6971,
       "cost_basis": 1320.2,
       "trend": "Sideways",
@@ -196,12 +252,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "OLP",
-      "price": 22.44,
+      "price": 22.5,
+      "previous_close": 23.02,
+      "daily_change": -0.52,
+      "daily_change_percent": -2.26,
       "position_qty": 13.56,
       "cost_basis": 300.54,
       "trend": "Mildly Bullish",
@@ -227,14 +288,19 @@
         "trailing_stop_pct": null
       },
       "alerts": {
-        "stop_near": true,
+        "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "JNJ",
-      "price": 166.93,
+      "price": 167.26,
+      "previous_close": 168.11,
+      "daily_change": -0.85,
+      "daily_change_percent": -0.51,
       "position_qty": 3,
       "cost_basis": 465.75,
       "trend": "Bearish",
@@ -262,12 +328,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "SBUX",
-      "price": 91.71,
+      "price": 92.76,
+      "previous_close": 92.96,
+      "daily_change": -0.2,
+      "daily_change_percent": -0.22,
       "position_qty": 9.9188,
       "cost_basis": 925.72,
       "trend": "Bearish",
@@ -295,12 +366,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "ISRG",
-      "price": 498.44,
+      "price": 500.51,
+      "previous_close": 496.87,
+      "daily_change": 3.64,
+      "daily_change_percent": 0.73,
       "position_qty": 0.0463,
       "cost_basis": 14.22,
       "trend": "Bullish",
@@ -328,12 +404,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "NEE",
-      "price": 71.09,
+      "price": 70.99,
+      "previous_close": 71.95,
+      "daily_change": -0.96,
+      "daily_change_percent": -1.33,
       "position_qty": 3,
       "cost_basis": 211.1,
       "trend": "Sideways",
@@ -361,12 +442,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "GOOG",
-      "price": 197.02,
+      "price": 197.44,
+      "previous_close": 196.43,
+      "daily_change": 1.01,
+      "daily_change_percent": 0.51,
       "position_qty": 1.931,
       "cost_basis": 216.77,
       "trend": "Bullish",
@@ -394,12 +480,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "BAC",
-      "price": 47.85,
+      "price": 47.96,
+      "previous_close": 47.95,
+      "daily_change": 0.01,
+      "daily_change_percent": 0.02,
       "position_qty": 29.2748,
       "cost_basis": 1127.19,
       "trend": "Bullish",
@@ -427,12 +518,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "PRDO",
-      "price": 28.63,
+      "price": 28.65,
+      "previous_close": null,
+      "daily_change": null,
+      "daily_change_percent": null,
       "position_qty": 8,
       "cost_basis": 170.2,
       "trend": "Bullish",
@@ -460,12 +556,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "INTC",
-      "price": 20.21,
+      "price": 20.34,
+      "previous_close": 20.41,
+      "daily_change": -0.07,
+      "daily_change_percent": -0.34,
       "position_qty": 5,
       "cost_basis": 102.52,
       "trend": "Bearish",
@@ -493,12 +594,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "caution",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "GOOGL",
-      "price": 196.08,
+      "price": 196.53,
+      "previous_close": 195.75,
+      "daily_change": 0.78,
+      "daily_change_percent": 0.4,
       "position_qty": 10.7361,
       "cost_basis": 1327.86,
       "trend": "Bullish",
@@ -526,12 +632,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "GM",
-      "price": 51.78,
+      "price": 52.11,
+      "previous_close": 52.11,
+      "daily_change": 0.0,
+      "daily_change_percent": 0.0,
       "position_qty": 1,
       "cost_basis": 55.74,
       "trend": "Bullish",
@@ -559,12 +670,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "HD",
-      "price": 370.22,
+      "price": 372.08,
+      "previous_close": 377.34,
+      "daily_change": -5.26,
+      "daily_change_percent": -1.39,
       "position_qty": 4.1487,
       "cost_basis": 1431.19,
       "trend": "Sideways",
@@ -592,12 +708,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "AMZN",
-      "price": 229.78,
+      "price": 230.19,
+      "previous_close": 231.01,
+      "daily_change": -0.82,
+      "daily_change_percent": -0.35,
       "position_qty": 8,
       "cost_basis": 1677.77,
       "trend": "Bullish",
@@ -625,12 +746,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "META",
-      "price": 696.5,
+      "price": 695.21,
+      "previous_close": 700.0,
+      "daily_change": -4.79,
+      "daily_change_percent": -0.68,
       "position_qty": 1,
       "cost_basis": 719.41,
       "trend": "Bullish",
@@ -658,12 +784,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "BP",
-      "price": 32.08,
+      "price": 32.25,
+      "previous_close": 32.96,
+      "daily_change": -0.71,
+      "daily_change_percent": -2.15,
       "position_qty": 22,
       "cost_basis": 645.78,
       "trend": "Sideways",
@@ -691,12 +822,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "OXY",
-      "price": 44.16,
+      "price": 44.41,
+      "previous_close": 45.46,
+      "daily_change": -1.05,
+      "daily_change_percent": -2.31,
       "position_qty": 1,
       "cost_basis": 43.73,
       "trend": "Bullish",
@@ -724,12 +860,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "BA",
-      "price": 225.56,
+      "price": 225.84,
+      "previous_close": 226.08,
+      "daily_change": -0.24,
+      "daily_change_percent": -0.11,
       "position_qty": 1,
       "cost_basis": 204.84,
       "trend": "Bearish",
@@ -757,12 +898,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "AVGO",
-      "price": 301.68,
+      "price": 302.62,
+      "previous_close": 297.42,
+      "daily_change": 5.2,
+      "daily_change_percent": 1.75,
       "position_qty": 4.4808,
       "cost_basis": 435.61,
       "trend": "Bullish",
@@ -790,12 +936,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "high",
-        "attention": "none"
+        "attention": "none",
+        "category": "critical",
+        "message": "High volatility indicated by RSI"
       }
     },
     {
       "ticker": "BABA",
-      "price": 117.1,
+      "price": 117.38,
+      "previous_close": 119.36,
+      "daily_change": -1.98,
+      "daily_change_percent": -1.66,
       "position_qty": 4,
       "cost_basis": 550.45,
       "trend": "Bearish",
@@ -823,12 +974,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "NVDA",
-      "price": 178.98,
+      "price": 179.27,
+      "previous_close": 175.51,
+      "daily_change": 3.76,
+      "daily_change_percent": 2.14,
       "position_qty": 9.0078,
       "cost_basis": 153.65,
       "trend": "Bullish",
@@ -856,12 +1012,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "high",
-        "attention": "none"
+        "attention": "none",
+        "category": "critical",
+        "message": "High volatility indicated by RSI"
       }
     },
     {
       "ticker": "VHT",
-      "price": 246.84,
+      "price": 247.54,
+      "previous_close": 247.72,
+      "daily_change": -0.18,
+      "daily_change_percent": -0.07,
       "position_qty": 2,
       "cost_basis": 489.76,
       "trend": "Sideways",
@@ -889,12 +1050,17 @@
       "alerts": {
         "stop_near": true,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "Price near stop loss"
       }
     },
     {
       "ticker": "SCHD",
-      "price": 26.76,
+      "price": 26.84,
+      "previous_close": 27.17,
+      "daily_change": -0.33,
+      "daily_change_percent": -1.21,
       "position_qty": 18,
       "cost_basis": 475.66,
       "trend": "Sideways",
@@ -922,12 +1088,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "VTI",
-      "price": 311.21,
+      "price": 312.25,
+      "previous_close": 312.61,
+      "daily_change": -0.36,
+      "daily_change_percent": -0.12,
       "position_qty": 2,
       "cost_basis": 579.65,
       "trend": "Bullish",
@@ -955,12 +1126,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "QQQ",
-      "price": 566.59,
+      "price": 568.02,
+      "previous_close": 567.26,
+      "daily_change": 0.76,
+      "daily_change_percent": 0.13,
       "position_qty": 1,
       "cost_basis": 559.69,
       "trend": "Bullish",
@@ -988,12 +1164,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "XLE",
-      "price": 87.26,
+      "price": 87.68,
+      "previous_close": 88.95,
+      "daily_change": -1.27,
+      "daily_change_percent": -1.43,
       "position_qty": 5,
       "cost_basis": 426.28,
       "trend": "Sideways",
@@ -1021,12 +1202,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "BROS",
-      "price": 59.89,
+      "price": 60.07,
+      "previous_close": 58.31,
+      "daily_change": 1.76,
+      "daily_change_percent": 3.02,
       "position_qty": 7,
       "cost_basis": 218.96,
       "trend": "Bearish \u2192 Potential Reversal",
@@ -1054,12 +1240,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "info",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "AAPL",
-      "price": 208.68,
+      "price": 209.05,
+      "previous_close": 211.27,
+      "daily_change": -2.22,
+      "daily_change_percent": -1.05,
       "position_qty": 17.06,
       "cost_basis": 2710.85,
       "trend": "Bullish",
@@ -1087,12 +1278,17 @@
       "alerts": {
         "stop_near": true,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Price near stop loss"
       }
     },
     {
       "ticker": "BTC",
-      "price": 51.5,
+      "price": 51.77,
+      "previous_close": 52.04,
+      "daily_change": -0.27,
+      "daily_change_percent": -0.52,
       "position_qty": 0.039,
       "cost_basis": 2820.0,
       "trend": "Neutral-Bearish",
@@ -1117,12 +1313,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "ETH",
-      "price": 35.08,
+      "price": 35.43,
+      "previous_close": 35.45,
+      "daily_change": -0.02,
+      "daily_change_percent": -0.06,
       "position_qty": 0.33,
       "cost_basis": 1070.0,
       "trend": "Bullish",
@@ -1147,12 +1348,17 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "SOL",
       "price": 1.88,
+      "previous_close": 1.91,
+      "daily_change": -0.03,
+      "daily_change_percent": -1.57,
       "position_qty": 6.5,
       "cost_basis": 720.0,
       "trend": "Bullish",
@@ -1177,59 +1383,10 @@
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
-        "attention": "none"
+        "attention": "none",
+        "category": "positive",
+        "message": "Positive outlook based on narrative"
       }
     }
-  ],
-  "portfolio_summary": {
-    "total_value": 26583.59,
-    "total_invested": 25904.97,
-    "total_pl_percent": 2.62,
-    "top_winners": [
-      {
-        "ticker": "NVDA",
-        "pl_percent": 949.2782583794337,
-        "price": 178.98,
-        "cost_basis": 153.65,
-        "position_qty": 9.0078
-      },
-      {
-        "ticker": "AVGO",
-        "pl_percent": 210.31604967746378,
-        "price": 301.68,
-        "cost_basis": 435.61,
-        "position_qty": 4.4808
-      },
-      {
-        "ticker": "BROS",
-        "pl_percent": 91.46419437340153,
-        "price": 59.89,
-        "cost_basis": 218.96,
-        "position_qty": 7
-      }
-    ],
-    "top_losers": [
-      {
-        "ticker": "BTC",
-        "pl_percent": -99.92877659574468,
-        "price": 51.5,
-        "cost_basis": 2820.0,
-        "position_qty": 0.039
-      },
-      {
-        "ticker": "ETH",
-        "pl_percent": -98.91809345794393,
-        "price": 35.08,
-        "cost_basis": 1070.0,
-        "position_qty": 0.33
-      },
-      {
-        "ticker": "SOL",
-        "pl_percent": -98.30277777777778,
-        "price": 1.88,
-        "cost_basis": 720.0,
-        "position_qty": 6.5
-      }
-    ]
-  }
+  ]
 }

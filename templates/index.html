@@ -42,6 +42,42 @@
       </div>
     </div>
 
+    <h3>Alerts Overview</h3>
+    <div class="row mb-4" id="alertsOverview">
+      <div class="col-md-3">
+        <div class="card text-bg-danger mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Critical</h5>
+            <p class="card-text" id="alertCritical">--</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-bg-warning mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Caution</h5>
+            <p class="card-text" id="alertCaution">--</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-bg-success mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Positive</h5>
+            <p class="card-text" id="alertPositive">--</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-bg-info mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Info</h5>
+            <p class="card-text" id="alertInfo">--</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h3>Positions Overview</h3>
     <table id="positionsTable" class="table table-striped table-bordered">
       <thead class="table-dark">
@@ -83,6 +119,10 @@ async function loadPositions() {
       document.getElementById('topWinners').innerHTML = '<li>--</li>';
       document.getElementById('topLosers').innerHTML = '<li>--</li>';
       document.getElementById('totalPL').textContent = '--';
+      document.getElementById('alertCritical').textContent = '--';
+      document.getElementById('alertCaution').textContent = '--';
+      document.getElementById('alertPositive').textContent = '--';
+      document.getElementById('alertInfo').textContent = '--';
       return;
     }
 
@@ -100,6 +140,12 @@ async function loadPositions() {
       ? summary.top_losers.map(l => `<li>${l.ticker}: ${l.pl_percent.toFixed(2)}%</li>`).join('')
       : '<li>--</li>';
     document.getElementById('topLosers').innerHTML = losersList;
+
+    const counts = (summary.alert_counts) || {};
+    document.getElementById('alertCritical').textContent = counts.critical ?? 0;
+    document.getElementById('alertCaution').textContent = counts.caution ?? 0;
+    document.getElementById('alertPositive').textContent = counts.positive ?? 0;
+    document.getElementById('alertInfo').textContent = counts.info ?? 0;
 
     // Filter positions to only those with actionable alerts
     const alertPositions = positions.filter(item => {
@@ -137,6 +183,10 @@ async function loadPositions() {
     document.getElementById('topWinners').innerHTML = '<li>--</li>';
     document.getElementById('topLosers').innerHTML = '<li>--</li>';
     document.getElementById('totalPL').textContent = '--';
+    document.getElementById('alertCritical').textContent = '--';
+    document.getElementById('alertCaution').textContent = '--';
+    document.getElementById('alertPositive').textContent = '--';
+    document.getElementById('alertInfo').textContent = '--';
   }
 }
 
