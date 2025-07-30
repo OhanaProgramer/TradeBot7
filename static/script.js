@@ -59,8 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Enable Bootstrap tooltips
   const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
-
-  // Display last updated time
-  const lastUpdated = document.getElementById('lastUpdated');
-  if (lastUpdated) lastUpdated.textContent = 'Last Updated: ' + new Date().toLocaleString();
 });

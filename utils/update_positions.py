@@ -56,6 +56,52 @@ for item in positions:
     # Recalculate alerts
     item["alerts"] = calculate_alerts(item)
 
+
+# Portfolio summary metrics
+def compute_portfolio_summary(positions):
+    total_value = 0.0
+    total_invested = 0.0
+    winners = []
+    losers = []
+    for item in positions:
+        price = item.get("price")
+        qty = item.get("position_qty", 0)
+        cost_basis = item.get("cost_basis", 0)
+        # Defensive: skip if price or cost_basis missing
+        try:
+            value = float(price) * float(qty)
+            invested = float(cost_basis)
+        except Exception:
+            value = 0.0
+            invested = 0.0
+        total_value += value
+        total_invested += invested
+        # Compute % change for winner/loser lists
+        try:
+            pl_pct = ((float(price) - float(cost_basis)/float(qty)) / (float(cost_basis)/float(qty))) * 100 if qty != 0 else 0
+        except Exception:
+            pl_pct = 0
+        # Use cost_basis > 0 and qty > 0 as filter
+        if invested > 0 and qty > 0:
+            winners.append({
+                "ticker": item.get("ticker"),
+                "pl_percent": pl_pct,
+                "price": price,
+                "cost_basis": cost_basis,
+                "position_qty": qty
+            })
+    # Sort by pl_percent descending for winners, ascending for losers
+    winners_sorted = sorted(winners, key=lambda x: x["pl_percent"], reverse=True)
+    losers_sorted = sorted(winners, key=lambda x: x["pl_percent"])
+    summary = {
+        "total_value": round(total_value, 2),
+        "total_invested": round(total_invested, 2),
+        "total_pl_percent": round(((total_value - total_invested) / total_invested) * 100, 2) if total_invested else 0.0,
+        "top_winners": winners_sorted[:3],
+        "top_losers": losers_sorted[:3]
+    }
+    return summary
+
 # Prepare output with last_updated timestamp in format 'Wed, Jul 30, 2025 – 13:52'
 def format_last_updated(dt):
     # Example: Wed, Jul 30, 2025 – 13:52
@@ -63,7 +109,8 @@ def format_last_updated(dt):
 
 output = {
     "last_updated": format_last_updated(datetime.utcnow()),
-    "positions": positions
+    "positions": positions,
+    "portfolio_summary": compute_portfolio_summary(positions)
 }
 
 # Save updated positions

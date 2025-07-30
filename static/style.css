@@ -64,3 +64,41 @@ thead th {
   color: #fff;
   z-index: 2;
 }
+/* Single line clamp with ellipsis for action text */
+
+/* Color-coded backgrounds for action text */
+.action-text {
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.action-critical { background-color: #dc3545; }   /* red */
+.action-warning  { background-color: #ffc107; color: #000; } /* yellow */
+.action-info     { background-color: #17a2b8; }   /* blue */
+.action-neutral  { background-color: #6c757d; }   /* gray */
+
+/* Action badge colors */
+.badge.action-badge {
+  background-color: #6c757d; /* default gray */
+}
+.badge.action-badge.sell,
+.badge.action-badge.take-profit {
+  background-color: #28a745 !important; /* green for sell/take profit */
+}
+.badge.action-badge.stop,
+.badge.action-badge.exit {
+  background-color: #dc3545 !important; /* red for stop/exit */
+}
+.badge.action-badge.watch,
+.badge.action-badge.alert {
+  background-color: #ffc107 !important; /* yellow for watch/alert */
+}
+.badge.action-badge.info,
+.badge.action-badge.pending {
+  background-color: #17a2b8 !important; /* blue for info/pending */
+}

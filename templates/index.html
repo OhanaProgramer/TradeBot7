@@ -32,6 +32,14 @@
           </div>
         </div>
       </div>
+      <div class="col-md-4">
+        <div class="card text-bg-info mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total P/L</h5>
+            <p class="card-text" id="totalPL">--</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <h3>Positions Overview</h3>
@@ -74,47 +82,22 @@ async function loadPositions() {
       document.getElementById('totalValue').textContent = '--';
       document.getElementById('topWinners').innerHTML = '<li>--</li>';
       document.getElementById('topLosers').innerHTML = '<li>--</li>';
+      document.getElementById('totalPL').textContent = '--';
       return;
     }
 
-    // Calculate total portfolio value and identify top winners/losers
-    // Assume each position has fields: price, quantity, and changePercent (percentage change)
-    let totalValue = 0;
-    let winners = [];
-    let losers = [];
+    // Use portfolio summary data from API
+    const summary = data.portfolio_summary || {};
+    document.getElementById('totalValue').textContent = summary.total_value ? '$' + summary.total_value.toFixed(2) : '--';
+    document.getElementById('totalPL').textContent = summary.total_pl_percent !== undefined ? summary.total_pl_percent.toFixed(2) + '%' : '--';
 
-    positions.forEach(item => {
-      const price = Number(item.price) || 0;
-      const quantity = Number(item.quantity) || 0;
-      const changePercent = Number(item.changePercent) || 0;
-      const value = price * quantity;
-      totalValue += value;
-
-      if (changePercent > 0) {
-        winners.push({ ticker: item.ticker || '--', changePercent });
-      } else if (changePercent < 0) {
-        losers.push({ ticker: item.ticker || '--', changePercent });
-      }
-    });
-
-    // Sort winners descending by changePercent, losers ascending
-    winners.sort((a, b) => b.changePercent - a.changePercent);
-    losers.sort((a, b) => a.changePercent - b.changePercent);
-
-    // Take top 3 of each
-    const topWinners = winners.slice(0, 3);
-    const topLosers = losers.slice(0, 3);
-
-    // Update portfolio snapshot cards
-    document.getElementById('totalValue').textContent = '$' + totalValue.toFixed(2);
-
-    const winnersList = topWinners.length > 0
-      ? topWinners.map(w => `<li>${w.ticker}: ${w.changePercent.toFixed(2)}%</li>`).join('')
+    const winnersList = (summary.top_winners && summary.top_winners.length)
+      ? summary.top_winners.map(w => `<li>${w.ticker}: ${w.pl_percent.toFixed(2)}%</li>`).join('')
       : '<li>--</li>';
     document.getElementById('topWinners').innerHTML = winnersList;
 
-    const losersList = topLosers.length > 0
-      ? topLosers.map(l => `<li>${l.ticker}: ${l.changePercent.toFixed(2)}%</li>`).join('')
+    const losersList = (summary.top_losers && summary.top_losers.length)
+      ? summary.top_losers.map(l => `<li>${l.ticker}: ${l.pl_percent.toFixed(2)}%</li>`).join('')
       : '<li>--</li>';
     document.getElementById('topLosers').innerHTML = losersList;
 
@@ -153,6 +136,7 @@ async function loadPositions() {
     document.getElementById('totalValue').textContent = '--';
     document.getElementById('topWinners').innerHTML = '<li>--</li>';
     document.getElementById('topLosers').innerHTML = '<li>--</li>';
+    document.getElementById('totalPL').textContent = '--';
   }
 }
 

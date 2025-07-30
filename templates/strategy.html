@@ -41,9 +41,11 @@
           <td>{{ item.action_plan.stop_loss }}</td>
           <td class="performance-cell" data-cost="{{ item.cost_basis }}" data-price="{{ item.price }}" data-qty="{{ item.position_qty }}"></td>
           <td class="wrap-action">
-            <span class="badge action-badge" data-bs-toggle="tooltip" title="{{ item.action_plan.narrative }}">
+            <div class="action-text action-badge" 
+                 data-bs-toggle="tooltip" 
+                 title="{{ item.action_plan.narrative }}">
               {{ item.action_plan.narrative }}
-            </span>
+            </div>
           </td>
         </tr>
         {% endfor %}
@@ -88,4 +90,13 @@
   });
 </script>
 <script src="{{ url_for('static', filename='script.js') }}"></script>
+<style>
+  .two-line-ellipsis {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+</style>
 {% endblock %}
