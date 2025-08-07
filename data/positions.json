@@ -1,29 +1,67 @@
 {
+  "crypto": {
+    "broker": "Coinbase",
+    "assets": [
+      {
+        "symbol": "SHIB",
+        "name": "Shiba Inu",
+        "price": 1.2e-05,
+        "change_percent": 3.17
+      },
+      {
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "price": 115027.89,
+        "change_percent": 1.34
+      },
+      {
+        "symbol": "ETH",
+        "name": "Ethereum",
+        "price": 3669.64,
+        "change_percent": 2.92
+      },
+      {
+        "symbol": "SOL",
+        "name": "Solana",
+        "price": 167.89,
+        "change_percent": 3.58
+      }
+    ],
+    "cash": {
+      "USD": 100.0,
+      "USDC": 9.51,
+      "total_cash": 109.51
+    },
+    "total_value": 245.34
+  },
   "meta": {
-    "last_updated": "Wed, Jul 30, 2025 \u2013 20:36",
+    "last_updated": "Fri, Aug 01, 2025 \u2013 12:34",
+    "last_updated_indicators": "2025-08-07 16:10:10",
+    "last_updated_positions": null,
+    "last_updated_prices": null,
     "portfolio_summary": {
-      "total_value": 26644.8,
+      "total_value": 26558.66,
       "total_invested": 25904.97,
-      "total_pl_percent": 2.86,
+      "total_pl_percent": 2.52,
       "top_winners": [
         {
           "ticker": "NVDA",
-          "pl_percent": 950.9783963553531,
-          "price": 179.27,
+          "pl_percent": 942.770833712984,
+          "price": 177.87,
           "cost_basis": 153.65,
           "position_qty": 9.0078
         },
         {
           "ticker": "AVGO",
-          "pl_percent": 211.28295860976561,
-          "price": 302.62,
+          "pl_percent": 202.10761001813546,
+          "price": 293.7,
           "cost_basis": 435.61,
           "position_qty": 4.4808
         },
         {
           "ticker": "BROS",
-          "pl_percent": 92.03964194373401,
-          "price": 60.07,
+          "pl_percent": 89.48209718670077,
+          "price": 59.27,
           "cost_basis": 218.96,
           "position_qty": 7
         }
@@ -31,31 +69,31 @@
       "top_losers": [
         {
           "ticker": "BTC",
-          "pl_percent": -99.92840319148935,
-          "price": 51.77,
+          "pl_percent": -99.92850000000001,
+          "price": 51.7,
           "cost_basis": 2820.0,
           "position_qty": 0.039
         },
         {
           "ticker": "ETH",
-          "pl_percent": -98.90729906542056,
-          "price": 35.43,
+          "pl_percent": -98.91531775700935,
+          "price": 35.17,
           "cost_basis": 1070.0,
           "position_qty": 0.33
         },
         {
           "ticker": "SOL",
-          "pl_percent": -98.30277777777778,
-          "price": 1.88,
+          "pl_percent": -98.31180555555555,
+          "price": 1.87,
           "cost_basis": 720.0,
           "position_qty": 6.5
         }
       ],
       "alert_counts": {
-        "critical": 4,
-        "caution": 1,
-        "positive": 19,
-        "info": 11
+        "critical": 27,
+        "caution": 0,
+        "positive": 8,
+        "info": 0
       }
     },
     "benchmark": {
@@ -64,17 +102,18 @@
       "previous_close": null,
       "daily_change_percent": null,
       "ytd_change_percent": null
-    }
+    },
+    "cash_available": 4366.23,
+    "notes": "Watchlist metadata moved here. Buy prices set using technical support levels and breakout zones. Includes sector-aligned candidates and personal picks like Raspberry Pi and Planet Fitness."
   },
   "positions": [
     {
-      "ticker": "NIO",
-      "price": 4.51,
-      "previous_close": 4.71,
-      "daily_change": -0.2,
-      "daily_change_percent": -4.25,
-      "position_qty": 86,
+      "symbol": "NIO",
+      "quantity": 86,
+      "price": 4.87,
+      "market_value": 418.82,
       "cost_basis": 466.22,
+      "gain_loss_percent": -10.15,
       "trend": "Neutral \u2192 Attempting Bullish Reversal",
       "support_levels": [
         "4.20",
@@ -85,54 +124,23 @@
         "5.50"
       ],
       "indicators": {
-        "RSI": 43.5,
-        "MACD": "-0.1 (near crossover)",
-        "SMA_20": 5.51,
-        "SMA_50": 5.45,
-        "SMA_200": 5.0
+        "RSI": 57.1021,
+        "MACD": {
+          "datetime": "2025-08-07",
+          "macd": "0.21957230",
+          "macd_signal": "0.25955499",
+          "macd_hist": "-0.039982694"
+        },
+        "SMA_20": 4.58675,
+        "SMA_50": 3.9607,
+        "SMA_200": 4.27778,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:20.367978"
       },
       "action_plan": {
-        "narrative": "NIO closed slightly below the $5.00 resistance but above support at $4.20. Price action shows stabilization with potential upside if volume increases. MACD near crossover suggests a possible bullish move, but risk remains if $4.20 fails.",
-        "stop_loss": null,
-        "stop_type": "none",
-        "trailing_stop_pct": null
-      },
-      "alerts": {
-        "stop_near": false,
-        "volatility": "normal",
-        "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
-      }
-    },
-    {
-      "ticker": "UPS",
-      "price": 87.18,
-      "previous_close": 90.84,
-      "daily_change": -3.66,
-      "daily_change_percent": -4.03,
-      "position_qty": 7,
-      "cost_basis": 774.39,
-      "trend": "Bearish",
-      "support_levels": [
-        "99.00",
-        "90.00"
-      ],
-      "resistance_levels": [
-        "105.00",
-        "113.00"
-      ],
-      "indicators": {
-        "RSI": 52.7,
-        "MACD": "-0.2 (bearish momentum)",
-        "SMA_20": 103.8,
-        "SMA_50": 113.6,
-        "SMA_200": 134.1
-      },
-      "action_plan": {
-        "narrative": "UPS has broken below the $99 minor support and is now testing major support at $90. Momentum remains bearish with no sign of reversal. Hold cautiously while $90 is being tested. If $90 fails, consider reducing or exiting the position. No adding until price reclaims $99 with strong volume.",
-        "stop_loss": null,
-        "stop_type": "none",
+        "narrative": "Hold. Do not add unless a breakout above $5.00 with strong volume occurs. Capital for new adds is severely limited ($386 available) and should be reserved for top conviction trend leaders only. Maintain stop at $3.90; tighten if price approaches within 5-7% of support.",
+        "stop_loss": 3.9,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
@@ -144,13 +152,56 @@
       }
     },
     {
-      "ticker": "SONY",
-      "price": 24.2,
-      "previous_close": 24.15,
-      "daily_change": 0.05,
-      "daily_change_percent": 0.21,
-      "position_qty": 100,
+      "symbol": "UPS",
+      "quantity": 7,
+      "price": 86.16,
+      "market_value": 603.12,
+      "cost_basis": 774.39,
+      "gain_loss_percent": -22.09,
+      "trend": "Bearish",
+      "support_levels": [
+        "99.00",
+        "90.00"
+      ],
+      "resistance_levels": [
+        "105.00",
+        "113.00"
+      ],
+      "indicators": {
+        "RSI": 30.77202,
+        "MACD": {
+          "datetime": "2025-08-07",
+          "macd": "-4.025281",
+          "macd_signal": "-2.72518",
+          "macd_hist": "-1.30011"
+        },
+        "SMA_20": 95.18799,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:22.234035"
+      },
+      "action_plan": {
+        "narrative": "Reduce exposure on any weakness (Reduce). Major support at $90 is critical; if it fails, exit most or all of the position. Do not add. Only hold minimal exposure if $90 holds. Capital is restricted ($386 available) and reserved for leaders only.",
+        "stop_loss": 83.7,
+        "stop_type": "hard",
+        "trailing_stop_pct": null
+      },
+      "alerts": {
+        "stop_near": true,
+        "volatility": "normal",
+        "attention": "critical",
+        "category": "critical",
+        "message": "Price near stop loss; Critical attention: Bearish trend near stop"
+      }
+    },
+    {
+      "symbol": "SONY",
+      "quantity": 100,
+      "price": 24.32,
+      "market_value": 2432.0,
       "cost_basis": 1832.13,
+      "gain_loss_percent": 32.76,
       "trend": "Sideways",
       "support_levels": [
         "24.00",
@@ -161,14 +212,16 @@
         "28.00"
       ],
       "indicators": {
-        "RSI": 48.0,
-        "MACD": "flat",
-        "SMA_20": 24.9,
-        "SMA_50": 24.5,
-        "SMA_200": 23.8
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:24.095563"
       },
       "action_plan": {
-        "narrative": "SONY consolidating near $24. Hold unless support breaks; add only above $26 breakout. Trailing stop at $23.20.",
+        "narrative": "Hold. Only consider adding above $26 breakout and only if capital is not better deployed in top conviction trend leaders. Trailing stop 5%",
         "stop_loss": 23.2,
         "stop_type": "trailing",
         "trailing_stop_pct": 5.0
@@ -182,13 +235,12 @@
       }
     },
     {
-      "ticker": "F",
-      "price": 10.87,
-      "previous_close": 11.08,
-      "daily_change": -0.21,
-      "daily_change_percent": -1.9,
-      "position_qty": 55,
+      "symbol": "F",
+      "quantity": 55,
+      "price": 11.07,
+      "market_value": 608.85,
       "cost_basis": 661.14,
+      "gain_loss_percent": -7.91,
       "trend": "Mildly Bullish",
       "support_levels": [
         "12.00",
@@ -199,34 +251,35 @@
         "14.00"
       ],
       "indicators": {
-        "RSI": 56.0,
-        "MACD": "+0.1 (turning positive)",
-        "SMA_20": 12.08,
-        "SMA_50": 11.8,
-        "SMA_200": 11.4
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:25.975560"
       },
       "action_plan": {
-        "narrative": "F bouncing from support. Hold; add on dips near $12.",
-        "stop_loss": 11.9,
-        "stop_type": "trailing",
+        "narrative": "Hold. Do not add unless on a strong dip near $12 and only if no higher conviction leaders are available for new capital ($386). Maintain stop at $10.40; tighten if price approaches support.",
+        "stop_loss": 10.4,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "VZ",
-      "price": 42.6,
-      "previous_close": 42.71,
-      "daily_change": -0.11,
-      "daily_change_percent": -0.26,
-      "position_qty": 29.6971,
+      "symbol": "VZ",
+      "quantity": 29.6971,
+      "price": 42.76,
+      "market_value": 1270.89,
       "cost_basis": 1320.2,
+      "gain_loss_percent": -3.74,
       "trend": "Sideways",
       "support_levels": [
         "39.00",
@@ -237,34 +290,35 @@
         "43.00"
       ],
       "indicators": {
-        "RSI": 49.0,
-        "MACD": "-0.05 (slightly negative)",
-        "SMA_20": 40.5,
-        "SMA_50": 41.1,
-        "SMA_200": 39.8
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:27.870939"
       },
       "action_plan": {
-        "narrative": "VZ is rangebound. Hold for yield; add only above $42.",
-        "stop_loss": 38.8,
-        "stop_type": "trailing",
+        "narrative": "Hold for yield. No adds. Only consider adding above $42 if capital is not better used in leaders and only after strong breakout. Stop at $36.90; review if price nears support.",
+        "stop_loss": 36.9,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "OLP",
-      "price": 22.5,
-      "previous_close": 23.02,
-      "daily_change": -0.52,
-      "daily_change_percent": -2.26,
-      "position_qty": 13.56,
+      "symbol": "OLP",
+      "quantity": 13.56,
+      "price": 22.38,
+      "market_value": 303.54,
       "cost_basis": 300.54,
+      "gain_loss_percent": 1.0,
       "trend": "Mildly Bullish",
       "support_levels": [
         "22.00",
@@ -275,34 +329,35 @@
         "25.50"
       ],
       "indicators": {
-        "RSI": 58.0,
-        "MACD": "+0.08 (positive)",
-        "SMA_20": 21.98,
-        "SMA_50": 22.2,
-        "SMA_200": 21.6
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:30.023073"
       },
       "action_plan": {
-        "narrative": "OLP uptrend continues. Hold; add on break above $24.",
-        "stop_loss": 21.8,
-        "stop_type": "trailing",
+        "narrative": "Hold. Only add above $24 breakout and only if capital is not better deployed in higher conviction leaders. Maintain stop at $20.50; tighten if price approaches support.",
+        "stop_loss": 20.5,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
-      "ticker": "JNJ",
-      "price": 167.26,
-      "previous_close": 168.11,
-      "daily_change": -0.85,
-      "daily_change_percent": -0.51,
-      "position_qty": 3,
+      "symbol": "JNJ",
+      "quantity": 3,
+      "price": 164.74,
+      "market_value": 494.22,
       "cost_basis": 465.75,
+      "gain_loss_percent": 6.11,
       "trend": "Bearish",
       "support_levels": [
         "145.00",
@@ -313,34 +368,35 @@
         "155.00"
       ],
       "indicators": {
-        "RSI": 41.0,
-        "MACD": "-0.15 (negative)",
-        "SMA_20": 147.1,
-        "SMA_50": 149.8,
-        "SMA_200": 154.5
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:32.558433"
       },
       "action_plan": {
-        "narrative": "JNJ below SMAs. Hold for dividend; monitor $145 support.",
-        "stop_loss": 143.9,
-        "stop_type": "trailing",
+        "narrative": "Reduce exposure on any weakness (Reduce). Hold only minimal exposure for dividend if $145 holds. No adds. Tighten stop if price approaches $140 support.",
+        "stop_loss": 135.0,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "SBUX",
-      "price": 92.76,
-      "previous_close": 92.96,
-      "daily_change": -0.2,
-      "daily_change_percent": -0.22,
-      "position_qty": 9.9188,
+      "symbol": "SBUX",
+      "quantity": 9.9188,
+      "price": 89.16,
+      "market_value": 884.38,
       "cost_basis": 925.72,
+      "gain_loss_percent": -4.47,
       "trend": "Bearish",
       "support_levels": [
         "78.00",
@@ -351,34 +407,35 @@
         "89.00"
       ],
       "indicators": {
-        "RSI": 38.0,
-        "MACD": "-0.2 (deeply negative)",
-        "SMA_20": 82.1,
-        "SMA_50": 84.0,
-        "SMA_200": 95.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:34.512071"
       },
       "action_plan": {
-        "narrative": "SBUX broke down; hold and consider adding if reversal above $84.",
-        "stop_loss": 77.5,
-        "stop_type": "trailing",
+        "narrative": "Reduce exposure on any weakness (Reduce). Hold only minimal exposure if $78 support holds. No adds. Tighten stop if price approaches $75 support.",
+        "stop_loss": 73.5,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "ISRG",
-      "price": 500.51,
-      "previous_close": 496.87,
-      "daily_change": 3.64,
-      "daily_change_percent": 0.73,
-      "position_qty": 0.0463,
+      "symbol": "ISRG",
+      "quantity": 0.0463,
+      "price": 481.09,
+      "market_value": 22.27,
       "cost_basis": 14.22,
+      "gain_loss_percent": 56.65,
       "trend": "Bullish",
       "support_levels": [
         "410.00",
@@ -389,17 +446,20 @@
         "450.00"
       ],
       "indicators": {
-        "RSI": 66.0,
-        "MACD": "+0.3 (positive and rising)",
-        "SMA_20": 412.0,
-        "SMA_50": 401.5,
-        "SMA_200": 380.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:36.514678"
       },
       "action_plan": {
-        "narrative": "ISRG uptrend strong. Hold; consider partial profit at $430.",
-        "stop_loss": 405.0,
+        "narrative": "Hold. Take partial profits near $428\u2013430 (Take Partial Profits) to secure gains. No adds; capital is reserved for higher conviction names.",
+        "stop_loss": 383.7,
         "stop_type": "trailing",
-        "trailing_stop_pct": null
+        "trailing_stop_pct": 5.0,
+        "take_profit": 428.0
       },
       "alerts": {
         "stop_near": false,
@@ -410,13 +470,12 @@
       }
     },
     {
-      "ticker": "NEE",
-      "price": 70.99,
-      "previous_close": 71.95,
-      "daily_change": -0.96,
-      "daily_change_percent": -1.33,
-      "position_qty": 3,
+      "symbol": "NEE",
+      "quantity": 3,
+      "price": 71.06,
+      "market_value": 213.18,
       "cost_basis": 211.1,
+      "gain_loss_percent": 0.99,
       "trend": "Sideways",
       "support_levels": [
         "70.00",
@@ -427,34 +486,35 @@
         "77.00"
       ],
       "indicators": {
-        "RSI": 53.0,
-        "MACD": "flat",
-        "SMA_20": 72.0,
-        "SMA_50": 71.0,
-        "SMA_200": 70.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:08:49.517026"
       },
       "action_plan": {
-        "narrative": "NEE consolidating. Hold; add above $74 breakout.",
-        "stop_loss": 68.9,
-        "stop_type": "trailing",
+        "narrative": "Hold. No adds unless above $74 breakout and only if capital is not better used in leaders. Maintain stop at $63.25; tighten if price nears support.",
+        "stop_loss": 63.25,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
-      "ticker": "GOOG",
-      "price": 197.44,
-      "previous_close": 196.43,
-      "daily_change": 1.01,
-      "daily_change_percent": 0.51,
-      "position_qty": 1.931,
+      "symbol": "GOOG",
+      "quantity": 1.931,
+      "price": 192.86,
+      "market_value": 373.22,
       "cost_basis": 216.77,
+      "gain_loss_percent": 72.17,
       "trend": "Bullish",
       "support_levels": [
         "175.00",
@@ -465,17 +525,25 @@
         "190.00"
       ],
       "indicators": {
-        "RSI": 63.0,
-        "MACD": "+0.2 (positive)",
-        "SMA_20": 176.5,
-        "SMA_50": 172.8,
-        "SMA_200": 160.0
+        "RSI": null,
+        "MACD": {
+          "datetime": "2025-08-07",
+          "macd": "4.77875",
+          "macd_signal": "4.80896",
+          "macd_hist": "-0.030218792"
+        },
+        "SMA_20": 190.956,
+        "SMA_50": 181.166,
+        "SMA_200": 177.1882,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:32.035602"
       },
       "action_plan": {
-        "narrative": "GOOG above SMAs. Hold; add on dips to $175.",
-        "stop_loss": 169.0,
+        "narrative": "Hold. Consider taking partial profits near $185 (Take Partial Profits)",
+        "stop_loss": 160.0,
         "stop_type": "trailing",
-        "trailing_stop_pct": null
+        "trailing_stop_pct": 8.0,
+        "take_profit": 185.0
       },
       "alerts": {
         "stop_near": false,
@@ -486,13 +554,12 @@
       }
     },
     {
-      "ticker": "BAC",
-      "price": 47.96,
-      "previous_close": 47.95,
-      "daily_change": 0.01,
-      "daily_change_percent": 0.02,
-      "position_qty": 29.2748,
+      "symbol": "BAC",
+      "quantity": 29.2748,
+      "price": 47.27,
+      "market_value": 1383.18,
       "cost_basis": 1127.19,
+      "gain_loss_percent": 22.71,
       "trend": "Bullish",
       "support_levels": [
         "38.50",
@@ -503,17 +570,25 @@
         "43.00"
       ],
       "indicators": {
-        "RSI": 60.0,
-        "MACD": "+0.12 (positive)",
-        "SMA_20": 39.0,
-        "SMA_50": 37.9,
-        "SMA_200": 35.8
+        "RSI": 34.3261,
+        "MACD": {
+          "datetime": "2025-08-07",
+          "macd": "-0.22459545",
+          "macd_signal": "0.18628842",
+          "macd_hist": "-0.41088387"
+        },
+        "SMA_20": 46.969,
+        "SMA_50": 46.2794,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:33.880022"
       },
       "action_plan": {
-        "narrative": "BAC recent breakout. Hold; add on dips to $38.50.",
-        "stop_loss": 37.9,
+        "narrative": "Hold. Take partial profits near $41 (Take Partial Profits) to secure gains. Only add on dips to $38.50 if capital is not better used in top conviction leaders.",
+        "stop_loss": 36.0,
         "stop_type": "trailing",
-        "trailing_stop_pct": 5.0
+        "trailing_stop_pct": 5.0,
+        "take_profit": 41.0
       },
       "alerts": {
         "stop_near": false,
@@ -524,13 +599,12 @@
       }
     },
     {
-      "ticker": "PRDO",
-      "price": 28.65,
-      "previous_close": null,
-      "daily_change": null,
-      "daily_change_percent": null,
-      "position_qty": 8,
+      "symbol": "PRDO",
+      "quantity": 8,
+      "price": 28.78,
+      "market_value": 230.24,
       "cost_basis": 170.2,
+      "gain_loss_percent": 35.28,
       "trend": "Bullish",
       "support_levels": [
         "19.00",
@@ -541,34 +615,36 @@
         "23.00"
       ],
       "indicators": {
-        "RSI": 62.0,
-        "MACD": "+0.12 (positive)",
-        "SMA_20": 19.4,
-        "SMA_50": 18.8,
-        "SMA_200": 17.2
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:35.617429"
       },
       "action_plan": {
-        "narrative": "PRDO uptrend continues. Hold; take partial profits near $21.",
-        "stop_loss": 18.8,
-        "stop_type": "trailing",
-        "trailing_stop_pct": null
+        "narrative": "Hold. Take partial profits near $21 (Take Partial Profits). Only add on dips to $19 if capital is not better used in high conviction trend leaders. Maintain stop at $17.10.",
+        "stop_loss": 17.1,
+        "stop_type": "hard",
+        "trailing_stop_pct": null,
+        "take_profit": 21.0
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
-      "ticker": "INTC",
-      "price": 20.34,
-      "previous_close": 20.41,
-      "daily_change": -0.07,
-      "daily_change_percent": -0.34,
-      "position_qty": 5,
+      "symbol": "INTC",
+      "quantity": 5,
+      "price": 19.8,
+      "market_value": 99.0,
       "cost_basis": 102.52,
+      "gain_loss_percent": -3.43,
       "trend": "Bearish",
       "support_levels": [
         "29.00",
@@ -579,34 +655,35 @@
         "35.00"
       ],
       "indicators": {
-        "RSI": 40.0,
-        "MACD": "-0.18 (negative)",
-        "SMA_20": 30.8,
-        "SMA_50": 32.1,
-        "SMA_200": 35.6
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:37.391869"
       },
       "action_plan": {
-        "narrative": "INTC underperforming. Hold; watch for reversal above $32.",
-        "stop_loss": 28.8,
-        "stop_type": "trailing",
+        "narrative": "Reduce exposure on any weakness (Reduce). Hold only minimal exposure unless a reversal above $32 is confirmed. No adds. Tighten stop if price approaches $27 support.",
+        "stop_loss": 25.1,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "caution",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "GOOGL",
-      "price": 196.53,
-      "previous_close": 195.75,
-      "daily_change": 0.78,
-      "daily_change_percent": 0.4,
-      "position_qty": 10.7361,
+      "symbol": "GOOGL",
+      "quantity": 10.7361,
+      "price": 191.9,
+      "market_value": 2060.56,
       "cost_basis": 1327.86,
+      "gain_loss_percent": 55.17,
       "trend": "Bullish",
       "support_levels": [
         "173.00",
@@ -617,34 +694,36 @@
         "185.00"
       ],
       "indicators": {
-        "RSI": 62.0,
-        "MACD": "+0.18 (positive)",
-        "SMA_20": 175.2,
-        "SMA_50": 171.0,
-        "SMA_200": 160.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:39.541416"
       },
       "action_plan": {
-        "narrative": "GOOGL strong momentum. Hold; add on dips near $173.",
-        "stop_loss": 169.0,
+        "narrative": "Hold. Consider taking partial profits near $185 (Take Partial Profits) to secure gains. Only add on strong dip to $175 if capital is not better used in trend leaders and only if conviction is high. Broker GTC trailing stop (8%) is active.",
+        "stop_loss": 160.0,
         "stop_type": "trailing",
-        "trailing_stop_pct": null
+        "trailing_stop_pct": 8.0,
+        "take_profit": 180.0
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
-      "ticker": "GM",
-      "price": 52.11,
-      "previous_close": 52.11,
-      "daily_change": 0.0,
-      "daily_change_percent": 0.0,
-      "position_qty": 1,
+      "symbol": "GM",
+      "quantity": 1,
+      "price": 53.34,
+      "market_value": 53.34,
       "cost_basis": 55.74,
+      "gain_loss_percent": -4.31,
       "trend": "Bullish",
       "support_levels": [
         "46.00",
@@ -655,17 +734,20 @@
         "53.00"
       ],
       "indicators": {
-        "RSI": 64.0,
-        "MACD": "+0.19 (positive)",
-        "SMA_20": 46.6,
-        "SMA_50": 45.3,
-        "SMA_200": 41.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:41.260639"
       },
       "action_plan": {
-        "narrative": "GM recent breakout. Hold; consider profit at $50.",
-        "stop_loss": 44.9,
-        "stop_type": "trailing",
-        "trailing_stop_pct": null
+        "narrative": "Hold. Consider taking partial profits near $50 (Take Partial Profits) to secure gains. No adds; capital is reserved for higher conviction leaders.",
+        "stop_loss": 41.0,
+        "stop_type": "hard",
+        "trailing_stop_pct": null,
+        "take_profit": 50.0
       },
       "alerts": {
         "stop_near": false,
@@ -676,13 +758,12 @@
       }
     },
     {
-      "ticker": "HD",
-      "price": 372.08,
-      "previous_close": 377.34,
-      "daily_change": -5.26,
-      "daily_change_percent": -1.39,
-      "position_qty": 4.1487,
+      "symbol": "HD",
+      "quantity": 4.1487,
+      "price": 367.51,
+      "market_value": 1524.73,
       "cost_basis": 1431.19,
+      "gain_loss_percent": 6.53,
       "trend": "Sideways",
       "support_levels": [
         "330.00",
@@ -693,34 +774,35 @@
         "360.00"
       ],
       "indicators": {
-        "RSI": 53.0,
-        "MACD": "flat",
-        "SMA_20": 337.0,
-        "SMA_50": 335.0,
-        "SMA_200": 330.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:43.016549"
       },
       "action_plan": {
-        "narrative": "HD rangebound. Hold; add above $350 breakout.",
-        "stop_loss": 319.0,
-        "stop_type": "trailing",
+        "narrative": "Hold. Only add above $350 breakout and only if capital is not better used in high conviction leaders. Maintain stop at $297.60.",
+        "stop_loss": 297.6,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
-      "ticker": "AMZN",
-      "price": 230.19,
-      "previous_close": 231.01,
-      "daily_change": -0.82,
-      "daily_change_percent": -0.35,
-      "position_qty": 8,
+      "symbol": "AMZN",
+      "quantity": 8,
+      "price": 234.11,
+      "market_value": 1872.88,
       "cost_basis": 1677.77,
+      "gain_loss_percent": 11.63,
       "trend": "Bullish",
       "support_levels": [
         "182.00",
@@ -731,17 +813,20 @@
         "200.00"
       ],
       "indicators": {
-        "RSI": 65.0,
-        "MACD": "+0.25 (positive)",
-        "SMA_20": 183.8,
-        "SMA_50": 179.2,
-        "SMA_200": 162.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:44.812945"
       },
       "action_plan": {
-        "narrative": "AMZN strong uptrend. Hold; add on dips near $182.",
-        "stop_loss": 174.0,
+        "narrative": "Hold. Add only on strong dip near $182 and only if capital ($386) is available and not deployed in NVDA or META. Consider taking partial profits near $190 (Take Partial Profits) to secure gains. AMZN is a top conviction leader.",
+        "stop_loss": 157.5,
         "stop_type": "trailing",
-        "trailing_stop_pct": 10.0
+        "trailing_stop_pct": 10.0,
+        "take_profit": 190.0
       },
       "alerts": {
         "stop_near": false,
@@ -752,13 +837,12 @@
       }
     },
     {
-      "ticker": "META",
-      "price": 695.21,
-      "previous_close": 700.0,
-      "daily_change": -4.79,
-      "daily_change_percent": -0.68,
-      "position_qty": 1,
+      "symbol": "META",
+      "quantity": 1,
+      "price": 773.44,
+      "market_value": 773.44,
       "cost_basis": 719.41,
+      "gain_loss_percent": 7.51,
       "trend": "Bullish",
       "support_levels": [
         "490.00",
@@ -769,34 +853,36 @@
         "550.00"
       ],
       "indicators": {
-        "RSI": 69.0,
-        "MACD": "+0.32 (positive)",
-        "SMA_20": 498.0,
-        "SMA_50": 475.0,
-        "SMA_200": 400.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:46.572182"
       },
       "action_plan": {
-        "narrative": "META strong uptrend. Hold; consider profit-taking near $520.",
-        "stop_loss": 489.0,
+        "narrative": "Hold. Take partial profits near $520 (Take Partial Profits) to secure gains as RSI is extended. Add only on strong dip and only if capital ($386) is available and not allocated to NVDA or AMZN. META is a top conviction leader. Broker GTC trailing stop (10%) is active.",
+        "stop_loss": 455.5,
         "stop_type": "trailing",
-        "trailing_stop_pct": null
+        "trailing_stop_pct": 10.0,
+        "take_profit": 520.0
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
-      "ticker": "BP",
-      "price": 32.25,
-      "previous_close": 32.96,
-      "daily_change": -0.71,
-      "daily_change_percent": -2.15,
-      "position_qty": 22,
+      "symbol": "BP",
+      "quantity": 22,
+      "price": 32.15,
+      "market_value": 707.3,
       "cost_basis": 645.78,
+      "gain_loss_percent": 9.53,
       "trend": "Sideways",
       "support_levels": [
         "35.00",
@@ -807,34 +893,35 @@
         "39.00"
       ],
       "indicators": {
-        "RSI": 51.0,
-        "MACD": "flat",
-        "SMA_20": 35.4,
-        "SMA_50": 36.1,
-        "SMA_200": 35.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:48.332624"
       },
       "action_plan": {
-        "narrative": "BP consolidating. Hold for yield; add above $37.",
-        "stop_loss": 33.9,
-        "stop_type": "trailing",
+        "narrative": "Hold for yield. No adds. Only consider adding above $37 if capital is not better used in higher conviction leaders. Maintain stop at $31.00.",
+        "stop_loss": 31.0,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "OXY",
-      "price": 44.41,
-      "previous_close": 45.46,
-      "daily_change": -1.05,
-      "daily_change_percent": -2.31,
-      "position_qty": 1,
+      "symbol": "OXY",
+      "quantity": 1,
+      "price": 43.94,
+      "market_value": 43.94,
       "cost_basis": 43.73,
+      "gain_loss_percent": 0.48,
       "trend": "Bullish",
       "support_levels": [
         "60.00",
@@ -845,34 +932,35 @@
         "68.00"
       ],
       "indicators": {
-        "RSI": 59.0,
-        "MACD": "+0.15 (positive)",
-        "SMA_20": 60.5,
-        "SMA_50": 59.0,
-        "SMA_200": 58.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:50.063899"
       },
       "action_plan": {
-        "narrative": "OXY recent bounce. Hold; add on dips to $60.",
-        "stop_loss": 56.8,
-        "stop_type": "trailing",
+        "narrative": "Hold. No adds unless on a strong dip to $60 and only if capital is not better used in trend leaders. Maintain stop at $53.00.",
+        "stop_loss": 53.0,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
-      "ticker": "BA",
-      "price": 225.84,
-      "previous_close": 226.08,
-      "daily_change": -0.24,
-      "daily_change_percent": -0.11,
-      "position_qty": 1,
+      "symbol": "BA",
+      "quantity": 1,
+      "price": 221.84,
+      "market_value": 221.84,
       "cost_basis": 204.84,
+      "gain_loss_percent": 8.32,
       "trend": "Bearish",
       "support_levels": [
         "172.00",
@@ -883,34 +971,35 @@
         "192.00"
       ],
       "indicators": {
-        "RSI": 44.0,
-        "MACD": "-0.10 (negative)",
-        "SMA_20": 179.0,
-        "SMA_50": 184.0,
-        "SMA_200": 200.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:51.760875"
       },
       "action_plan": {
-        "narrative": "BA under pressure. Hold; reduce if $172 fails.",
-        "stop_loss": 164.0,
-        "stop_type": "trailing",
+        "narrative": "Reduce exposure on any weakness (Reduce). Hold only minimal exposure if $172 holds. No adds. Tighten stop if price approaches $165 support.",
+        "stop_loss": 153.45,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "AVGO",
-      "price": 302.62,
-      "previous_close": 297.42,
-      "daily_change": 5.2,
-      "daily_change_percent": 1.75,
-      "position_qty": 4.4808,
+      "symbol": "AVGO",
+      "quantity": 4.4808,
+      "price": 293.7,
+      "market_value": 1315.94,
       "cost_basis": 435.61,
+      "gain_loss_percent": 202.11,
       "trend": "Bullish",
       "support_levels": [
         "290.00",
@@ -921,17 +1010,20 @@
         "320.00"
       ],
       "indicators": {
-        "RSI": 73.0,
-        "MACD": "+0.5 (strong positive)",
-        "SMA_20": 1630.0,
-        "SMA_50": 1580.0,
-        "SMA_200": 1400.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:53.535856"
       },
       "action_plan": {
-        "narrative": "AVGO remains in strong uptrend. Hold; target profit-taking at $1750\u2013$1800. Stop at $1599.",
-        "stop_loss": 271.0,
+        "narrative": "Hold. Take partial profits near $310 (Take Partial Profits) as RSI is overbought. Add only on a strong dip and only if capital ($386) is not needed for NVDA, AMZN, or META. Tighten trailing stop to protect gains.",
+        "stop_loss": 261.0,
         "stop_type": "trailing",
-        "trailing_stop_pct": 10.0
+        "trailing_stop_pct": 10.0,
+        "take_profit": 310.0
       },
       "alerts": {
         "stop_near": false,
@@ -942,13 +1034,12 @@
       }
     },
     {
-      "ticker": "BABA",
-      "price": 117.38,
-      "previous_close": 119.36,
-      "daily_change": -1.98,
-      "daily_change_percent": -1.66,
-      "position_qty": 4,
+      "symbol": "BABA",
+      "quantity": 4,
+      "price": 120.63,
+      "market_value": 482.52,
       "cost_basis": 550.45,
+      "gain_loss_percent": -12.34,
       "trend": "Bearish",
       "support_levels": [
         "72.00",
@@ -959,34 +1050,35 @@
         "82.00"
       ],
       "indicators": {
-        "RSI": 39.0,
-        "MACD": "-0.09 (negative)",
-        "SMA_20": 75.1,
-        "SMA_50": 76.8,
-        "SMA_200": 80.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:55.318810"
       },
       "action_plan": {
-        "narrative": "BABA under pressure. Hold; cut if $72 fails.",
-        "stop_loss": 67.8,
-        "stop_type": "trailing",
+        "narrative": "Reduce exposure on any weakness (Reduce). Hold only minimal exposure if $72 holds. No adds. Tighten stop if price approaches $68 support.",
+        "stop_loss": 63.25,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "NVDA",
-      "price": 179.27,
-      "previous_close": 175.51,
-      "daily_change": 3.76,
-      "daily_change_percent": 2.14,
-      "position_qty": 9.0078,
+      "symbol": "NVDA",
+      "quantity": 9.0078,
+      "price": 177.87,
+      "market_value": 1602.98,
       "cost_basis": 153.65,
+      "gain_loss_percent": 942.77,
       "trend": "Bullish",
       "support_levels": [
         "1200.00",
@@ -997,17 +1089,20 @@
         "1400.00"
       ],
       "indicators": {
-        "RSI": 75.0,
-        "MACD": "+1.1 (strong positive)",
-        "SMA_20": 1205.0,
-        "SMA_50": 1175.0,
-        "SMA_200": 950.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:57.135037"
       },
       "action_plan": {
-        "narrative": "NVDA continues to ride AI momentum above $1200 support. Hold; consider profit-taking near $1300. Trailing stop at $1149 to protect gains.",
+        "narrative": "Hold. Take partial profits near $1300 (Take Partial Profits) as RSI is very high. Add only on a strong dip to support and only if capital ($386) is available. NVDA is a top conviction trend leader. Tighten trailing stop 15%",
         "stop_loss": 160.0,
         "stop_type": "trailing",
-        "trailing_stop_pct": 15.0
+        "trailing_stop_pct": 15.0,
+        "take_profit": 1300.0
       },
       "alerts": {
         "stop_near": false,
@@ -1018,165 +1113,85 @@
       }
     },
     {
-      "ticker": "VHT",
-      "price": 247.54,
-      "previous_close": 247.72,
-      "daily_change": -0.18,
-      "daily_change_percent": -0.07,
-      "position_qty": 2,
+      "symbol": "VHT",
+      "quantity": 2,
+      "price": 241.0246,
+      "market_value": 482.05,
       "cost_basis": 489.76,
-      "trend": "Sideways",
-      "support_levels": [
-        "260.00",
-        "255.00"
-      ],
-      "resistance_levels": [
-        "268.00",
-        "275.00"
-      ],
+      "gain_loss_percent": -1.57,
       "indicators": {
-        "RSI": 50.0,
-        "MACD": "flat",
-        "SMA_20": 261.0,
-        "SMA_50": 259.0,
-        "SMA_200": 255.0
-      },
-      "action_plan": {
-        "narrative": "VHT sector rotation. Hold; add above $268.",
-        "stop_loss": 254.0,
-        "stop_type": "trailing",
-        "trailing_stop_pct": null
-      },
-      "alerts": {
-        "stop_near": true,
-        "volatility": "normal",
-        "attention": "none",
-        "category": "info",
-        "message": "Price near stop loss"
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:09:59.264935"
       }
     },
     {
-      "ticker": "SCHD",
-      "price": 26.84,
-      "previous_close": 27.17,
-      "daily_change": -0.33,
-      "daily_change_percent": -1.21,
-      "position_qty": 18,
+      "symbol": "SCHD",
+      "quantity": 18,
+      "price": 26.675,
+      "market_value": 480.15,
       "cost_basis": 475.66,
-      "trend": "Sideways",
-      "support_levels": [
-        "78.00",
-        "75.00"
-      ],
-      "resistance_levels": [
-        "81.00",
-        "84.00"
-      ],
+      "gain_loss_percent": 0.94,
       "indicators": {
-        "RSI": 52.0,
-        "MACD": "flat",
-        "SMA_20": 79.0,
-        "SMA_50": 78.8,
-        "SMA_200": 76.0
-      },
-      "action_plan": {
-        "narrative": "SCHD dividend ETF. Hold for yield; add above $81.",
-        "stop_loss": 74.0,
-        "stop_type": "trailing",
-        "trailing_stop_pct": null
-      },
-      "alerts": {
-        "stop_near": false,
-        "volatility": "normal",
-        "attention": "none",
-        "category": "info",
-        "message": "No significant alerts"
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": 26.98215,
+        "SMA_50": 26.81926,
+        "SMA_200": 27.36432,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:10:01.203943"
       }
     },
     {
-      "ticker": "VTI",
-      "price": 312.25,
-      "previous_close": 312.61,
-      "daily_change": -0.36,
-      "daily_change_percent": -0.12,
-      "position_qty": 2,
+      "symbol": "VTI",
+      "quantity": 2,
+      "price": 311.5,
+      "market_value": 623.0,
       "cost_basis": 579.65,
-      "trend": "Bullish",
-      "support_levels": [
-        "258.00",
-        "250.00"
-      ],
-      "resistance_levels": [
-        "265.00",
-        "270.00"
-      ],
+      "gain_loss_percent": 7.48,
       "indicators": {
-        "RSI": 61.0,
-        "MACD": "+0.22 (positive)",
-        "SMA_20": 259.8,
-        "SMA_50": 257.0,
-        "SMA_200": 240.0
-      },
-      "action_plan": {
-        "narrative": "VTI broad market strength. Hold; add on dips near $258.",
-        "stop_loss": 249.0,
-        "stop_type": "trailing",
-        "trailing_stop_pct": null
-      },
-      "alerts": {
-        "stop_near": false,
-        "volatility": "normal",
-        "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "RSI": 57.68089,
+        "MACD": {
+          "datetime": "2025-08-07",
+          "macd": "2.23605",
+          "macd_signal": "2.92353",
+          "macd_hist": "-0.68747801"
+        },
+        "SMA_20": 310.0575,
+        "SMA_50": 302.8258,
+        "SMA_200": 290.9844,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:10:02.980132"
       }
     },
     {
-      "ticker": "QQQ",
-      "price": 568.02,
-      "previous_close": 567.26,
-      "daily_change": 0.76,
-      "daily_change_percent": 0.13,
-      "position_qty": 1,
+      "symbol": "QQQ",
+      "quantity": 1,
+      "price": 567.02,
+      "market_value": 567.02,
       "cost_basis": 559.69,
-      "trend": "Bullish",
-      "support_levels": [
-        "455.00",
-        "440.00"
-      ],
-      "resistance_levels": [
-        "470.00",
-        "480.00"
-      ],
+      "gain_loss_percent": 1.31,
       "indicators": {
-        "RSI": 65.0,
-        "MACD": "+0.31 (positive)",
-        "SMA_20": 456.0,
-        "SMA_50": 448.0,
-        "SMA_200": 410.0
-      },
-      "action_plan": {
-        "narrative": "QQQ tech sector strength. Hold; add on dips near $455.",
-        "stop_loss": 439.0,
-        "stop_type": "trailing",
-        "trailing_stop_pct": null
-      },
-      "alerts": {
-        "stop_near": false,
-        "volatility": "normal",
-        "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:10:04.722448"
       }
     },
     {
-      "ticker": "XLE",
-      "price": 87.68,
-      "previous_close": 88.95,
-      "daily_change": -1.27,
-      "daily_change_percent": -1.43,
-      "position_qty": 5,
+      "symbol": "XLE",
+      "quantity": 5,
+      "price": 87.21,
+      "market_value": 436.05,
       "cost_basis": 426.28,
+      "gain_loss_percent": 2.29,
       "trend": "Sideways",
       "support_levels": [
         "88.00",
@@ -1187,15 +1202,17 @@
         "95.00"
       ],
       "indicators": {
-        "RSI": 50.0,
-        "MACD": "flat",
-        "SMA_20": 89.0,
-        "SMA_50": 90.0,
-        "SMA_200": 87.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:10:06.486690"
       },
       "action_plan": {
-        "narrative": "XLE consolidating. Hold for yield; add above $92.",
-        "stop_loss": 84.0,
+        "narrative": "Hold for yield. No adds unless above $92 breakout and only if capital is not needed for higher conviction trend leaders. Maintain stop at $80.75.",
+        "stop_loss": 80.75,
         "stop_type": "trailing",
         "trailing_stop_pct": 5.0
       },
@@ -1203,18 +1220,17 @@
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "BROS",
-      "price": 60.07,
-      "previous_close": 58.31,
-      "daily_change": 1.76,
-      "daily_change_percent": 3.02,
-      "position_qty": 7,
+      "symbol": "BROS",
+      "quantity": 7,
+      "price": 59.27,
+      "market_value": 414.89,
       "cost_basis": 218.96,
+      "gain_loss_percent": 89.48,
       "trend": "Bearish \u2192 Potential Reversal",
       "support_levels": [
         "56.00",
@@ -1225,15 +1241,17 @@
         "70.00"
       ],
       "indicators": {
-        "RSI": 35.0,
-        "MACD": "-0.3 (bearish momentum)",
-        "SMA_20": 65.0,
-        "SMA_50": 70.0,
-        "SMA_200": 56.0
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:10:08.192526"
       },
       "action_plan": {
-        "narrative": "BROS is testing SMA200 at $56. A bounce here could trigger a reversal; failure opens downside to $50.",
-        "stop_loss": 56.0,
+        "narrative": "Hold with active trailing stop (5%). No additional hard stop is necessary. Continue to protect gains while allowing room for upside. Reduce exposure only if stop triggers. No adds until reversal above $65 is confirmed and only if capital is available.",
+        "stop_loss": 47.0,
         "stop_type": "trailing",
         "trailing_stop_pct": 5.0
       },
@@ -1241,18 +1259,17 @@
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "info",
+        "category": "critical",
         "message": "No significant alerts"
       }
     },
     {
-      "ticker": "AAPL",
-      "price": 209.05,
-      "previous_close": 211.27,
-      "daily_change": -2.22,
-      "daily_change_percent": -1.05,
-      "position_qty": 17.06,
+      "symbol": "AAPL",
+      "quantity": 17.06,
+      "price": 207.57,
+      "market_value": 3544.19,
       "cost_basis": 2710.85,
+      "gain_loss_percent": 30.74,
       "trend": "Bullish",
       "support_levels": [
         "210.00",
@@ -1263,32 +1280,35 @@
         "230.00"
       ],
       "indicators": {
-        "RSI": 61.0,
-        "MACD": "+0.2 (bullish momentum)",
-        "SMA_20": 211.5,
-        "SMA_50": 206.3,
-        "SMA_200": 190.4
+        "RSI": null,
+        "MACD": null,
+        "SMA_20": null,
+        "SMA_50": null,
+        "SMA_200": null,
+        "source": "TwelveData",
+        "fetched_at": "2025-08-07T16:10:10.047959"
       },
       "action_plan": {
-        "narrative": "AAPL is trading above all major SMAs with positive MACD and RSI trending upward. Trend remains bullish; watch for breakout above $220 for continuation.",
-        "stop_loss": 208.0,
+        "narrative": "Hold. Consider taking partial profits near $220 (Take Partial Profits) to secure gains. Only add on dips to $210 if capital is not better used in top conviction trend leaders.",
+        "stop_loss": 186.0,
         "stop_type": "trailing",
-        "trailing_stop_pct": 17.0
+        "trailing_stop_pct": 17.0,
+        "take_profit": 220.0
       },
       "alerts": {
-        "stop_near": true,
+        "stop_near": false,
         "volatility": "normal",
         "attention": "none",
         "category": "positive",
-        "message": "Price near stop loss"
+        "message": "Positive outlook based on narrative"
       }
     },
     {
       "ticker": "BTC",
-      "price": 51.77,
-      "previous_close": 52.04,
-      "daily_change": -0.27,
-      "daily_change_percent": -0.52,
+      "price": 51.7,
+      "previous_close": 51.77,
+      "daily_change": -0.07,
+      "daily_change_percent": -0.14,
       "position_qty": 0.039,
       "cost_basis": 2820.0,
       "trend": "Neutral-Bearish",
@@ -1305,25 +1325,25 @@
         "MACD": "Slightly negative, no clear upturn"
       },
       "action_plan": {
-        "narrative": "BTC under pressure, momentum weak. Hold while above $66,000; avoid adds unless $70,000 reclaims with strong volume.",
-        "stop_loss": 65500,
-        "stop_type": null,
+        "narrative": "BTC remains highly speculative and is a major drag on performance. Hold only minimal exposure. Reduce further if stop at $62,000 is breached. Absolutely no adds. Capital is reserved for higher conviction equities.",
+        "stop_loss": 62000,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "ETH",
-      "price": 35.43,
-      "previous_close": 35.45,
-      "daily_change": -0.02,
-      "daily_change_percent": -0.06,
+      "price": 35.17,
+      "previous_close": 35.43,
+      "daily_change": -0.26,
+      "daily_change_percent": -0.73,
       "position_qty": 0.33,
       "cost_basis": 1070.0,
       "trend": "Bullish",
@@ -1340,25 +1360,25 @@
         "MACD": "Positive, supporting rally"
       },
       "action_plan": {
-        "narrative": "ETH strong upward momentum, outperforming BTC. Hold; add on dips to $3,400. Target $3,700+.",
-        "stop_loss": 3250,
-        "stop_type": null,
+        "narrative": "ETH remains speculative. Hold only minimal exposure. Reduce further if stop at $3,000 is breached. No adds; capital is reserved for high conviction equities. Target $3,700+ for any profit-taking.",
+        "stop_loss": 3000,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     },
     {
       "ticker": "SOL",
-      "price": 1.88,
-      "previous_close": 1.91,
-      "daily_change": -0.03,
-      "daily_change_percent": -1.57,
+      "price": 1.87,
+      "previous_close": 1.88,
+      "daily_change": -0.01,
+      "daily_change_percent": -0.53,
       "position_qty": 6.5,
       "cost_basis": 720.0,
       "trend": "Bullish",
@@ -1375,18 +1395,187 @@
         "MACD": "Positive, strong upward move"
       },
       "action_plan": {
-        "narrative": "SOL strong bounce, momentum building. Hold; consider profit near $165. Add on dips to $140 if uptrend holds.",
-        "stop_loss": 119,
-        "stop_type": null,
+        "narrative": "SOL is speculative; hold only minimal exposure. Consider profit near $165 if possible. No adds. Reduce further if stop at $110 is breached. Capital reserved for higher conviction equities.",
+        "stop_loss": 110,
+        "stop_type": "hard",
         "trailing_stop_pct": null
       },
       "alerts": {
         "stop_near": false,
         "volatility": "normal",
         "attention": "none",
-        "category": "positive",
-        "message": "Positive outlook based on narrative"
+        "category": "critical",
+        "message": "No significant alerts"
       }
     }
-  ]
+  ],
+  "watchlist": {
+    "model_candidates": [
+      {
+        "symbol": "VGT",
+        "name": "Vanguard Information Technology ETF",
+        "sector": "Technology",
+        "reason": "Strong growth exposure to AI and cloud sectors",
+        "status": "watch",
+        "target_buy": 682.0,
+        "stop_loss": 670.0,
+        "upper_alert": 705.0,
+        "lower_alert": 660.0,
+        "trend_status": "bullish"
+      },
+      {
+        "symbol": "XLF",
+        "name": "Financial Select Sector SPDR Fund",
+        "sector": "Financials",
+        "reason": "Banking sector benefiting from rate environment",
+        "status": "watch",
+        "target_buy": 42.5,
+        "stop_loss": 40.0,
+        "upper_alert": 45.0,
+        "lower_alert": 38.0,
+        "trend_status": "neutral"
+      },
+      {
+        "symbol": "XLE",
+        "name": "Energy Select Sector SPDR Fund",
+        "sector": "Energy",
+        "reason": "Hedge against inflation and commodity cycles",
+        "status": "watch",
+        "target_buy": 87.0,
+        "stop_loss": 84.0,
+        "upper_alert": 92.0,
+        "lower_alert": 80.0,
+        "trend_status": "neutral"
+      },
+      {
+        "symbol": "XLV",
+        "name": "Health Care Select Sector SPDR Fund",
+        "sector": "Healthcare",
+        "reason": "Defensive play with growth potential",
+        "status": "watch",
+        "target_buy": 145.0,
+        "stop_loss": 140.0,
+        "upper_alert": 150.0,
+        "lower_alert": 135.0,
+        "trend_status": "neutral"
+      },
+      {
+        "symbol": "UNH",
+        "name": "UnitedHealth Group",
+        "sector": "Healthcare",
+        "reason": "Industry leader, steady earnings growth",
+        "status": "watch",
+        "target_buy": 490.0,
+        "stop_loss": 470.0,
+        "upper_alert": 515.0,
+        "lower_alert": 450.0,
+        "trend_status": "neutral"
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft Corp.",
+        "sector": "Technology",
+        "reason": "AI/cloud leader with strong fundamentals and momentum",
+        "status": "watch",
+        "target_buy": 515.0,
+        "stop_loss": 468.0,
+        "upper_alert": 540.0,
+        "lower_alert": 450.0,
+        "trend_status": "bullish"
+      },
+      {
+        "symbol": "JPM",
+        "name": "JPMorgan Chase & Co",
+        "sector": "Financials",
+        "reason": "Strong balance sheet, dividend growth",
+        "status": "watch",
+        "target_buy": 282.0,
+        "stop_loss": 270.0,
+        "upper_alert": 300.0,
+        "lower_alert": 260.0,
+        "trend_status": "neutral"
+      }
+    ],
+    "personal_interest": [
+      {
+        "symbol": "RPI",
+        "name": "Raspberry Pi Holdings",
+        "sector": "Technology Hardware",
+        "reason": "Personal interest in maker/edge computing niche",
+        "status": "speculative",
+        "target_buy": 5.0,
+        "stop_loss": 4.0,
+        "upper_alert": 7.0,
+        "lower_alert": 4.5,
+        "trend_status": "bearish",
+        "news_summary": {
+          "analyst_fair_value": 7.0,
+          "inst_stake": "3.6% SW Investment",
+          "caution": "Thin liquidity, OTC risks, high valuation multiples",
+          "notes": "Institutional stake and market expansion offer upside potential, but technicals remain bearish. Speculative entry near $5.00 only with momentum confirmation."
+        },
+        "planned_entry": 4.5,
+        "position_plan": "Long-term stake, small size, GTC limit order (currently on hold due to high transaction costs).",
+        "brokerage_warning": "High $50 foreign transaction fee on Schwab makes small positions inefficient. Consider larger order size or alternative broker."
+      },
+      {
+        "symbol": "PLNT",
+        "name": "Planet Fitness Inc.",
+        "sector": "Consumer Discretionary",
+        "reason": "Personal interest; technical buy zone near support",
+        "status": "speculative",
+        "target_buy": 107.04,
+        "stop_loss": 106.73,
+        "upper_alert": 116.73,
+        "lower_alert": 105.0,
+        "trend_status": "neutral"
+      },
+      {
+        "symbol": "TSLA",
+        "name": "Tesla Inc.",
+        "sector": "Consumer Discretionary",
+        "reason": "Innovative, but high volatility",
+        "status": "hold_for_now",
+        "target_buy": 305.0,
+        "stop_loss": 265.0,
+        "upper_alert": 365.0,
+        "lower_alert": 225.0,
+        "trend_status": "neutral"
+      },
+      {
+        "symbol": "NVDA",
+        "name": "Nvidia Corp",
+        "sector": "Technology",
+        "reason": "AI chip leader, extended valuation risk",
+        "status": "speculative",
+        "target_buy": 169.0,
+        "stop_loss": 160.0,
+        "upper_alert": 180.0,
+        "lower_alert": 150.0,
+        "trend_status": "bullish"
+      },
+      {
+        "symbol": "RIVN",
+        "name": "Rivian Automotive",
+        "sector": "Consumer Discretionary",
+        "reason": "EV growth potential, early-stage risk",
+        "status": "speculative",
+        "upper_alert": null,
+        "lower_alert": null,
+        "trend_status": "bearish"
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon.com Inc.",
+        "sector": "Consumer Discretionary",
+        "reason": "Previously held; monitor for potential re-entry if strong support confirms.",
+        "status": "exited_watch",
+        "target_buy": 210.0,
+        "stop_loss": 188.0,
+        "upper_alert": 235.0,
+        "lower_alert": 180.0,
+        "trend_status": "neutral"
+      }
+    ]
+  }
 }
